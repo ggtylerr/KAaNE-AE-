@@ -508,6 +508,49 @@ public class BombSettings extends Fragment {
                 ex.printStackTrace();
             }
         });
+        // clear button
+        currNormalBtn = sv.findViewById(R.id.clearBtn);
+        currNormalBtn.setOnClickListener((View v) -> {
+            // indicators
+            bobCB.setSelected(false);
+            bobLitCB.setSelected(false);
+            carCB.setSelected(false);
+            carLitCB.setSelected(false);
+            clrCB.setSelected(false);
+            clrLitCB.setSelected(false);
+            frkCB.setSelected(false);
+            frkLitCB.setSelected(false);
+            frqCB.setSelected(false);
+            frqLitCB.setSelected(false);
+            indCB.setSelected(false);
+            indLitCB.setSelected(false);
+            msaCB.setSelected(false);
+            msaLitCB.setSelected(false);
+            nsaCB.setSelected(false);
+            nsaLitCB.setSelected(false);
+            sigCB.setSelected(false);
+            sigLitCB.setSelected(false);
+            sndCB.setSelected(false);
+            sndLitCB.setSelected(false);
+            trnCB.setSelected(false);
+            trnLitCB.setSelected(false);
+            // batteries
+            aaTxt.setText("");
+            dTxt.setText("");
+            // ports
+            dvidTxt.setText("");
+            parallelTxt.setText("");
+            ps2Txt.setText("");
+            rj45Txt.setText("");
+            serialTxt.setText("");
+            stereoRCATxt.setText("");
+            // other stuff
+            plateTxt.setText("");
+            modIndTxt.setText("");
+            modPortTxt.setText("");
+            moduleTxt.setText("");
+            serialTxt.setText("");
+        });
         return sv;
     }
 
