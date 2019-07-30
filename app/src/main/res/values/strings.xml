@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">KAaNE [AE]</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">KAaNE [AE]</string>
+    <string name="nav_header_subtitle">The KTaNE assistant program for Androids</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Menu Stuff -->
+    <string name="menu_home">Home</string>
+    <string name="menu_bomb_settings">Bomb Settings</string>
+
+    <!-- Vanilla Menu -->
+    <string name="menu_vanilla_wires">Wires</string>
+    <string name="menu_vanilla_button">The Button</string>
+    <string name="menu_vanilla_keypad">Keypad</string>
+
+    <!-- Home Screen String -->
+    <string name="home_string">Welcome to the alpha of KAaNE [AE]</string>
+
+    <!-- Bomb Setting Strings -->
+    <string name="bomb_settings_ind">Indicators</string>
+    <string name="bomb_settings_ind_bob">BOB</string>
+    <string name="bomb_settings_ind_car">CAR</string>
+    <string name="bomb_settings_ind_clr">CLR</string>
+    <string name="bomb_settings_ind_frk">FRK</string>
+    <string name="bomb_settings_ind_frq">FRQ</string>
+    <string name="bomb_settings_ind_ind">IND</string>
+    <string name="bomb_settings_ind_msa">MSA</string>
+    <string name="bomb_settings_ind_nsa">NSA</string>
+    <string name="bomb_settings_ind_sig">SIG</string>
+    <string name="bomb_settings_ind_snd">SND</string>
+    <string name="bomb_settings_ind_trn">TRN</string>
+    <string name="bomb_settings_ind_is_lit">LIT</string>
+    <string name="bomb_settings_bat_slash_port">Batteries/Ports</string>
+    <string name="bomb_settings_hint_number">##</string>
+    <string name="bomb_settings_hint_add">Add</string>
+    <string name="bomb_settings_hint_remove">Remove</string>
+    <string name="bomb_settings_bat_aa">Total AAs</string>
+    <string name="bomb_settings_bat_d">Total Ds</string>
+    <string name="bomb_settings_port_dvid">DVI-D</string>
+    <string name="bomb_settings_port_parallel">Parallel</string>
+    <string name="bomb_settings_port_ps2">PS/2</string>
+    <string name="bomb_settings_port_rj45">RJ-45</string>
+    <string name="bomb_settings_port_serial">Serial</string>
+    <string name="bomb_settings_port_stereoRCA">Stereo RCA</string>
+    <string name="bomb_settings_other">Other Settings</string>
+    <string name="bomb_settings_plates">Port Plates</string>
+    <string name="bomb_settings_mod_ind">Mod Indicators</string>
+    <string name="bomb_settings_mod_port">Mod Ports</string>
+    <string name="bomb_settings_modules">Modules</string>
+    <string name="bomb_settings_serial_number">Serial Number</string>
+    <string name="bomb_settings_save">Save</string>
+    <string name="bomb_settings_clear">Clear</string>
+</resources>

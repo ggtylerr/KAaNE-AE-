@@ -1,0 +1,983 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView2"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_weight="1"
+    android:scrollbars="none">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/indString"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/bomb_settings_ind"
+            app:layout_constraintEnd_toEndOf="@+id/bobLitCB"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <CheckBox
+            android:id="@+id/bobCB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/bomb_settings_ind_bob"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/indString" />
+
+        <CheckBox
+            android:id="@+id/bobLitCB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:text="@string/bomb_settings_ind_is_lit"
+            app:layout_constraintStart_toEndOf="@+id/bobCB"
+            app:layout_constraintTop_toTopOf="@+id/bobCB" />
+
+        <CheckBox
+            android:id="@+id/carCB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/bomb_settings_ind_car"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bobCB" />
+
+        <CheckBox
+            android:id="@+id/carLitCB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/bomb_settings_ind_is_lit"
+            app:layout_constraintStart_toEndOf="@+id/bobCB"
+            app:layout_constraintTop_toBottomOf="@+id/bobLitCB" />
+
+        <CheckBox
+            android:id="@+id/clrCB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/bomb_settings_ind_clr"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/carCB" />
+
+        <CheckBox
+            android:id="@+id/clrLitCB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/bomb_settings_ind_is_lit"
+            app:layout_constraintStart_toEndOf="@+id/bobCB"
+            app:layout_constraintTop_toBottomOf="@+id/carLitCB" />
+
+        <CheckBox
+            android:id="@+id/frkCB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/bomb_settings_ind_frk"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/clrCB" />
+
+        <CheckBox
+            android:id="@+id/frkLitCB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/bomb_settings_ind_is_lit"
+            app:layout_constraintStart_toEndOf="@+id/bobCB"
+            app:layout_constraintTop_toBottomOf="@+id/clrLitCB" />
+
+        <CheckBox
+            android:id="@+id/frqCB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/bomb_settings_ind_frq"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/frkCB" />
+
+        <CheckBox
+            android:id="@+id/frqLitCB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/bomb_settings_ind_is_lit"
+            app:layout_constraintStart_toEndOf="@+id/bobCB"
+            app:layout_constraintTop_toBottomOf="@+id/frkLitCB" />
+
+        <CheckBox
+            android:id="@+id/indCB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/bomb_settings_ind_ind"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/frqCB" />
+
+        <CheckBox
+            android:id="@+id/indLitCB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/bomb_settings_ind_is_lit"
+            app:layout_constraintStart_toEndOf="@+id/bobCB"
+            app:layout_constraintTop_toBottomOf="@+id/frqLitCB" />
+
+        <CheckBox
+            android:id="@+id/msaCB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/bomb_settings_ind_msa"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/indCB" />
+
+        <CheckBox
+            android:id="@+id/msaLitCB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/bomb_settings_ind_is_lit"
+            app:layout_constraintStart_toEndOf="@+id/bobCB"
+            app:layout_constraintTop_toBottomOf="@+id/indLitCB" />
+
+        <CheckBox
+            android:id="@+id/nsaCB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/bomb_settings_ind_nsa"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/msaCB" />
+
+        <CheckBox
+            android:id="@+id/nsaLitCB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/bomb_settings_ind_is_lit"
+            app:layout_constraintStart_toEndOf="@+id/bobCB"
+            app:layout_constraintTop_toBottomOf="@+id/msaLitCB" />
+
+        <CheckBox
+            android:id="@+id/sigCB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/bomb_settings_ind_sig"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nsaCB" />
+
+        <CheckBox
+            android:id="@+id/sigLitCB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/bomb_settings_ind_is_lit"
+            app:layout_constraintStart_toEndOf="@+id/bobCB"
+            app:layout_constraintTop_toBottomOf="@+id/nsaLitCB" />
+
+        <CheckBox
+            android:id="@+id/sndCB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/bomb_settings_ind_snd"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sigCB" />
+
+        <CheckBox
+            android:id="@+id/sndLitCB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/bomb_settings_ind_is_lit"
+            app:layout_constraintStart_toEndOf="@+id/bobCB"
+            app:layout_constraintTop_toBottomOf="@+id/sigLitCB" />
+
+        <CheckBox
+            android:id="@+id/trnCB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/bomb_settings_ind_trn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sndCB" />
+
+        <CheckBox
+            android:id="@+id/trnLitCB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/bomb_settings_ind_is_lit"
+            app:layout_constraintStart_toEndOf="@+id/bobCB"
+            app:layout_constraintTop_toBottomOf="@+id/sndLitCB" />
+
+        <TextView
+            android:id="@+id/batsPortsString"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/bomb_settings_bat_slash_port"
+            app:layout_constraintEnd_toEndOf="@+id/aaString"
+            app:layout_constraintStart_toStartOf="@+id/aaAddBTN"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/aaAddBTN"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:background="#00FFFFFF"
+            android:contentDescription="@string/bomb_settings_hint_add"
+            app:layout_constraintStart_toEndOf="@+id/bobLitCB"
+            app:layout_constraintTop_toBottomOf="@+id/batsPortsString"
+            app:srcCompat="@drawable/ic_add_circle_black_24dp" />
+
+        <ImageButton
+            android:id="@+id/aaRmvBTN"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            android:background="#00FFFFFF"
+            android:contentDescription="@string/bomb_settings_hint_remove"
+            app:layout_constraintStart_toEndOf="@+id/aaAddBTN"
+            app:layout_constraintTop_toBottomOf="@+id/batsPortsString"
+            app:srcCompat="@drawable/ic_remove_circle_black_24dp" />
+
+        <!-- Hello there, fellow developer! I want to show you the magic of Android Studio right here.
+        You should the EditText right below? It's constantly showing a warning for a "Missing autoFillHints attribute".
+        Here's the kicker: If you add one, it yells at you, since it's only available in API 26, while this is made for API whatever.
+        This is because Google developers, you know, the ones that made AI and shit, thought it was a good idea to show this warning for API applicable levels >= 26.
+        Oh, and not make a check if it also is for API < 26.
+        This perfectly explains Google: https://old.reddit.com/r/androiddev/comments/9gayxz/why_does_android_development_feel_like_hell/ -->
+
+        <EditText
+            android:id="@+id/aaTXT"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="@string/bomb_settings_hint_number"
+            android:inputType="number"
+            app:layout_constraintStart_toEndOf="@+id/aaRmvBTN"
+            app:layout_constraintTop_toBottomOf="@+id/batsPortsString" />
+
+        <TextView
+            android:id="@+id/aaString"
+            android:layout_width="0dp"
+            android:layout_height="18dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/bomb_settings_bat_aa"
+            app:layout_constraintBottom_toBottomOf="@+id/aaTXT"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/aaTXT"
+            app:layout_constraintTop_toTopOf="@+id/aaTXT" />
+
+        <ImageButton
+            android:id="@+id/dAddBTN"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:background="#00FFFFFF"
+            android:contentDescription="@string/bomb_settings_hint_add"
+            app:layout_constraintStart_toEndOf="@+id/bobLitCB"
+            app:layout_constraintTop_toBottomOf="@+id/aaAddBTN"
+            app:srcCompat="@drawable/ic_add_circle_black_24dp" />
+
+        <ImageButton
+            android:id="@+id/dRmvBTN"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            android:background="#00FFFFFF"
+            android:contentDescription="@string/bomb_settings_hint_remove"
+            app:layout_constraintStart_toEndOf="@+id/dAddBTN"
+            app:layout_constraintTop_toBottomOf="@+id/aaRmvBTN"
+            app:srcCompat="@drawable/ic_remove_circle_black_24dp" />
+
+        <EditText
+            android:id="@+id/dTXT"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:ems="10"
+            android:hint="@string/bomb_settings_hint_number"
+            android:inputType="number"
+            app:layout_constraintStart_toEndOf="@+id/dRmvBTN"
+            app:layout_constraintTop_toBottomOf="@+id/aaTXT" />
+
+        <TextView
+            android:id="@+id/dString"
+            android:layout_width="0dp"
+            android:layout_height="18dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/bomb_settings_bat_d"
+            app:layout_constraintBottom_toBottomOf="@+id/dTXT"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/dTXT"
+            app:layout_constraintTop_toTopOf="@+id/dTXT" />
+
+        <ImageButton
+            android:id="@+id/dvidAddBTN"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:background="#00FFFFFF"
+            android:contentDescription="@string/bomb_settings_hint_add"
+            app:layout_constraintStart_toEndOf="@+id/bobLitCB"
+            app:layout_constraintTop_toBottomOf="@+id/dAddBTN"
+            app:srcCompat="@drawable/ic_add_circle_black_24dp" />
+
+        <ImageButton
+            android:id="@+id/dvidRmvBTN"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            android:background="#00FFFFFF"
+            android:contentDescription="@string/bomb_settings_hint_remove"
+            app:layout_constraintStart_toEndOf="@+id/dvidAddBTN"
+            app:layout_constraintTop_toBottomOf="@+id/dRmvBTN"
+            app:srcCompat="@drawable/ic_remove_circle_black_24dp" />
+
+        <EditText
+            android:id="@+id/dvidTXT"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:ems="10"
+            android:hint="@string/bomb_settings_hint_number"
+            android:inputType="number"
+            app:layout_constraintStart_toEndOf="@+id/dvidRmvBTN"
+            app:layout_constraintTop_toBottomOf="@+id/dTXT" />
+
+        <TextView
+            android:id="@+id/dvidString"
+            android:layout_width="0dp"
+            android:layout_height="18dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/bomb_settings_port_dvid"
+            app:layout_constraintBottom_toBottomOf="@+id/dvidImg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/dvidImg"
+            app:layout_constraintTop_toTopOf="@+id/dvidImg" />
+
+        <ImageView
+            android:id="@+id/dvidImg"
+            android:layout_width="67dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:contentDescription="@string/bomb_settings_port_dvid"
+            app:layout_constraintBottom_toTopOf="@+id/parallelTXT"
+            app:layout_constraintStart_toEndOf="@+id/dvidTXT"
+            app:layout_constraintTop_toTopOf="@+id/dvidTXT"
+            app:srcCompat="@drawable/ic_dvid" />
+
+        <ImageButton
+            android:id="@+id/parallelAddBTN"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:background="#00FFFFFF"
+            android:contentDescription="@string/bomb_settings_hint_add"
+            app:layout_constraintStart_toEndOf="@+id/frkLitCB"
+            app:layout_constraintTop_toBottomOf="@+id/dvidAddBTN"
+            app:srcCompat="@drawable/ic_add_circle_black_24dp" />
+
+        <ImageButton
+            android:id="@+id/parallelRmvBTN"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            android:background="#00FFFFFF"
+            android:contentDescription="@string/bomb_settings_hint_remove"
+            app:layout_constraintStart_toEndOf="@+id/parallelAddBTN"
+            app:layout_constraintTop_toBottomOf="@+id/dvidRmvBTN"
+            app:srcCompat="@drawable/ic_remove_circle_black_24dp" />
+
+        <EditText
+            android:id="@+id/parallelTXT"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:ems="10"
+            android:hint="@string/bomb_settings_hint_number"
+            android:inputType="number"
+            app:layout_constraintStart_toEndOf="@+id/parallelRmvBTN"
+            app:layout_constraintTop_toBottomOf="@+id/dvidTXT" />
+
+        <TextView
+            android:id="@+id/parallelString"
+            android:layout_width="0dp"
+            android:layout_height="18dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/bomb_settings_port_parallel"
+            app:layout_constraintBottom_toBottomOf="@+id/parallelImg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/parallelImg"
+            app:layout_constraintTop_toTopOf="@+id/parallelImg" />
+
+        <ImageView
+            android:id="@+id/parallelImg"
+            android:layout_width="90dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:contentDescription="@string/bomb_settings_port_parallel"
+            app:layout_constraintBottom_toTopOf="@+id/ps2TXT"
+            app:layout_constraintStart_toEndOf="@+id/parallelTXT"
+            app:layout_constraintTop_toTopOf="@+id/parallelTXT"
+            app:srcCompat="@drawable/ic_parallel" />
+
+        <ImageButton
+            android:id="@+id/ps2AddBTN"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:background="#00FFFFFF"
+            android:contentDescription="@string/bomb_settings_hint_add"
+            app:layout_constraintStart_toEndOf="@+id/frqLitCB"
+            app:layout_constraintTop_toBottomOf="@+id/parallelAddBTN"
+            app:srcCompat="@drawable/ic_add_circle_black_24dp" />
+
+        <ImageButton
+            android:id="@+id/ps2RmvBTN"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            android:background="#00FFFFFF"
+            android:contentDescription="@string/bomb_settings_hint_remove"
+            app:layout_constraintStart_toEndOf="@+id/ps2AddBTN"
+            app:layout_constraintTop_toBottomOf="@+id/parallelRmvBTN"
+            app:srcCompat="@drawable/ic_remove_circle_black_24dp" />
+
+        <EditText
+            android:id="@+id/ps2TXT"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:ems="10"
+            android:hint="@string/bomb_settings_hint_number"
+            android:inputType="number"
+            app:layout_constraintStart_toEndOf="@+id/ps2RmvBTN"
+            app:layout_constraintTop_toBottomOf="@+id/parallelTXT" />
+
+        <TextView
+            android:id="@+id/ps2String"
+            android:layout_width="0dp"
+            android:layout_height="18dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/bomb_settings_port_ps2"
+            app:layout_constraintBottom_toBottomOf="@+id/ps2Img"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ps2Img"
+            app:layout_constraintTop_toTopOf="@+id/ps2Img" />
+
+        <ImageView
+            android:id="@+id/ps2Img"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:contentDescription="@string/bomb_settings_port_ps2"
+            app:layout_constraintBottom_toTopOf="@+id/rj45TXT"
+            app:layout_constraintStart_toEndOf="@+id/ps2TXT"
+            app:layout_constraintTop_toTopOf="@+id/ps2TXT"
+            app:srcCompat="@drawable/ic_ps2" />
+
+        <ImageButton
+            android:id="@+id/rj45AddBTN"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:background="#00FFFFFF"
+            android:contentDescription="@string/bomb_settings_hint_add"
+            app:layout_constraintStart_toEndOf="@+id/indLitCB"
+            app:layout_constraintTop_toBottomOf="@+id/ps2AddBTN"
+            app:srcCompat="@drawable/ic_add_circle_black_24dp" />
+
+        <ImageButton
+            android:id="@+id/rj45RmvBTN"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            android:background="#00FFFFFF"
+            android:contentDescription="@string/bomb_settings_hint_remove"
+            app:layout_constraintStart_toEndOf="@+id/rj45AddBTN"
+            app:layout_constraintTop_toBottomOf="@+id/ps2RmvBTN"
+            app:srcCompat="@drawable/ic_remove_circle_black_24dp" />
+
+        <EditText
+            android:id="@+id/rj45TXT"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:ems="10"
+            android:hint="@string/bomb_settings_hint_number"
+            android:inputType="number"
+            app:layout_constraintStart_toEndOf="@+id/rj45RmvBTN"
+            app:layout_constraintTop_toBottomOf="@+id/ps2TXT" />
+
+        <TextView
+            android:id="@+id/rj45String"
+            android:layout_width="0dp"
+            android:layout_height="18dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/bomb_settings_port_rj45"
+            app:layout_constraintBottom_toBottomOf="@+id/rj45Img"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/rj45Img"
+            app:layout_constraintTop_toTopOf="@+id/rj45Img" />
+
+        <ImageView
+            android:id="@+id/rj45Img"
+            android:layout_width="22dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:contentDescription="@string/bomb_settings_port_rj45"
+            app:layout_constraintBottom_toTopOf="@+id/serialTXT"
+            app:layout_constraintStart_toEndOf="@+id/rj45TXT"
+            app:layout_constraintTop_toTopOf="@+id/rj45TXT"
+            app:srcCompat="@drawable/ic_rj45" />
+
+        <ImageButton
+            android:id="@+id/serialAddBTN"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:background="#00FFFFFF"
+            android:contentDescription="@string/bomb_settings_hint_add"
+            app:layout_constraintStart_toEndOf="@+id/msaLitCB"
+            app:layout_constraintTop_toBottomOf="@+id/rj45AddBTN"
+            app:srcCompat="@drawable/ic_add_circle_black_24dp" />
+
+        <ImageButton
+            android:id="@+id/serialRmvBTN"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            android:background="#00FFFFFF"
+            android:contentDescription="@string/bomb_settings_hint_remove"
+            app:layout_constraintStart_toEndOf="@+id/serialAddBTN"
+            app:layout_constraintTop_toBottomOf="@+id/rj45RmvBTN"
+            app:srcCompat="@drawable/ic_remove_circle_black_24dp" />
+
+        <EditText
+            android:id="@+id/serialTXT"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:ems="10"
+            android:hint="@string/bomb_settings_hint_number"
+            android:inputType="number"
+            app:layout_constraintStart_toEndOf="@+id/serialRmvBTN"
+            app:layout_constraintTop_toBottomOf="@+id/rj45TXT" />
+
+        <TextView
+            android:id="@+id/serialString"
+            android:layout_width="0dp"
+            android:layout_height="18dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/bomb_settings_port_serial"
+            app:layout_constraintBottom_toBottomOf="@+id/serialImg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/serialImg"
+            app:layout_constraintTop_toTopOf="@+id/serialImg" />
+
+        <ImageView
+            android:id="@+id/serialImg"
+            android:layout_width="45dp"
+            android:layout_height="25dp"
+            android:contentDescription="@string/bomb_settings_port_serial"
+            app:layout_constraintBottom_toTopOf="@+id/stereoRCATXT"
+            app:layout_constraintStart_toEndOf="@+id/serialTXT"
+            app:layout_constraintTop_toTopOf="@+id/serialTXT"
+            app:srcCompat="@drawable/ic_serial" />
+
+        <ImageButton
+            android:id="@+id/stereoRCAAddBTN"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:background="#00FFFFFF"
+            android:contentDescription="@string/bomb_settings_hint_add"
+            app:layout_constraintStart_toEndOf="@+id/nsaLitCB"
+            app:layout_constraintTop_toBottomOf="@+id/serialAddBTN"
+            app:srcCompat="@drawable/ic_add_circle_black_24dp" />
+
+        <ImageButton
+            android:id="@+id/stereoRCARmvBTN"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            android:background="#00FFFFFF"
+            android:contentDescription="@string/bomb_settings_hint_remove"
+            app:layout_constraintStart_toEndOf="@+id/stereoRCAAddBTN"
+            app:layout_constraintTop_toBottomOf="@+id/serialRmvBTN"
+            app:srcCompat="@drawable/ic_remove_circle_black_24dp" />
+
+        <EditText
+            android:id="@+id/stereoRCATXT"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:ems="10"
+            android:hint="@string/bomb_settings_hint_number"
+            android:inputType="number"
+            app:layout_constraintStart_toEndOf="@+id/stereoRCARmvBTN"
+            app:layout_constraintTop_toBottomOf="@+id/serialTXT" />
+
+        <TextView
+            android:id="@+id/stereoRCAString"
+            android:layout_width="0dp"
+            android:layout_height="18dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/bomb_settings_port_stereoRCA"
+            app:layout_constraintBottom_toBottomOf="@+id/stereoRCAImg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/stereoRCAImg"
+            app:layout_constraintTop_toTopOf="@+id/stereoRCAImg" />
+
+        <ImageView
+            android:id="@+id/stereoRCAImg"
+            android:layout_width="46dp"
+            android:layout_height="25dp"
+            android:contentDescription="@string/bomb_settings_port_stereoRCA"
+            app:layout_constraintBottom_toBottomOf="@+id/stereoRCATXT"
+            app:layout_constraintStart_toEndOf="@+id/stereoRCATXT"
+            app:layout_constraintTop_toTopOf="@+id/stereoRCATXT"
+            app:srcCompat="@drawable/ic_stereo_rca" />
+
+        <TextView
+            android:id="@+id/otherString"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/bomb_settings_other"
+            app:layout_constraintBottom_toBottomOf="@+id/sigLitCB"
+            app:layout_constraintEnd_toEndOf="@+id/plateString"
+            app:layout_constraintStart_toStartOf="@+id/plateAddBTN"
+            app:layout_constraintTop_toTopOf="@+id/sigLitCB"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageButton
+            android:id="@+id/plateAddBTN"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:background="#00FFFFFF"
+            android:contentDescription="@string/bomb_settings_hint_add"
+            app:layout_constraintStart_toEndOf="@+id/sndLitCB"
+            app:layout_constraintTop_toBottomOf="@+id/otherString"
+            app:srcCompat="@drawable/ic_add_circle_black_24dp" />
+
+        <ImageButton
+            android:id="@+id/plateRmvBTN"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            android:background="#00FFFFFF"
+            android:contentDescription="@string/bomb_settings_hint_remove"
+            app:layout_constraintStart_toEndOf="@+id/plateAddBTN"
+            app:layout_constraintTop_toBottomOf="@+id/otherString"
+            app:srcCompat="@drawable/ic_remove_circle_black_24dp" />
+
+        <EditText
+            android:id="@+id/plateTXT"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="@string/bomb_settings_hint_number"
+            android:inputType="number"
+            app:layout_constraintStart_toEndOf="@+id/plateRmvBTN"
+            app:layout_constraintTop_toBottomOf="@+id/otherString" />
+
+        <TextView
+            android:id="@+id/plateString"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/bomb_settings_plates"
+            app:layout_constraintBottom_toBottomOf="@+id/plateTXT"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/plateTXT"
+            app:layout_constraintTop_toTopOf="@+id/plateTXT"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <ImageButton
+            android:id="@+id/modIndAddBTN"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:background="#00FFFFFF"
+            android:contentDescription="@string/bomb_settings_hint_add"
+            app:layout_constraintStart_toEndOf="@+id/trnLitCB"
+            app:layout_constraintTop_toBottomOf="@+id/plateAddBTN"
+            app:srcCompat="@drawable/ic_add_circle_black_24dp" />
+
+        <ImageButton
+            android:id="@+id/modIndRmvBTN"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            android:background="#00FFFFFF"
+            android:contentDescription="@string/bomb_settings_hint_remove"
+            app:layout_constraintStart_toEndOf="@+id/modIndAddBTN"
+            app:layout_constraintTop_toBottomOf="@+id/plateRmvBTN"
+            app:srcCompat="@drawable/ic_remove_circle_black_24dp" />
+
+        <EditText
+            android:id="@+id/modIndTXT"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:ems="10"
+            android:hint="@string/bomb_settings_hint_number"
+            android:inputType="number"
+            app:layout_constraintStart_toEndOf="@+id/modIndRmvBTN"
+            app:layout_constraintTop_toBottomOf="@+id/plateTXT" />
+
+        <TextView
+            android:id="@+id/modIndString"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/bomb_settings_mod_ind"
+            app:layout_constraintBottom_toBottomOf="@+id/modIndTXT"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/modIndTXT"
+            app:layout_constraintTop_toTopOf="@+id/modIndTXT" />
+
+        <ImageButton
+            android:id="@+id/modPortAddBTN"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:background="#00FFFFFF"
+            android:contentDescription="@string/bomb_settings_hint_add"
+            app:layout_constraintStart_toEndOf="@+id/trnLitCB"
+            app:layout_constraintTop_toBottomOf="@+id/modIndAddBTN"
+            app:srcCompat="@drawable/ic_add_circle_black_24dp" />
+
+        <ImageButton
+            android:id="@+id/modPortRmvBTN"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            android:background="#00FFFFFF"
+            android:contentDescription="@string/bomb_settings_hint_remove"
+            app:layout_constraintStart_toEndOf="@+id/modPortAddBTN"
+            app:layout_constraintTop_toBottomOf="@+id/modIndRmvBTN"
+            app:srcCompat="@drawable/ic_remove_circle_black_24dp" />
+
+        <EditText
+            android:id="@+id/modPortTXT"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:ems="10"
+            android:hint="@string/bomb_settings_hint_number"
+            android:inputType="number"
+            app:layout_constraintStart_toEndOf="@+id/modPortRmvBTN"
+            app:layout_constraintTop_toBottomOf="@+id/modIndTXT" />
+
+        <TextView
+            android:id="@+id/modPortString"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/bomb_settings_mod_port"
+            app:layout_constraintBottom_toBottomOf="@+id/modPortTXT"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/modPortTXT"
+            app:layout_constraintTop_toTopOf="@+id/modPortTXT" />
+
+        <ImageButton
+            android:id="@+id/moduleAddBTN"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:background="#00FFFFFF"
+            android:contentDescription="@string/bomb_settings_hint_add"
+            app:layout_constraintStart_toEndOf="@+id/trnLitCB"
+            app:layout_constraintTop_toBottomOf="@+id/modPortAddBTN"
+            app:srcCompat="@drawable/ic_add_circle_black_24dp" />
+
+        <ImageButton
+            android:id="@+id/moduleRmvBTN"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            android:background="#00FFFFFF"
+            android:contentDescription="@string/bomb_settings_hint_remove"
+            app:layout_constraintStart_toEndOf="@+id/moduleAddBTN"
+            app:layout_constraintTop_toBottomOf="@+id/modPortRmvBTN"
+            app:srcCompat="@drawable/ic_remove_circle_black_24dp" />
+
+        <EditText
+            android:id="@+id/moduleTXT"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:ems="10"
+            android:hint="@string/bomb_settings_hint_number"
+            android:inputType="number"
+            app:layout_constraintStart_toEndOf="@+id/moduleRmvBTN"
+            app:layout_constraintTop_toBottomOf="@+id/modPortTXT" />
+
+        <TextView
+            android:id="@+id/moduleString"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/bomb_settings_modules"
+            app:layout_constraintBottom_toBottomOf="@+id/moduleTXT"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/moduleTXT"
+            app:layout_constraintTop_toTopOf="@+id/moduleTXT" />
+
+        <EditText
+            android:id="@+id/snTXT"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:inputType="textCapWords"
+            android:maxLength="6"
+            app:layout_constraintEnd_toEndOf="@+id/moduleTXT"
+            app:layout_constraintStart_toStartOf="@+id/moduleAddBTN"
+            app:layout_constraintTop_toBottomOf="@+id/moduleRmvBTN" />
+
+        <TextView
+            android:id="@+id/snString"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/bomb_settings_serial_number"
+            app:layout_constraintBottom_toBottomOf="@+id/snTXT"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/snTXT"
+            app:layout_constraintTop_toTopOf="@+id/snTXT" />
+
+        <Button
+            android:id="@+id/saveBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/bomb_settings_save"
+            app:layout_constraintBottom_toBottomOf="@+id/moduleAddBTN"
+            app:layout_constraintEnd_toStartOf="@+id/moduleAddBTN"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/moduleAddBTN" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/bomb_settings_clear"
+            app:layout_constraintEnd_toStartOf="@+id/snTXT"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/saveBtn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

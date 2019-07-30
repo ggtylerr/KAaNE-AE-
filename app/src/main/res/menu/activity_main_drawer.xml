@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_bomb_settings"
+            android:icon="@drawable/ic_bomb_settings"
+            android:title="@string/menu_bomb_settings" />
+    </group>
+    <item android:title="Vanilla">
+        <menu>
+            <item
+                android:id="@+id/nav_vanilla_wires"
+                android:icon="@drawable/ic_wires"
+                android:title="@string/menu_vanilla_wires" />
+            <item
+                android:id="@+id/nav_vanilla_button"
+                android:icon="@drawable/ic_button"
+                android:title="@string/menu_vanilla_button" />
+            <item
+                android:id="@+id/nav_vanilla_keypad"
+                android:icon="@drawable/ic_keypad"
+                android:title="@string/menu_vanilla_keypad"/>
+        </menu>
+    </item>
+
+</menu>
