@@ -8,6 +8,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ScrollView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatButton;
@@ -382,16 +383,25 @@ public class BombSettings extends Fragment {
                 props.setProperty("trnUnlit","0");
                 trnLitCB.setSelected(false);
             }
+            if (modIndTxt.getText().toString().equals("")) modIndTxt.setText("0");
             props.setProperty("totalInds",String.valueOf(inds));
             props.setProperty("totalIndsPlusMods",String.valueOf(inds+Integer.parseInt(modIndTxt.getText().toString())));
             props.setProperty("totalIndsLit",String.valueOf(litInds));
             props.setProperty("totalIndsUnlit",String.valueOf(unlitInds));
             // batteries
+            if (aaTxt.getText().toString().equals("")) aaTxt.setText("0");
+            if (dTxt.getText().toString().equals("")) dTxt.setText("0");
             props.setProperty("batteriesTotal",Integer.toString(Integer.parseInt(aaTxt.getText().toString()) + Integer.parseInt(dTxt.getText().toString())));
             props.setProperty("batteryHolders",Integer.toString((Integer.parseInt(aaTxt.getText().toString()) / 2) + Integer.parseInt(dTxt.getText().toString())));
             props.setProperty("batteriesAA",aaTxt.getText().toString());
             props.setProperty("batteriesD",dTxt.getText().toString());
             // ports
+            if (dvidTxt.getText().toString().equals("")) dvidTxt.setText("0");
+            if (parallelTxt.getText().toString().equals("")) parallelTxt.setText("0");
+            if (ps2Txt.getText().toString().equals("")) ps2Txt.setText("0");
+            if (rj45Txt.getText().toString().equals("")) rj45Txt.setText("0");
+            if (serialTxt.getText().toString().equals("")) serialTxt.setText("0");
+            if (stereoRCATxt.getText().toString().equals("")) stereoRCATxt.setText("0");
             String dvidQuantity = dvidTxt.getText().toString();
             String parallelQuantity = parallelTxt.getText().toString();
             String ps2Quantity = ps2Txt.getText().toString();
@@ -409,6 +419,7 @@ public class BombSettings extends Fragment {
                     Integer.parseInt(ps2Quantity) + Integer.parseInt(rj45Quantity) +
                     Integer.parseInt(serialQuantity) + Integer.parseInt(stereoRCAQuantity);
             props.setProperty("totalPorts",String.valueOf(ports));
+            if (modPortTxt.getText().toString().equals("")) modPortTxt.setText("0");
             ports += Integer.parseInt(modPortTxt.getText().toString());
             props.setProperty("totalPortsPlusMods",String.valueOf(ports));
             int portTypes = 0;
@@ -447,43 +458,35 @@ public class BombSettings extends Fragment {
             sn = snTxt.getText().toString();
             String snTemp = sn;
             String[] snArr = string.removeLast(string.moveOnceLeft(sn.split("")));
-            String sn1 = snArr[0];
-            if (sn1.equals("")) props.setProperty("sn1","B");
-            else props.setProperty("sn1",sn1);
             try {
-                String sn2 = snArr[1];
-                props.setProperty("sn2",sn2);
+                props.setProperty("sn1",snArr[0]);
             } catch (ArrayIndexOutOfBoundsException ex) {
-                String sn2 = "B";
-                props.setProperty("sn2",sn2);
+                props.setProperty("sn1","B");
             }
             try {
-                String sn3 = snArr[2];
-                props.setProperty("sn3",sn3);
+                props.setProperty("sn2",snArr[1]);
             } catch (ArrayIndexOutOfBoundsException ex) {
-                String sn3 = "B";
-                props.setProperty("sn3",sn3);
+                props.setProperty("sn2","B");
             }
             try {
-                String sn4 = snArr[3];
-                props.setProperty("sn4",sn4);
+                props.setProperty("sn3",snArr[2]);
             } catch (ArrayIndexOutOfBoundsException ex) {
-                String sn4 = "0";
-                props.setProperty("sn4",sn4);
+                props.setProperty("sn3","B");
             }
             try {
-                String sn5 = snArr[4];
-                props.setProperty("sn5",sn5);
+                props.setProperty("sn4",snArr[3]);
             } catch (ArrayIndexOutOfBoundsException ex) {
-                String sn5 = "0";
-                props.setProperty("sn5",sn5);
+                props.setProperty("sn4","0");
             }
             try {
-                String sn6 = snArr[5];
-                props.setProperty("sn6",sn6);
+                props.setProperty("sn5",snArr[4]);
             } catch (ArrayIndexOutOfBoundsException ex) {
-                String sn6 = "0";
-                props.setProperty("sn6",sn6);
+                props.setProperty("sn5","0");
+            }
+            try {
+                props.setProperty("sn6",snArr[5]);
+            } catch (ArrayIndexOutOfBoundsException ex) {
+                props.setProperty("sn6","0");
             }
             String vowel = "f";
             for (String s : snArr) if (string.isVowel(s)) vowel = "t";
@@ -493,8 +496,10 @@ public class BombSettings extends Fragment {
             props.setProperty("snTotalDigs",String.valueOf(string.totalDigits(sn)));
             props.setProperty("snTotalLets",String.valueOf(string.totalLetters(sn)));
             // Modules
+            if (moduleTxt.getText().toString().equals("")) moduleTxt.setText("0");
             props.setProperty("modules",moduleTxt.getText().toString());
             // Plates
+            if (plateTxt.getText().toString().equals("")) plateTxt.setText("0");
             props.setProperty("plates",plateTxt.getText().toString());
             // Mod Indicators
             props.setProperty("modInd",modIndTxt.getText().toString());
@@ -507,6 +512,7 @@ public class BombSettings extends Fragment {
                 System.out.println("Exception occurred when trying to save! (Probably an IO Exception) printing stack trace...");
                 ex.printStackTrace();
             }
+            Toast.makeText(getActivity(),"Saved!",Toast.LENGTH_SHORT).show();
         });
         // clear button
         currNormalBtn = sv.findViewById(R.id.clearBtn);
@@ -550,6 +556,8 @@ public class BombSettings extends Fragment {
             modPortTxt.setText("");
             moduleTxt.setText("");
             serialTxt.setText("");
+            snTxt.setText("");
+            Toast.makeText(getActivity(),"Cleared!",Toast.LENGTH_SHORT).show();
         });
         return sv;
     }
