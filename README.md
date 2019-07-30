@@ -27,7 +27,7 @@ This app is **NOT** available on the Google Play Store. Even after I make an APK
 
 **5. Turn ON Storage**
 
-**If you don't turn this on, it will crash upon pressing "Bomb Settings" and any other module that uses edgework.**
+**If you don't turn this on, you will not be able to save settings and any module that uses edgework will use the default settings.**
 
 The only thing done currently is the bomb settings, a temporary home screen, and proper navigation. Everything else is a placeholder for future screens.
 
