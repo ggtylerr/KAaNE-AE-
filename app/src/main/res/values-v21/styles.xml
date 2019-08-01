@@ -4,4 +4,15 @@
             <item name="windowNoTitle">true</item>
             <item name="android:statusBarColor">@android:color/transparent</item>
         </style>
+
+    <style name="AppTheme.Dark" parent="Theme.AppCompat">
+        <item name="colorPrimary">@color/darkColorPrimary</item>
+        <item name="colorPrimaryDark">@color/darkColorPrimaryDark</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="colorAccent">@color/darkColorAccent</item>
+        <item name="android:background">@color/darkColorPrimary</item>
+        <item name="android:actionBarStyle">@color/darkColorPrimaryDark</item>
+        <item name="android:navigationBarColor">@color/darkColorPrimaryDark</item>
+    </style>
 </resources>

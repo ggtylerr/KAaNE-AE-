@@ -1,15 +1,179 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-android:layout_width="match_parent"
-android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:textAppearance="?android:attr/textAppearanceLarge"
-    android:text="Vanilla - Wires"
-    android:id="@+id/textView"
-    android:layout_centerVertical="true"
-    android:layout_centerHorizontal="true" />
+    <Spinner
+        android:id="@+id/vanilla_wires_wire1spin"
+        style="@android:style/Widget.Holo.Light.Spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:entries="@array/vanilla_wires_colors"
+        app:layout_constraintEnd_toStartOf="@+id/vanilla_wires_wire1String"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</RelativeLayout>
+    <TextView
+        android:id="@+id/vanilla_wires_wire1String"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/vanilla_wires_w1"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_wires_wire1spin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wires_wire1spin"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_wires_wire1spin" />
+
+    <Spinner
+        android:id="@+id/vanilla_wires_wire2spin"
+        style="@android:style/Widget.Holo.Light.Spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:entries="@array/vanilla_wires_colors"
+        app:layout_constraintEnd_toStartOf="@+id/vanilla_wires_wire2String"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wires_wire1spin" />
+
+    <TextView
+        android:id="@+id/vanilla_wires_wire2String"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/vanilla_wires_w2"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_wires_wire2spin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wires_wire2spin"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_wires_wire2spin" />
+
+    <Spinner
+        android:id="@+id/vanilla_wires_wire3spin"
+        style="@android:style/Widget.Holo.Light.Spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:entries="@array/vanilla_wires_colors"
+        app:layout_constraintEnd_toStartOf="@+id/vanilla_wires_wire3String"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wires_wire2spin" />
+
+    <TextView
+        android:id="@+id/vanilla_wires_wire3String"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/vanilla_wires_w3"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_wires_wire3spin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wires_wire3spin"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_wires_wire3spin" />
+
+    <Spinner
+        android:id="@+id/vanilla_wires_wire4spin"
+        style="@android:style/Widget.Holo.Light.Spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:entries="@array/vanilla_wires_colors"
+        app:layout_constraintEnd_toStartOf="@+id/vanilla_wires_wire4String"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wires_wire3spin" />
+
+    <TextView
+        android:id="@+id/vanilla_wires_wire4String"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/vanilla_wires_w4"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_wires_wire4spin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wires_wire4spin"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_wires_wire4spin" />
+
+    <Spinner
+        android:id="@+id/vanilla_wires_wire5spin"
+        style="@android:style/Widget.Holo.Light.Spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:entries="@array/vanilla_wires_colors"
+        app:layout_constraintEnd_toStartOf="@+id/vanilla_wires_wire5String"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wires_wire4spin" />
+
+    <TextView
+        android:id="@+id/vanilla_wires_wire5String"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/vanilla_wires_w5"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_wires_wire5spin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wires_wire5spin"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_wires_wire5spin" />
+
+    <Spinner
+        android:id="@+id/vanilla_wires_wire6spin"
+        style="@android:style/Widget.Holo.Light.Spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:entries="@array/vanilla_wires_colors"
+        app:layout_constraintEnd_toStartOf="@+id/vanilla_wires_wire6String"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wires_wire5spin" />
+
+    <TextView
+        android:id="@+id/vanilla_wires_wire6String"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/vanilla_wires_w6"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_wires_wire6spin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wires_wire6spin"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_wires_wire6spin" />
+
+    <Button
+        android:id="@+id/vanilla_wires_okBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/generic_ok"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wires_wire6spin" />
+
+    <TextView
+        android:id="@+id/vanilla_wires_output"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wires_okBtn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

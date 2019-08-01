@@ -1,0 +1,58 @@
+<androidx.preference.PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory app:title="@string/options_header_log">
+
+        <SwitchPreferenceCompat
+            app:key="log_menu"
+            app:title="@string/options_log"
+            app:summaryOff="@string/options_log_off"/>
+
+        <SwitchPreferenceCompat
+            app:key="excessive_log"
+            app:title="@string/options_excessive_log"
+            app:summary="@string/options_excessive_log_summary"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/options_header_appearance">
+
+        <SwitchPreferenceCompat
+            app:key="theme"
+            app:title="@string/options_theme"
+            app:summary="@string/options_theme_summary"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/options_header_about">
+        <Preference
+            app:title="@string/options_version_title"
+            app:summary="@string/options_version"/>
+        <Preference
+            app:title="@string/options_github">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="@string/options_github_url" />
+        </Preference>
+        <Preference
+            app:title="@string/options_discord">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="@string/options_discord_url"/>
+        </Preference>
+        <Preference
+            app:title="@string/options_wiki">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="@string/options_wiki_url"/>
+        </Preference>
+        <Preference
+            app:title="@string/options_blog"
+            app:summary="@string/options_blog_summary">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="@string/options_blog_url"/>
+        </Preference>
+    </PreferenceCategory>
+
+</androidx.preference.PreferenceScreen>

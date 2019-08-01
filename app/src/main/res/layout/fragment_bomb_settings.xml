@@ -437,7 +437,7 @@
             app:layout_constraintBottom_toTopOf="@+id/parallelTXT"
             app:layout_constraintStart_toEndOf="@+id/dvidTXT"
             app:layout_constraintTop_toTopOf="@+id/dvidTXT"
-            app:srcCompat="@drawable/ic_dvid" />
+            app:srcCompat="@drawable/dvid" />
 
         <ImageButton
             android:id="@+id/parallelAddBTN"
@@ -495,7 +495,7 @@
             app:layout_constraintBottom_toTopOf="@+id/ps2TXT"
             app:layout_constraintStart_toEndOf="@+id/parallelTXT"
             app:layout_constraintTop_toTopOf="@+id/parallelTXT"
-            app:srcCompat="@drawable/ic_parallel" />
+            app:srcCompat="@drawable/parallel" />
 
         <ImageButton
             android:id="@+id/ps2AddBTN"
@@ -553,7 +553,7 @@
             app:layout_constraintBottom_toTopOf="@+id/rj45TXT"
             app:layout_constraintStart_toEndOf="@+id/ps2TXT"
             app:layout_constraintTop_toTopOf="@+id/ps2TXT"
-            app:srcCompat="@drawable/ic_ps2" />
+            app:srcCompat="@drawable/ps2" />
 
         <ImageButton
             android:id="@+id/rj45AddBTN"
@@ -611,7 +611,7 @@
             app:layout_constraintBottom_toTopOf="@+id/serialTXT"
             app:layout_constraintStart_toEndOf="@+id/rj45TXT"
             app:layout_constraintTop_toTopOf="@+id/rj45TXT"
-            app:srcCompat="@drawable/ic_rj45" />
+            app:srcCompat="@drawable/rj45" />
 
         <ImageButton
             android:id="@+id/serialAddBTN"
@@ -667,7 +667,7 @@
             app:layout_constraintBottom_toTopOf="@+id/stereoRCATXT"
             app:layout_constraintStart_toEndOf="@+id/serialTXT"
             app:layout_constraintTop_toTopOf="@+id/serialTXT"
-            app:srcCompat="@drawable/ic_serial" />
+            app:srcCompat="@drawable/serial" />
 
         <ImageButton
             android:id="@+id/stereoRCAAddBTN"
@@ -723,7 +723,7 @@
             app:layout_constraintBottom_toBottomOf="@+id/stereoRCATXT"
             app:layout_constraintStart_toEndOf="@+id/stereoRCATXT"
             app:layout_constraintTop_toTopOf="@+id/stereoRCATXT"
-            app:srcCompat="@drawable/ic_stereo_rca" />
+            app:srcCompat="@drawable/stereo_rca" />
 
         <TextView
             android:id="@+id/otherString"
