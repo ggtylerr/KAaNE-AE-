@@ -43,8 +43,9 @@
     <string name="menu_vanilla_button">The Button</string>
     <string name="menu_vanilla_keypad">Keypad</string>
 
-    <!-- Home Screen String -->
+    <!-- Home Screen Strings -->
     <string name="home_string">Welcome to the alpha of KAaNE [AE]</string>
+    <string name="home_request_perms">Request Storage Permissions</string>
 
     <!-- Bomb Setting Strings -->
     <string name="bomb_settings_ind">Indicators</string>

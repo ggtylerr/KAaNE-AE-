@@ -15,19 +15,7 @@ There is **NO** APK available yet. I will build and sign one whenever there's so
 
 This app is **NOT** available on the Google Play Store. Even after I make an APK available, I'll most likely release it on the store when the first beta build is out. I'll also have to pay a $25 license and I'm not planning on putting ads, so that's another reason why I'm not going to release it there for a while. I'm also not sure how lengthy their verification process is.
 
-**This does not yet request for permission, but you absolutely need to give it Storage permission (for settings). You can do this by doing the following:**
-
-**1. Open the Settings app**
-
-**2. Tap Apps or Application Manager**
-
-**3. Tap "KAaNE [AE]"**
-
-**4. Tap Permissions**
-
-**5. Turn ON Storage**
-
-**If you don't turn this on, you will not be able to save settings and any module that uses edgework will use the default settings.**
+**In the home screen, there's a button that requests for storage permissions. The app absolutely needs these permissions for settings, logs, etc. KAaNE [AE] stores these files in /Downloads/kaane-ae-/. It does not collect any other information or use any other files.**
 
 The only thing done currently is the bomb settings, a temporary home screen, and proper navigation. Everything else is a placeholder for future screens. _EDIT: There's now an app settings menu and work has been started on vanilla wires._
 

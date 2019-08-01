@@ -1,6 +1,5 @@
 package com.ggtylerr.kaane_ae;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
@@ -26,7 +25,6 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.preference.PreferenceManager;
 
 import android.view.Menu;
-import android.widget.Toast;
 
 /**
  * KAaNE [AE]
