@@ -29,13 +29,9 @@ This app is **NOT** available on the Google Play Store. Even after I make an APK
 
 **If you don't turn this on, you will not be able to save settings and any module that uses edgework will use the default settings.**
 
-The only thing done currently is the bomb settings, a temporary home screen, and proper navigation. Everything else is a placeholder for future screens.
+The only thing done currently is the bomb settings, a temporary home screen, and proper navigation. Everything else is a placeholder for future screens. _EDIT: There's now an app settings menu and work has been started on vanilla wires._
 
 Config file is found in `Downloads/kaane-ae-/config.properties`. This will be changed whenever I figure out how to make a proper directory without Android freaking out.
-
-Rotating the screen will reset you back to the home screen.
-
-Images in the bomb settings might look a bit odd. This is because images on apps uses "vectors" instead of regular images (and as of right now I have no idea how to just use normal images). The current solution to this was to make an exact vector of the image (turning each pixel into a square). For whatever reason, the android image renderer flips out because of this and makes the images look bad. Once I figure out how to use normal images, I'll fix this up.
 
 If you have a small screen, the bomb settings might have cropped text. You can easily fix this by rotating your screen or by using an emulator.
 
@@ -47,7 +43,7 @@ If you want to help development, make a pull request with your changes.
 
 Further info can be found in the wiki. [Here's a link.](https://kaane.miraheze.org/wiki/Main_Page)
 
-NOTE: There's currently no info on the wiki.
+NOTE: There's currently no info on the app in the wiki.
 
 There's also now an official discord server which can be joined using [this link.](https://discord.gg/SdaFUAm)
 
