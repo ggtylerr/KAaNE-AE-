@@ -1,5 +1,8 @@
 package com.ggtylerr.kaane_ae;
 
+import android.content.SharedPreferences;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +16,7 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.fragment.app.Fragment;
+import androidx.preference.PreferenceManager;
 
 import com.ggtylerr.kaane_ae.util.Props;
 import com.ggtylerr.kaane_ae.util.string;
@@ -559,6 +563,71 @@ public class BombSettings extends Fragment {
             snTxt.setText("");
             Toast.makeText(getActivity(),"Cleared!",Toast.LENGTH_SHORT).show();
         });
+        // dark theme
+        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(getContext());
+        if (sharedPrefs.getBoolean("theme",false)) {
+            int[][] state = new int[][]{
+                    new int[]{-android.R.attr.state_enabled},
+                    new int[]{android.R.attr.state_enabled},
+                    new int[]{-android.R.attr.state_checked},
+                    new int[]{android.R.attr.state_pressed}
+            };
+            int[] color = new int[]{
+                    Color.WHITE,
+                    Color.WHITE,
+                    Color.WHITE,
+                    Color.WHITE
+            };
+            ColorStateList cs = new ColorStateList(state, color);
+            currBtn = sv.findViewById(R.id.aaAddBTN);
+            currBtn.setImageTintList(cs);
+            currBtn = sv.findViewById(R.id.aaRmvBTN);
+            currBtn.setImageTintList(cs);
+            currBtn = sv.findViewById(R.id.dAddBTN);
+            currBtn.setImageTintList(cs);
+            currBtn = sv.findViewById(R.id.dRmvBTN);
+            currBtn.setImageTintList(cs);
+            currBtn = sv.findViewById(R.id.dvidAddBTN);
+            currBtn.setImageTintList(cs);
+            currBtn = sv.findViewById(R.id.dvidRmvBTN);
+            currBtn.setImageTintList(cs);
+            currBtn = sv.findViewById(R.id.parallelAddBTN);
+            currBtn.setImageTintList(cs);
+            currBtn = sv.findViewById(R.id.parallelRmvBTN);
+            currBtn.setImageTintList(cs);
+            currBtn = sv.findViewById(R.id.ps2AddBTN);
+            currBtn.setImageTintList(cs);
+            currBtn = sv.findViewById(R.id.ps2RmvBTN);
+            currBtn.setImageTintList(cs);
+            currBtn = sv.findViewById(R.id.rj45AddBTN);
+            currBtn.setImageTintList(cs);
+            currBtn = sv.findViewById(R.id.rj45RmvBTN);
+            currBtn.setImageTintList(cs);
+            currBtn = sv.findViewById(R.id.serialAddBTN);
+            currBtn.setImageTintList(cs);
+            currBtn = sv.findViewById(R.id.serialRmvBTN);
+            currBtn.setImageTintList(cs);
+            currBtn = sv.findViewById(R.id.stereoRCAAddBTN);
+            currBtn.setImageTintList(cs);
+            currBtn = sv.findViewById(R.id.stereoRCARmvBTN);
+            currBtn.setImageTintList(cs);
+            currBtn = sv.findViewById(R.id.plateAddBTN);
+            currBtn.setImageTintList(cs);
+            currBtn = sv.findViewById(R.id.plateRmvBTN);
+            currBtn.setImageTintList(cs);
+            currBtn = sv.findViewById(R.id.modIndAddBTN);
+            currBtn.setImageTintList(cs);
+            currBtn = sv.findViewById(R.id.modIndRmvBTN);
+            currBtn.setImageTintList(cs);
+            currBtn = sv.findViewById(R.id.modPortAddBTN);
+            currBtn.setImageTintList(cs);
+            currBtn = sv.findViewById(R.id.modPortRmvBTN);
+            currBtn.setImageTintList(cs);
+            currBtn = sv.findViewById(R.id.moduleAddBTN);
+            currBtn.setImageTintList(cs);
+            currBtn = sv.findViewById(R.id.moduleRmvBTN);
+            currBtn.setImageTintList(cs);
+        }
         return sv;
     }
 

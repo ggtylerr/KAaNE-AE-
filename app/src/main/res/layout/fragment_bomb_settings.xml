@@ -286,10 +286,10 @@
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
             android:background="#00FFFFFF"
             android:contentDescription="@string/bomb_settings_hint_add"
+            android:tint="@android:color/black"
             app:layout_constraintStart_toEndOf="@+id/bobLitCB"
             app:layout_constraintTop_toBottomOf="@+id/batsPortsString"
             app:srcCompat="@drawable/ic_add_circle_black_24dp" />
@@ -301,6 +301,7 @@
             android:layout_marginTop="8dp"
             android:background="#00FFFFFF"
             android:contentDescription="@string/bomb_settings_hint_remove"
+            android:tint="@android:color/black"
             app:layout_constraintStart_toEndOf="@+id/aaAddBTN"
             app:layout_constraintTop_toBottomOf="@+id/batsPortsString"
             app:srcCompat="@drawable/ic_remove_circle_black_24dp" />
@@ -344,6 +345,7 @@
             android:layout_marginTop="8dp"
             android:background="#00FFFFFF"
             android:contentDescription="@string/bomb_settings_hint_add"
+            android:tint="@android:color/black"
             app:layout_constraintStart_toEndOf="@+id/bobLitCB"
             app:layout_constraintTop_toBottomOf="@+id/aaAddBTN"
             app:srcCompat="@drawable/ic_add_circle_black_24dp" />
@@ -355,6 +357,7 @@
             android:layout_marginTop="8dp"
             android:background="#00FFFFFF"
             android:contentDescription="@string/bomb_settings_hint_remove"
+            android:tint="@android:color/black"
             app:layout_constraintStart_toEndOf="@+id/dAddBTN"
             app:layout_constraintTop_toBottomOf="@+id/aaRmvBTN"
             app:srcCompat="@drawable/ic_remove_circle_black_24dp" />
@@ -390,6 +393,7 @@
             android:layout_marginTop="8dp"
             android:background="#00FFFFFF"
             android:contentDescription="@string/bomb_settings_hint_add"
+            android:tint="@android:color/black"
             app:layout_constraintStart_toEndOf="@+id/bobLitCB"
             app:layout_constraintTop_toBottomOf="@+id/dAddBTN"
             app:srcCompat="@drawable/ic_add_circle_black_24dp" />
@@ -401,6 +405,7 @@
             android:layout_marginTop="8dp"
             android:background="#00FFFFFF"
             android:contentDescription="@string/bomb_settings_hint_remove"
+            android:tint="@android:color/black"
             app:layout_constraintStart_toEndOf="@+id/dvidAddBTN"
             app:layout_constraintTop_toBottomOf="@+id/dRmvBTN"
             app:srcCompat="@drawable/ic_remove_circle_black_24dp" />
@@ -448,6 +453,7 @@
             android:layout_marginTop="8dp"
             android:background="#00FFFFFF"
             android:contentDescription="@string/bomb_settings_hint_add"
+            android:tint="@android:color/black"
             app:layout_constraintStart_toEndOf="@+id/frkLitCB"
             app:layout_constraintTop_toBottomOf="@+id/dvidAddBTN"
             app:srcCompat="@drawable/ic_add_circle_black_24dp" />
@@ -459,6 +465,7 @@
             android:layout_marginTop="8dp"
             android:background="#00FFFFFF"
             android:contentDescription="@string/bomb_settings_hint_remove"
+            android:tint="@android:color/black"
             app:layout_constraintStart_toEndOf="@+id/parallelAddBTN"
             app:layout_constraintTop_toBottomOf="@+id/dvidRmvBTN"
             app:srcCompat="@drawable/ic_remove_circle_black_24dp" />
@@ -506,6 +513,7 @@
             android:layout_marginTop="8dp"
             android:background="#00FFFFFF"
             android:contentDescription="@string/bomb_settings_hint_add"
+            android:tint="@android:color/black"
             app:layout_constraintStart_toEndOf="@+id/frqLitCB"
             app:layout_constraintTop_toBottomOf="@+id/parallelAddBTN"
             app:srcCompat="@drawable/ic_add_circle_black_24dp" />
@@ -517,6 +525,7 @@
             android:layout_marginTop="8dp"
             android:background="#00FFFFFF"
             android:contentDescription="@string/bomb_settings_hint_remove"
+            android:tint="@android:color/black"
             app:layout_constraintStart_toEndOf="@+id/ps2AddBTN"
             app:layout_constraintTop_toBottomOf="@+id/parallelRmvBTN"
             app:srcCompat="@drawable/ic_remove_circle_black_24dp" />
@@ -564,6 +573,7 @@
             android:layout_marginTop="8dp"
             android:background="#00FFFFFF"
             android:contentDescription="@string/bomb_settings_hint_add"
+            android:tint="@android:color/black"
             app:layout_constraintStart_toEndOf="@+id/indLitCB"
             app:layout_constraintTop_toBottomOf="@+id/ps2AddBTN"
             app:srcCompat="@drawable/ic_add_circle_black_24dp" />
@@ -575,6 +585,7 @@
             android:layout_marginTop="8dp"
             android:background="#00FFFFFF"
             android:contentDescription="@string/bomb_settings_hint_remove"
+            android:tint="@android:color/black"
             app:layout_constraintStart_toEndOf="@+id/rj45AddBTN"
             app:layout_constraintTop_toBottomOf="@+id/ps2RmvBTN"
             app:srcCompat="@drawable/ic_remove_circle_black_24dp" />
@@ -622,6 +633,7 @@
             android:layout_marginTop="8dp"
             android:background="#00FFFFFF"
             android:contentDescription="@string/bomb_settings_hint_add"
+            android:tint="@android:color/black"
             app:layout_constraintStart_toEndOf="@+id/msaLitCB"
             app:layout_constraintTop_toBottomOf="@+id/rj45AddBTN"
             app:srcCompat="@drawable/ic_add_circle_black_24dp" />
@@ -633,6 +645,7 @@
             android:layout_marginTop="8dp"
             android:background="#00FFFFFF"
             android:contentDescription="@string/bomb_settings_hint_remove"
+            android:tint="@android:color/black"
             app:layout_constraintStart_toEndOf="@+id/serialAddBTN"
             app:layout_constraintTop_toBottomOf="@+id/rj45RmvBTN"
             app:srcCompat="@drawable/ic_remove_circle_black_24dp" />
@@ -678,6 +691,7 @@
             android:layout_marginTop="8dp"
             android:background="#00FFFFFF"
             android:contentDescription="@string/bomb_settings_hint_add"
+            android:tint="@android:color/black"
             app:layout_constraintStart_toEndOf="@+id/nsaLitCB"
             app:layout_constraintTop_toBottomOf="@+id/serialAddBTN"
             app:srcCompat="@drawable/ic_add_circle_black_24dp" />
@@ -689,6 +703,7 @@
             android:layout_marginTop="8dp"
             android:background="#00FFFFFF"
             android:contentDescription="@string/bomb_settings_hint_remove"
+            android:tint="@android:color/black"
             app:layout_constraintStart_toEndOf="@+id/stereoRCAAddBTN"
             app:layout_constraintTop_toBottomOf="@+id/serialRmvBTN"
             app:srcCompat="@drawable/ic_remove_circle_black_24dp" />
@@ -749,6 +764,7 @@
             android:layout_marginTop="8dp"
             android:background="#00FFFFFF"
             android:contentDescription="@string/bomb_settings_hint_add"
+            android:tint="@android:color/black"
             app:layout_constraintStart_toEndOf="@+id/sndLitCB"
             app:layout_constraintTop_toBottomOf="@+id/otherString"
             app:srcCompat="@drawable/ic_add_circle_black_24dp" />
@@ -760,6 +776,7 @@
             android:layout_marginTop="8dp"
             android:background="#00FFFFFF"
             android:contentDescription="@string/bomb_settings_hint_remove"
+            android:tint="@android:color/black"
             app:layout_constraintStart_toEndOf="@+id/plateAddBTN"
             app:layout_constraintTop_toBottomOf="@+id/otherString"
             app:srcCompat="@drawable/ic_remove_circle_black_24dp" />
@@ -797,6 +814,7 @@
             android:layout_marginTop="8dp"
             android:background="#00FFFFFF"
             android:contentDescription="@string/bomb_settings_hint_add"
+            android:tint="@android:color/black"
             app:layout_constraintStart_toEndOf="@+id/trnLitCB"
             app:layout_constraintTop_toBottomOf="@+id/plateAddBTN"
             app:srcCompat="@drawable/ic_add_circle_black_24dp" />
@@ -808,6 +826,7 @@
             android:layout_marginTop="8dp"
             android:background="#00FFFFFF"
             android:contentDescription="@string/bomb_settings_hint_remove"
+            android:tint="@android:color/black"
             app:layout_constraintStart_toEndOf="@+id/modIndAddBTN"
             app:layout_constraintTop_toBottomOf="@+id/plateRmvBTN"
             app:srcCompat="@drawable/ic_remove_circle_black_24dp" />
@@ -843,6 +862,7 @@
             android:layout_marginTop="8dp"
             android:background="#00FFFFFF"
             android:contentDescription="@string/bomb_settings_hint_add"
+            android:tint="@android:color/black"
             app:layout_constraintStart_toEndOf="@+id/trnLitCB"
             app:layout_constraintTop_toBottomOf="@+id/modIndAddBTN"
             app:srcCompat="@drawable/ic_add_circle_black_24dp" />
@@ -854,6 +874,7 @@
             android:layout_marginTop="8dp"
             android:background="#00FFFFFF"
             android:contentDescription="@string/bomb_settings_hint_remove"
+            android:tint="@android:color/black"
             app:layout_constraintStart_toEndOf="@+id/modPortAddBTN"
             app:layout_constraintTop_toBottomOf="@+id/modIndRmvBTN"
             app:srcCompat="@drawable/ic_remove_circle_black_24dp" />
@@ -889,6 +910,7 @@
             android:layout_marginTop="8dp"
             android:background="#00FFFFFF"
             android:contentDescription="@string/bomb_settings_hint_add"
+            android:tint="@android:color/black"
             app:layout_constraintStart_toEndOf="@+id/trnLitCB"
             app:layout_constraintTop_toBottomOf="@+id/modPortAddBTN"
             app:srcCompat="@drawable/ic_add_circle_black_24dp" />
@@ -900,6 +922,7 @@
             android:layout_marginTop="8dp"
             android:background="#00FFFFFF"
             android:contentDescription="@string/bomb_settings_hint_remove"
+            android:tint="@android:color/black"
             app:layout_constraintStart_toEndOf="@+id/moduleAddBTN"
             app:layout_constraintTop_toBottomOf="@+id/modPortRmvBTN"
             app:srcCompat="@drawable/ic_remove_circle_black_24dp" />
