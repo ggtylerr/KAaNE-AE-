@@ -39,9 +39,14 @@
     <string name="menu_bomb_settings">Bomb Settings</string>
 
     <!-- Vanilla Menu -->
+    <string name="menu_vanilla">Vanilla</string>
     <string name="menu_vanilla_wires">Wires</string>
     <string name="menu_vanilla_button">The Button</string>
     <string name="menu_vanilla_keypad">Keypad</string>
+
+    <!-- Dev Menu -->
+    <string name="menu_dev">Developer Screens</string>
+    <string name="menu_dev_log">Log</string>
 
     <!-- Home Screen Strings -->
     <string name="home_string">Welcome to the alpha of KAaNE [AE]</string>
@@ -98,4 +103,7 @@
     <string name="vanilla_wires_w6">6th wire</string>
     <string name="vanilla_wires_cut_msg">Cut the %1$s wire.</string>
     <string name="title_activity_settings">Settings</string>
+
+    <!-- Log String -->
+    <string name="log_empty">Log is empty.</string>
 </resources>

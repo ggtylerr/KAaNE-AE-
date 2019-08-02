@@ -13,6 +13,8 @@ import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceManager;
 import androidx.preference.SwitchPreferenceCompat;
 
+import com.ggtylerr.kaane_ae.util.log;
+
 public class SettingsActivity extends AppCompatActivity {
 
     @Override
@@ -49,6 +51,8 @@ public class SettingsActivity extends AppCompatActivity {
             boolean checked = ((SwitchPreferenceCompat) pref).isChecked();
             editor.putBoolean(key,checked);
             editor.apply();
+            if (key.equals("excessive_log")) log.excessive_log = checked;
+
         }
         @Override
         public void onResume() {

@@ -1,5 +1,6 @@
 package com.ggtylerr.kaane_ae;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
@@ -25,6 +26,7 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.preference.PreferenceManager;
 
 import android.view.Menu;
+import android.view.View;
 
 /**
  * KAaNE [AE]
@@ -38,6 +40,7 @@ import android.view.Menu;
 
 public class MainActivity extends AppCompatActivity 
         implements NavigationView.OnNavigationItemSelectedListener {
+    private static SharedPreferences sharedPrefs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,7 +60,7 @@ public class MainActivity extends AppCompatActivity
         if(savedInstanceState == null) displaySelectedScreen(R.id.nav_home);
 
         // dark theme
-        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+        sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
         if (sharedPrefs.getBoolean("theme",false)) {
             setTheme(R.style.AppTheme_Dark);
             getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.darkColorPrimaryDark)));
@@ -77,6 +80,14 @@ public class MainActivity extends AppCompatActivity
             navigationView.setItemTextColor(cs);
             navigationView.setItemIconTintList(cs);
             navigationView.setBackgroundColor(getResources().getColor(R.color.darkColorPrimary));
+        }
+        // log option
+        if (!sharedPrefs.getBoolean("log_menu",false)) {
+            Menu menu = navigationView.getMenu();
+            MenuItem devMenuItem = menu.getItem(3);
+            Menu subMenu = devMenuItem.getSubMenu();
+            MenuItem item = subMenu.getItem(0);
+            item.setVisible(false);
         }
     }
 
@@ -121,6 +132,7 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_vanilla_wires: fragment = new Wires(); break;
             case R.id.nav_vanilla_button: fragment = new Button(); break;
             case R.id.nav_vanilla_keypad: fragment = new Keypad(); break;
+            case R.id.nav_dev_log: fragment = new LogFragment(); break;
         }
 
         //replacing the fragment
@@ -139,5 +151,8 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         displaySelectedScreen(item.getItemId());
         return true;
+    }
+    public static boolean grabExclogPreference() {
+        return sharedPrefs.getBoolean("excessive_log",false);
     }
 }

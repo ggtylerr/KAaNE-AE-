@@ -13,7 +13,7 @@
             android:icon="@drawable/ic_bomb_settings"
             android:title="@string/menu_bomb_settings" />
     </group>
-    <item android:title="Vanilla">
+    <item android:title="@string/menu_vanilla">
         <menu>
             <item
                 android:id="@+id/nav_vanilla_wires"
@@ -29,5 +29,12 @@
                 android:title="@string/menu_vanilla_keypad"/>
         </menu>
     </item>
-
+    <item android:title="@string/menu_dev">
+        <menu>
+            <item
+                android:id="@+id/nav_dev_log"
+                android:icon="@drawable/ic_view_list_black_24dp"
+                android:title="@string/menu_dev_log"/>
+        </menu>
+    </item>
 </menu>

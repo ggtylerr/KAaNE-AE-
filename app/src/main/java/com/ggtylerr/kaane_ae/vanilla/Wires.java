@@ -22,7 +22,7 @@ public class Wires extends Fragment {
             TextView output = view.findViewById(R.id.vanilla_wires_output);
             String outputString = getResources().getString(R.string.vanilla_wires_cut_msg,"1st");
             output.setText(outputString);
-            log.print("This is a test.");
+            log.printExclog(outputString);
         });
         return view;
     }
