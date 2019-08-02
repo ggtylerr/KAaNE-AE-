@@ -19,6 +19,7 @@ import androidx.fragment.app.Fragment;
 import androidx.preference.PreferenceManager;
 
 import com.ggtylerr.kaane_ae.util.Props;
+import com.ggtylerr.kaane_ae.util.log;
 import com.ggtylerr.kaane_ae.util.string;
 
 import java.io.FileWriter;
@@ -31,10 +32,12 @@ public class BombSettings extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        long startTime = System.nanoTime();
         ScrollView sv = (ScrollView) inflater.inflate(R.layout.fragment_bomb_settings, container, false);
         // Property Handling
         props = new Properties();
         props = Props.load(props);
+        log.print("Bomb Settings: Loading Props");
         // Define widgets/stuff
         CheckBox bobCB = sv.findViewById(R.id.bobCB);
         CheckBox carCB = sv.findViewById(R.id.carCB);
@@ -73,109 +76,216 @@ public class BombSettings extends Fragment {
         EditText modPortTxt = sv.findViewById(R.id.modPortTXT);
         // Mirror Settings to Properties
         if (Integer.parseInt(props.getProperty("bob")) == 1) bobCB.setSelected(true);
+        log.printExclog("BOB value: " + props.getProperty("bob"));
         if (Integer.parseInt(props.getProperty("bobLit")) == 1) bobLitCB.setSelected(true);
+        log.printExclog("Lit BOB value: " + props.getProperty("bobLit"));
         if (Integer.parseInt(props.getProperty("car")) == 1) carCB.setSelected(true);
+        log.printExclog("CAR value: " + props.getProperty("car"));
         if (Integer.parseInt(props.getProperty("carLit")) == 1) carLitCB.setSelected(true);
+        log.printExclog("Lit CAR value: " + props.getProperty("carLit"));
         if (Integer.parseInt(props.getProperty("clr")) == 1) clrCB.setSelected(true);
+        log.printExclog("CLR value: " + props.getProperty("clr"));
         if (Integer.parseInt(props.getProperty("clrLit")) == 1) clrLitCB.setSelected(true);
+        log.printExclog("Lit CLR value: " + props.getProperty("clrLit"));
         if (Integer.parseInt(props.getProperty("frk")) == 1) frkCB.setSelected(true);
+        log.printExclog("FRK value: " + props.getProperty("frk"));
         if (Integer.parseInt(props.getProperty("frkLit")) == 1) frkLitCB.setSelected(true);
+        log.printExclog("Lit FRK value: " + props.getProperty("frkLit"));
         if (Integer.parseInt(props.getProperty("frq")) == 1) frqCB.setSelected(true);
+        log.printExclog("FRQ value: " + props.getProperty("frq"));
         if (Integer.parseInt(props.getProperty("frqLit")) == 1) frqLitCB.setSelected(true);
+        log.printExclog("Lit FRQ value: " + props.getProperty("frqLit"));
         if (Integer.parseInt(props.getProperty("ind")) == 1) indCB.setSelected(true);
+        log.printExclog("IND value: " + props.getProperty("ind"));
         if (Integer.parseInt(props.getProperty("indLit")) == 1) indLitCB.setSelected(true);
+        log.printExclog("Lit IND value: " + props.getProperty("indLit"));
         if (Integer.parseInt(props.getProperty("msa")) == 1) msaCB.setSelected(true);
+        log.printExclog("MSA value: " + props.getProperty("msa"));
         if (Integer.parseInt(props.getProperty("msaLit")) == 1) msaLitCB.setSelected(true);
+        log.printExclog("Lit MSA value: " + props.getProperty("msaLit"));
         if (Integer.parseInt(props.getProperty("nsa")) == 1) nsaCB.setSelected(true);
+        log.printExclog("NSA value: " + props.getProperty("nsa"));
         if (Integer.parseInt(props.getProperty("nsaLit")) == 1) nsaLitCB.setSelected(true);
+        log.printExclog("Lit NSA value: " + props.getProperty("nsaLit"));
         if (Integer.parseInt(props.getProperty("sig")) == 1) sigCB.setSelected(true);
+        log.printExclog("SIG value: " + props.getProperty("sig"));
         if (Integer.parseInt(props.getProperty("sigLit")) == 1) sigLitCB.setSelected(true);
+        log.printExclog("Lit SIG value: " + props.getProperty("sigLit"));
         if (Integer.parseInt(props.getProperty("snd")) == 1) sndCB.setSelected(true);
+        log.printExclog("SND value: " + props.getProperty("snd"));
         if (Integer.parseInt(props.getProperty("sndLit")) == 1) sndLitCB.setSelected(true);
+        log.printExclog("Lit SND value: " + props.getProperty("sndLit"));
         if (Integer.parseInt(props.getProperty("trn")) == 1) trnCB.setSelected(true);
+        log.printExclog("TRN value: " + props.getProperty("trn"));
         if (Integer.parseInt(props.getProperty("trnLit")) == 1) trnLitCB.setSelected(true);
+        log.printExclog("Lit TRN value: " + props.getProperty("trnLit"));
         aaTxt.setText(props.getProperty("batteriesAA"));
+        log.printExclog("AA Batteries value: " + props.getProperty("batteriesAA"));
         dTxt.setText(props.getProperty("batteriesD"));
+        log.printExclog("D Batteries value: " + props.getProperty("batteriesD"));
         dvidTxt.setText(props.getProperty("dvidQuantity"));
+        log.printExclog("DVI-D value: " + props.getProperty("dvidQuantity"));
         parallelTxt.setText(props.getProperty("parallelQuantity"));
+        log.printExclog("Parallel value: " + props.getProperty("parallelQuantity"));
         ps2Txt.setText(props.getProperty("ps2Quantity"));
+        log.printExclog("PS/2 value: " + props.getProperty("ps2Quantity"));
         rj45Txt.setText(props.getProperty("rj45Quantity"));
+        log.printExclog("RJ-45 value: " + props.getProperty("rj45Quantity"));
         serialTxt.setText(props.getProperty("serialQuantity"));
+        log.printExclog("Serial value: " + props.getProperty("serialQuantity"));
         stereoRCATxt.setText(props.getProperty("stereoRCAQuantity"));
+        log.printExclog("Stereo RCA value: " + props.getProperty("stereoRCAQuantity"));
         sn = props.getProperty("sn1") + props.getProperty("sn2") + props.getProperty("sn3") +
                 props.getProperty("sn4") + props.getProperty("sn5") + props.getProperty("sn6");
         snTxt.setText(sn);
+        log.printExclog("SN 1 value: " + props.getProperty("sn1"));
+        log.printExclog("SN 2 value: " + props.getProperty("sn2"));
+        log.printExclog("SN 3 value: " + props.getProperty("sn3"));
+        log.printExclog("SN 4 value: " + props.getProperty("sn4"));
+        log.printExclog("SN 5 value: " + props.getProperty("sn5"));
+        log.printExclog("SN 6 value: " + props.getProperty("sn6"));
+        log.printExclog("SN Full value: " + sn);
         moduleTxt.setText(props.getProperty("modules"));
+        log.printExclog("Module value: " + props.getProperty("modules"));
         plateTxt.setText(props.getProperty("plates"));
+        log.printExclog("Port Plates value: " + props.getProperty("plates"));
         modIndTxt.setText(props.getProperty("modInd"));
+        log.printExclog("Mod Indicator value: " + props.getProperty("modInd"));
         modPortTxt.setText(props.getProperty("modPort"));
+        log.printExclog("Mod Port value: " + props.getProperty("modPort"));
         // Add/Remove Buttons
         // AA Add
         ImageButton currBtn = sv.findViewById(R.id.aaAddBTN);
-        currBtn.setOnClickListener((View v) -> aaTxt.setText(add(aaTxt,true)));
+        currBtn.setOnClickListener((View v) -> {
+            log.printExclog("Click listened: AA Batt. Add");
+            aaTxt.setText(add(aaTxt,true));
+        });
         // AA Remove
         currBtn = sv.findViewById(R.id.aaRmvBTN);
-        currBtn.setOnClickListener((View v) -> aaTxt.setText(remove(aaTxt,true)));
+        currBtn.setOnClickListener((View v) -> {
+            log.printExclog("Click listened: AA Batt. Remove");
+            aaTxt.setText(remove(aaTxt,true));
+        });
         // D Add
         currBtn = sv.findViewById(R.id.dAddBTN);
-        currBtn.setOnClickListener((View v) -> dTxt.setText(add(dTxt,false)));
+        currBtn.setOnClickListener((View v) -> {
+            log.printExclog("Click listened: D Batt. Add");
+            dTxt.setText(add(dTxt,false));
+        });
         // D Remove
         currBtn = sv.findViewById(R.id.dRmvBTN);
-        currBtn.setOnClickListener((View v) -> dTxt.setText(remove(dTxt,false)));
+        currBtn.setOnClickListener((View v) -> {
+            log.printExclog("Click listened: D Batt. Remove");
+            dTxt.setText(remove(dTxt,false));
+        });
         // DVI-D Add
         currBtn = sv.findViewById(R.id.dvidAddBTN);
-        currBtn.setOnClickListener((View v) -> dvidTxt.setText(add(dvidTxt,false)));
+        currBtn.setOnClickListener((View v) -> {
+            log.printExclog("Click listened: DVI-D Add");
+            dvidTxt.setText(add(dvidTxt,false));
+        });
         // DVI-D Remove
         currBtn = sv.findViewById(R.id.dvidRmvBTN);
-        currBtn.setOnClickListener((View v) -> dvidTxt.setText(remove(dvidTxt,false)));
+        currBtn.setOnClickListener((View v) -> {
+            log.printExclog("Click listened: DVI-D Remove");
+            dvidTxt.setText(remove(dvidTxt,false));
+        });
         // Parallel Add
         currBtn = sv.findViewById(R.id.parallelAddBTN);
-        currBtn.setOnClickListener((View v) -> parallelTxt.setText(add(parallelTxt,false)));
+        currBtn.setOnClickListener((View v) -> {
+            log.printExclog("Click listened: Parallel Add");
+            parallelTxt.setText(add(parallelTxt,false));
+        });
         // Parallel Remove
         currBtn = sv.findViewById(R.id.parallelRmvBTN);
-        currBtn.setOnClickListener((View v) -> parallelTxt.setText(remove(parallelTxt,false)));
+        currBtn.setOnClickListener((View v) -> {
+            log.printExclog("Click listened: Parallel Remove");
+            parallelTxt.setText(remove(parallelTxt,false));
+        });
         // PS/2 Add
         currBtn = sv.findViewById(R.id.ps2AddBTN);
-        currBtn.setOnClickListener((View v) -> ps2Txt.setText(add(ps2Txt,false)));
+        currBtn.setOnClickListener((View v) -> {
+            log.printExclog("Click listened: PS/2 Add");
+            ps2Txt.setText(add(ps2Txt,false));
+        });
         // PS/2 Remove
         currBtn = sv.findViewById(R.id.ps2RmvBTN);
-        currBtn.setOnClickListener((View v) -> ps2Txt.setText(remove(ps2Txt,false)));
+        currBtn.setOnClickListener((View v) -> {
+            log.printExclog("Click listened: PS/2 Remove");
+            ps2Txt.setText(remove(ps2Txt,false));
+        });
         // RJ-45 Add
         currBtn = sv.findViewById(R.id.rj45AddBTN);
-        currBtn.setOnClickListener((View v) -> rj45Txt.setText(add(rj45Txt,false)));
+        currBtn.setOnClickListener((View v) -> {
+            log.printExclog("Click listened: RJ-45 Add");
+            rj45Txt.setText(add(rj45Txt,false));
+        });
         // RJ-45 Remove
         currBtn = sv.findViewById(R.id.rj45RmvBTN);
-        currBtn.setOnClickListener((View v) -> rj45Txt.setText(remove(rj45Txt,false)));
+        currBtn.setOnClickListener((View v) -> {
+            log.printExclog("Click listened: RJ-45 Remove");
+            rj45Txt.setText(remove(rj45Txt,false));
+        });
         // Serial Add
         currBtn = sv.findViewById(R.id.serialAddBTN);
-        currBtn.setOnClickListener((View v) -> serialTxt.setText(add(serialTxt,false)));
+        currBtn.setOnClickListener((View v) -> {
+            log.printExclog("Click listened: Serial Add");
+            serialTxt.setText(add(serialTxt,false));
+        });
         // Serial Remove
         currBtn = sv.findViewById(R.id.serialRmvBTN);
-        currBtn.setOnClickListener((View v) -> serialTxt.setText(remove(serialTxt,false)));
+        currBtn.setOnClickListener((View v) -> {
+            log.printExclog("Click listened: Serial Remove");
+            serialTxt.setText(remove(serialTxt,false));
+        });
         // Stereo RCA Add
         currBtn = sv.findViewById(R.id.stereoRCAAddBTN);
-        currBtn.setOnClickListener((View v) -> stereoRCATxt.setText(add(stereoRCATxt,false)));
+        currBtn.setOnClickListener((View v) -> {
+            log.printExclog("Click listened: Stereo RCA Add");
+            stereoRCATxt.setText(add(stereoRCATxt,false));
+        });
         // Stereo RCA Remove
         currBtn = sv.findViewById(R.id.stereoRCARmvBTN);
-        currBtn.setOnClickListener((View v) -> stereoRCATxt.setText(remove(stereoRCATxt,false)));
+        currBtn.setOnClickListener((View v) -> {
+            log.printExclog("Click listened: Stereo RCA Remove");
+            stereoRCATxt.setText(remove(stereoRCATxt,false));
+        });
         // Port Plate Add
         currBtn = sv.findViewById(R.id.plateAddBTN);
-        currBtn.setOnClickListener((View v) -> plateTxt.setText(add(plateTxt,false)));
+        currBtn.setOnClickListener((View v) -> {
+            log.printExclog("Click listened: Plate Add");
+            plateTxt.setText(add(plateTxt,false));
+        });
         // Port Plate Remove
         currBtn = sv.findViewById(R.id.plateRmvBTN);
-        currBtn.setOnClickListener((View v) -> plateTxt.setText(remove(plateTxt,false)));
+        currBtn.setOnClickListener((View v) -> {
+            log.printExclog("Click listened: Plate Remove");
+            plateTxt.setText(remove(plateTxt,false));
+        });
         // Mod Indicator Add
         currBtn = sv.findViewById(R.id.modIndAddBTN);
-        currBtn.setOnClickListener((View v) -> modIndTxt.setText(add(modIndTxt,false)));
+        currBtn.setOnClickListener((View v) -> {
+            log.printExclog("Click listened: Mod Indicator Add");
+            modIndTxt.setText(add(modIndTxt,false));
+        });
         // Mod Indicator Remove
         currBtn = sv.findViewById(R.id.modIndRmvBTN);
-        currBtn.setOnClickListener((View v) -> modIndTxt.setText(remove(modIndTxt,false)));
+        currBtn.setOnClickListener((View v) -> {
+            log.printExclog("Click listened: Mod Indicator Remove");
+            modIndTxt.setText(remove(modIndTxt,false));
+        });
         // Mod Port Add
         currBtn = sv.findViewById(R.id.modPortAddBTN);
-        currBtn.setOnClickListener((View v) -> modPortTxt.setText(add(modPortTxt,false)));
+        currBtn.setOnClickListener((View v) -> {
+            log.printExclog("Click listened: Mod Port Add");
+            modPortTxt.setText(add(modPortTxt,false));
+        });
         // Mod Port Remove
         currBtn = sv.findViewById(R.id.modPortRmvBTN);
-        currBtn.setOnClickListener((View v) -> modPortTxt.setText(remove(modPortTxt,false)));
+        currBtn.setOnClickListener((View v) -> {
+            log.printExclog("Click listened: Mod Port Remove");
+            modPortTxt.setText(remove(modPortTxt,false));
+        });
         // Modules Add
         currBtn = sv.findViewById(R.id.moduleAddBTN);
         currBtn.setOnClickListener((View v) -> moduleTxt.setText(add(moduleTxt,false)));
@@ -628,6 +738,12 @@ public class BombSettings extends Fragment {
             currBtn = sv.findViewById(R.id.moduleRmvBTN);
             currBtn.setImageTintList(cs);
         }
+        long endTime = System.nanoTime();
+        long calcTime = endTime - startTime;
+        log.print("Bomb Settings done loading. Took " + (calcTime / 1000000)+ " ms.");
+        log.printExclog("Start time: " + startTime);
+        log.printExclog("End time: " + endTime);
+        log.printExclog("Exact calculated time: " + calcTime);
         return sv;
     }
 
@@ -642,39 +758,60 @@ public class BombSettings extends Fragment {
         // convert
         int curr = convert(text);
         // check need for even
+        log.printExclog("Even Bool: " + isEven);
         if (isEven) {
             // if it's an odd number, add 1 to make it even
-            if (curr % 2 == 1) curr++;
+            if (curr % 2 == 1) {
+                curr++;
+                log.printExclog("Int is odd, added 1 to make it even");
+            }
             // if it's even, add 2
-            else curr += 2;
+            else {
+                curr += 2;
+                log.printExclog("Int is even, added 2.");
+            }
         } else {
             curr++;
         }
         // return string
+        log.printExclog("Final int: " + curr);
         return String.valueOf(curr);
     }
     private String remove(EditText text, boolean isEven) {
         // convert
         int curr = convert(text);
         // if it's 0, then don't remove
-        if (curr != 0)
+        if (curr != 0) {
             // check need for even
+            log.printExclog("Even Bool: " + isEven);
             if (isEven) {
                 // if it's an odd number, remove 1 to make it even
-                if (curr % 2 == 1) curr--;
+                if (curr % 2 == 1) {
+                    log.printExclog("Int is odd, removed 1 to make it even");
+                    curr--;
+                }
                 // if it's even, remove 2
-                else curr -= 2;
+                else {
+                    log.printExclog("Int is even, removed 2");
+                    curr -= 2;
+                }
             } else curr--;
+        }
+        else log.printExclog("Int is 0, ignoring remove request...");
         // return the converted string
+        log.printExclog("Final int: " + curr);
         return String.valueOf(curr);
     }
     private int convert(EditText text) {
+        log.printExclog("Converting Text -> String -> Int");
         // text -> string
         String curr = text.getText().toString();
+        log.printExclog("Converted string: " + curr);
         // if it's empty/has non-digits, use 0 instead
         int currInt = 0;
         // otherwise just convert
         if (!curr.equals("") && android.text.TextUtils.isDigitsOnly(curr)) currInt = Integer.parseInt(curr);
+        log.printExclog("Converted int: " + currInt);
         // return int
         return currInt;
     }
