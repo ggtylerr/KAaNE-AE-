@@ -28,96 +28,134 @@ import java.util.Properties;
 public class BombSettings extends Fragment {
     private static Properties props;
     private static String sn;
+    private static long startTime;
+    private static long endTime;
+    private static long calcTime;
+    private CheckBox bobCB;
+    private CheckBox carCB;
+    private CheckBox clrCB;
+    private CheckBox frkCB;
+    private CheckBox frqCB;
+    private CheckBox indCB;
+    private CheckBox msaCB;
+    private CheckBox nsaCB;
+    private CheckBox sigCB;
+    private CheckBox sndCB;
+    private CheckBox trnCB;
+    private CheckBox bobLitCB;
+    private CheckBox carLitCB;
+    private CheckBox clrLitCB;
+    private CheckBox frkLitCB;
+    private CheckBox frqLitCB;
+    private CheckBox indLitCB;
+    private CheckBox msaLitCB;
+    private CheckBox nsaLitCB;
+    private CheckBox sigLitCB;
+    private CheckBox sndLitCB;
+    private CheckBox trnLitCB;
+    private EditText aaTxt;
+    private EditText dTxt;
+    private EditText dvidTxt;
+    private EditText parallelTxt;
+    private EditText ps2Txt;
+    private EditText rj45Txt;
+    private EditText serialTxt;
+    private EditText stereoRCATxt;
+    private EditText snTxt;
+    private EditText moduleTxt;
+    private EditText plateTxt;
+    private EditText modIndTxt;
+    private EditText modPortTxt;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        long startTime = System.nanoTime();
+        startTime = System.nanoTime();
         ScrollView sv = (ScrollView) inflater.inflate(R.layout.fragment_bomb_settings, container, false);
         // Property Handling
         props = new Properties();
         props = Props.load(props);
         log.print("Bomb Settings: Loading Props");
         // Define widgets/stuff
-        CheckBox bobCB = sv.findViewById(R.id.bobCB);
-        CheckBox carCB = sv.findViewById(R.id.carCB);
-        CheckBox clrCB = sv.findViewById(R.id.clrCB);
-        CheckBox frkCB = sv.findViewById(R.id.frkCB);
-        CheckBox frqCB = sv.findViewById(R.id.frqCB);
-        CheckBox indCB = sv.findViewById(R.id.indCB);
-        CheckBox msaCB = sv.findViewById(R.id.msaCB);
-        CheckBox nsaCB = sv.findViewById(R.id.nsaCB);
-        CheckBox sigCB = sv.findViewById(R.id.sigCB);
-        CheckBox sndCB = sv.findViewById(R.id.sndCB);
-        CheckBox trnCB = sv.findViewById(R.id.trnCB);
-        CheckBox bobLitCB = sv.findViewById(R.id.bobLitCB);
-        CheckBox carLitCB = sv.findViewById(R.id.carLitCB);
-        CheckBox clrLitCB = sv.findViewById(R.id.clrLitCB);
-        CheckBox frkLitCB = sv.findViewById(R.id.frkLitCB);
-        CheckBox frqLitCB = sv.findViewById(R.id.frqLitCB);
-        CheckBox indLitCB = sv.findViewById(R.id.indLitCB);
-        CheckBox msaLitCB = sv.findViewById(R.id.msaLitCB);
-        CheckBox nsaLitCB = sv.findViewById(R.id.nsaLitCB);
-        CheckBox sigLitCB = sv.findViewById(R.id.sigLitCB);
-        CheckBox sndLitCB = sv.findViewById(R.id.sndLitCB);
-        CheckBox trnLitCB = sv.findViewById(R.id.trnLitCB);
-        EditText aaTxt = sv.findViewById(R.id.aaTXT);
-        EditText dTxt = sv.findViewById(R.id.dTXT);
-        EditText dvidTxt = sv.findViewById(R.id.dvidTXT);
-        EditText parallelTxt = sv.findViewById(R.id.parallelTXT);
-        EditText ps2Txt = sv.findViewById(R.id.ps2TXT);
-        EditText rj45Txt = sv.findViewById(R.id.rj45TXT);
-        EditText serialTxt = sv.findViewById(R.id.serialTXT);
-        EditText stereoRCATxt = sv.findViewById(R.id.stereoRCATXT);
-        EditText snTxt = sv.findViewById(R.id.snTXT);
-        EditText moduleTxt = sv.findViewById(R.id.moduleTXT);
-        EditText plateTxt = sv.findViewById(R.id.plateTXT);
-        EditText modIndTxt = sv.findViewById(R.id.modIndTXT);
-        EditText modPortTxt = sv.findViewById(R.id.modPortTXT);
+        bobCB = sv.findViewById(R.id.bobCB);
+        carCB = sv.findViewById(R.id.carCB);
+        clrCB = sv.findViewById(R.id.clrCB);
+        frkCB = sv.findViewById(R.id.frkCB);
+        frqCB = sv.findViewById(R.id.frqCB);
+        indCB = sv.findViewById(R.id.indCB);
+        msaCB = sv.findViewById(R.id.msaCB);
+        nsaCB = sv.findViewById(R.id.nsaCB);
+        sigCB = sv.findViewById(R.id.sigCB);
+        sndCB = sv.findViewById(R.id.sndCB);
+        trnCB = sv.findViewById(R.id.trnCB);
+        bobLitCB = sv.findViewById(R.id.bobLitCB);
+        carLitCB = sv.findViewById(R.id.carLitCB);
+        clrLitCB = sv.findViewById(R.id.clrLitCB);
+        frkLitCB = sv.findViewById(R.id.frkLitCB);
+        frqLitCB = sv.findViewById(R.id.frqLitCB);
+        indLitCB = sv.findViewById(R.id.indLitCB);
+        msaLitCB = sv.findViewById(R.id.msaLitCB);
+        nsaLitCB = sv.findViewById(R.id.nsaLitCB);
+        sigLitCB = sv.findViewById(R.id.sigLitCB);
+        sndLitCB = sv.findViewById(R.id.sndLitCB);
+        trnLitCB = sv.findViewById(R.id.trnLitCB);
+        aaTxt = sv.findViewById(R.id.aaTXT);
+        dTxt = sv.findViewById(R.id.dTXT);
+        dvidTxt = sv.findViewById(R.id.dvidTXT);
+        parallelTxt = sv.findViewById(R.id.parallelTXT);
+        ps2Txt = sv.findViewById(R.id.ps2TXT);
+        rj45Txt = sv.findViewById(R.id.rj45TXT);
+        serialTxt = sv.findViewById(R.id.serialTXT);
+        stereoRCATxt = sv.findViewById(R.id.stereoRCATXT);
+        snTxt = sv.findViewById(R.id.snTXT);
+        moduleTxt = sv.findViewById(R.id.moduleTXT);
+        plateTxt = sv.findViewById(R.id.plateTXT);
+        modIndTxt = sv.findViewById(R.id.modIndTXT);
+        modPortTxt = sv.findViewById(R.id.modPortTXT);
         // Mirror Settings to Properties
-        if (Integer.parseInt(props.getProperty("bob")) == 1) bobCB.setSelected(true);
+        if (Integer.parseInt(props.getProperty("bob")) == 1) bobCB.setChecked(true);
         log.printExclog("BOB value: " + props.getProperty("bob"));
-        if (Integer.parseInt(props.getProperty("bobLit")) == 1) bobLitCB.setSelected(true);
+        if (Integer.parseInt(props.getProperty("bobLit")) == 1) bobLitCB.setChecked(true);
         log.printExclog("Lit BOB value: " + props.getProperty("bobLit"));
-        if (Integer.parseInt(props.getProperty("car")) == 1) carCB.setSelected(true);
+        if (Integer.parseInt(props.getProperty("car")) == 1) carCB.setChecked(true);
         log.printExclog("CAR value: " + props.getProperty("car"));
-        if (Integer.parseInt(props.getProperty("carLit")) == 1) carLitCB.setSelected(true);
+        if (Integer.parseInt(props.getProperty("carLit")) == 1) carLitCB.setChecked(true);
         log.printExclog("Lit CAR value: " + props.getProperty("carLit"));
-        if (Integer.parseInt(props.getProperty("clr")) == 1) clrCB.setSelected(true);
+        if (Integer.parseInt(props.getProperty("clr")) == 1) clrCB.setChecked(true);
         log.printExclog("CLR value: " + props.getProperty("clr"));
-        if (Integer.parseInt(props.getProperty("clrLit")) == 1) clrLitCB.setSelected(true);
+        if (Integer.parseInt(props.getProperty("clrLit")) == 1) clrLitCB.setChecked(true);
         log.printExclog("Lit CLR value: " + props.getProperty("clrLit"));
-        if (Integer.parseInt(props.getProperty("frk")) == 1) frkCB.setSelected(true);
+        if (Integer.parseInt(props.getProperty("frk")) == 1) frkCB.setChecked(true);
         log.printExclog("FRK value: " + props.getProperty("frk"));
-        if (Integer.parseInt(props.getProperty("frkLit")) == 1) frkLitCB.setSelected(true);
+        if (Integer.parseInt(props.getProperty("frkLit")) == 1) frkLitCB.setChecked(true);
         log.printExclog("Lit FRK value: " + props.getProperty("frkLit"));
-        if (Integer.parseInt(props.getProperty("frq")) == 1) frqCB.setSelected(true);
+        if (Integer.parseInt(props.getProperty("frq")) == 1) frqCB.setChecked(true);
         log.printExclog("FRQ value: " + props.getProperty("frq"));
-        if (Integer.parseInt(props.getProperty("frqLit")) == 1) frqLitCB.setSelected(true);
+        if (Integer.parseInt(props.getProperty("frqLit")) == 1) frqLitCB.setChecked(true);
         log.printExclog("Lit FRQ value: " + props.getProperty("frqLit"));
-        if (Integer.parseInt(props.getProperty("ind")) == 1) indCB.setSelected(true);
+        if (Integer.parseInt(props.getProperty("ind")) == 1) indCB.setChecked(true);
         log.printExclog("IND value: " + props.getProperty("ind"));
-        if (Integer.parseInt(props.getProperty("indLit")) == 1) indLitCB.setSelected(true);
+        if (Integer.parseInt(props.getProperty("indLit")) == 1) indLitCB.setChecked(true);
         log.printExclog("Lit IND value: " + props.getProperty("indLit"));
-        if (Integer.parseInt(props.getProperty("msa")) == 1) msaCB.setSelected(true);
+        if (Integer.parseInt(props.getProperty("msa")) == 1) msaCB.setChecked(true);
         log.printExclog("MSA value: " + props.getProperty("msa"));
-        if (Integer.parseInt(props.getProperty("msaLit")) == 1) msaLitCB.setSelected(true);
+        if (Integer.parseInt(props.getProperty("msaLit")) == 1) msaLitCB.setChecked(true);
         log.printExclog("Lit MSA value: " + props.getProperty("msaLit"));
-        if (Integer.parseInt(props.getProperty("nsa")) == 1) nsaCB.setSelected(true);
+        if (Integer.parseInt(props.getProperty("nsa")) == 1) nsaCB.setChecked(true);
         log.printExclog("NSA value: " + props.getProperty("nsa"));
-        if (Integer.parseInt(props.getProperty("nsaLit")) == 1) nsaLitCB.setSelected(true);
+        if (Integer.parseInt(props.getProperty("nsaLit")) == 1) nsaLitCB.setChecked(true);
         log.printExclog("Lit NSA value: " + props.getProperty("nsaLit"));
-        if (Integer.parseInt(props.getProperty("sig")) == 1) sigCB.setSelected(true);
+        if (Integer.parseInt(props.getProperty("sig")) == 1) sigCB.setChecked(true);
         log.printExclog("SIG value: " + props.getProperty("sig"));
-        if (Integer.parseInt(props.getProperty("sigLit")) == 1) sigLitCB.setSelected(true);
+        if (Integer.parseInt(props.getProperty("sigLit")) == 1) sigLitCB.setChecked(true);
         log.printExclog("Lit SIG value: " + props.getProperty("sigLit"));
-        if (Integer.parseInt(props.getProperty("snd")) == 1) sndCB.setSelected(true);
+        if (Integer.parseInt(props.getProperty("snd")) == 1) sndCB.setChecked(true);
         log.printExclog("SND value: " + props.getProperty("snd"));
-        if (Integer.parseInt(props.getProperty("sndLit")) == 1) sndLitCB.setSelected(true);
+        if (Integer.parseInt(props.getProperty("sndLit")) == 1) sndLitCB.setChecked(true);
         log.printExclog("Lit SND value: " + props.getProperty("sndLit"));
-        if (Integer.parseInt(props.getProperty("trn")) == 1) trnCB.setSelected(true);
+        if (Integer.parseInt(props.getProperty("trn")) == 1) trnCB.setChecked(true);
         log.printExclog("TRN value: " + props.getProperty("trn"));
-        if (Integer.parseInt(props.getProperty("trnLit")) == 1) trnLitCB.setSelected(true);
+        if (Integer.parseInt(props.getProperty("trnLit")) == 1) trnLitCB.setChecked(true);
         log.printExclog("Lit TRN value: " + props.getProperty("trnLit"));
         aaTxt.setText(props.getProperty("batteriesAA"));
         log.printExclog("AA Batteries value: " + props.getProperty("batteriesAA"));
@@ -295,325 +333,539 @@ public class BombSettings extends Fragment {
         // Saving
         AppCompatButton currNormalBtn = sv.findViewById(R.id.saveBtn);
         currNormalBtn.setOnClickListener((View v) -> {
+            startTime = System.nanoTime();
+            log.printExclog("Click listened: Save button");
             // indicators
             int inds = 0;
             int litInds = 0;
             int unlitInds = 0;
-            if (bobCB.isSelected()) {
+            bobCB = sv.findViewById(R.id.bobCB);
+            bobLitCB = sv.findViewById(R.id.bobLitCB);
+            if (bobCB.isChecked()) {
+                log.printExclog("BOB is checked - Setting property \"bob\" to 1.");
                 props.setProperty("bob","1");
-                if (bobLitCB.isSelected()) {
+                if (bobLitCB.isChecked()) {
+                    log.printExclog("Lit BOB is checked - Setting property \"bobLit\" to 1 and \"bobUnlit\" to 0.");
                     props.setProperty("bobLit","1");
                     props.setProperty("bobUnlit","0");
+                    log.printExclog("Adding 1 to litInds.");
                     litInds++;
                 } else {
+                    log.printExclog("Lit BOB is unchecked - Setting property \"bobLit\" to 0 and \"bobUnlit\" to 1.");
                     props.setProperty("bobLit","0");
                     props.setProperty("bobUnlit","1");
+                    log.printExclog("Adding 1 to unlitInds.");
                     unlitInds++;
                 }
+                log.printExclog("Adding 1 to inds.");
                 inds++;
             } else {
+                log.printExclog("BOB is unchecked - Setting all related properties to 0.");
                 props.setProperty("bob","0");
                 props.setProperty("bobLit","0");
                 props.setProperty("bobUnlit","0");
-                bobLitCB.setSelected(false);
+                bobLitCB.setChecked(false);
             }
-            if (carCB.isSelected()) {
+            carCB = sv.findViewById(R.id.carCB);
+            carLitCB = sv.findViewById(R.id.carLitCB);
+            if (carCB.isChecked()) {
+                log.printExclog("CAR is checked - Setting property \"car\" to 1.");
                 props.setProperty("car","1");
-                if (carLitCB.isSelected()) {
+                if (carLitCB.isChecked()) {
+                    log.printExclog("Lit CAR is checked - Setting property \"carLit\" to 1 and \"carUnlit\" to 0.");
                     props.setProperty("carLit","1");
                     props.setProperty("carUnlit","0");
+                    log.printExclog("Adding 1 to litInds.");
                     litInds++;
                 } else {
+                    log.printExclog("Lit CAR is unchecked - Setting property \"carLit\" to 0 and \"carUnlit\" to 1.");
                     props.setProperty("carLit","0");
                     props.setProperty("carUnlit","1");
+                    log.printExclog("Adding 1 to unlitInds.");
                     unlitInds++;
                 }
+                log.printExclog("Adding 1 to inds.");
                 inds++;
             } else {
+                log.printExclog("CAR is unchecked - Setting all related properties to 0.");
                 props.setProperty("car","0");
                 props.setProperty("carLit","0");
                 props.setProperty("carUnlit","0");
-                carLitCB.setSelected(false);
+                carLitCB.setChecked(false);
             }
-            if (clrCB.isSelected()) {
+            clrCB = sv.findViewById(R.id.clrCB);
+            clrLitCB = sv.findViewById(R.id.clrLitCB);
+            if (clrCB.isChecked()) {
+                log.printExclog("CLR is checked - Setting property \"clr\" to 1.");
                 props.setProperty("clr","1");
-                if (clrLitCB.isSelected()) {
+                if (clrLitCB.isChecked()) {
+                    log.printExclog("Lit CLR is checked - Setting property \"clrLit\" to 1 and \"clrUnlit\" to 0.");
                     props.setProperty("clrLit","1");
                     props.setProperty("clrUnlit","0");
+                    log.printExclog("Adding 1 to litInds.");
                     litInds++;
                 } else {
+                    log.printExclog("Lit CLR is unchecked - Setting property \"clrLit\" to 0 and \"clrUnlit\" to 1.");
                     props.setProperty("clrLit","0");
                     props.setProperty("clrUnlit","1");
+                    log.printExclog("Adding 1 to unlitInds.");
                     unlitInds++;
                 }
+                log.printExclog("Adding 1 to inds.");
                 inds++;
             } else {
+                log.printExclog("CLR is unchecked - Setting all related properties to 0.");
                 props.setProperty("clr","0");
                 props.setProperty("clrLit","0");
                 props.setProperty("clrUnlit","0");
-                clrLitCB.setSelected(false);
+                clrLitCB.setChecked(false);
             }
-            if (frkCB.isSelected()) {
+            frkCB = sv.findViewById(R.id.frkCB);
+            frkLitCB = sv.findViewById(R.id.frkLitCB);
+            if (frkCB.isChecked()) {
+                log.printExclog("FRK is checked - Setting property \"frk\" to 1.");
                 props.setProperty("frk","1");
-                if (frkLitCB.isSelected()) {
+                if (frkLitCB.isChecked()) {
+                    log.printExclog("Lit FRK is checked - Setting property \"frkLit\" to 1 and \"frkUnlit\" to 0.");
                     props.setProperty("frkLit","1");
                     props.setProperty("frkUnlit","0");
+                    log.printExclog("Adding 1 to litInds.");
                     litInds++;
                 } else {
+                    log.printExclog("Lit FRK is unchecked - Setting property \"frkLit\" to 0 and \"frkUnlit\" to 1.");
                     props.setProperty("frkLit","0");
                     props.setProperty("frkUnlit","1");
+                    log.printExclog("Adding 1 to unlitInds.");
                     unlitInds++;
                 }
+                log.printExclog("Adding 1 to inds.");
                 inds++;
             } else {
+                log.printExclog("FRK is unchecked - Setting all related properties to 0.");
                 props.setProperty("frk","0");
                 props.setProperty("frkLit","0");
                 props.setProperty("frkUnlit","0");
-                frkLitCB.setSelected(false);
+                frkLitCB.setChecked(false);
             }
-            if (frqCB.isSelected()) {
+            frqCB = sv.findViewById(R.id.frqCB);
+            frqLitCB = sv.findViewById(R.id.frqLitCB);
+            if (frqCB.isChecked()) {
+                log.printExclog("FRQ is checked - Setting property \"frq\" to 1.");
                 props.setProperty("frq","1");
-                if (frqLitCB.isSelected()) {
+                if (frqLitCB.isChecked()) {
+                    log.printExclog("Lit FRQ is checked - Setting property \"frqLit\" to 1 and \"frqUnlit\" to 0.");
                     props.setProperty("frqLit","1");
                     props.setProperty("frqUnlit","0");
+                    log.printExclog("Adding 1 to litInds.");
                     litInds++;
                 } else {
+                    log.printExclog("Lit FRQ is unchecked - Setting property \"frqLit\" to 0 and \"frqUnlit\" to 1.");
                     props.setProperty("frqLit","0");
                     props.setProperty("frqUnlit","1");
+                    log.printExclog("Adding 1 to unlitInds.");
                     unlitInds++;
                 }
+                log.printExclog("Adding 1 to inds.");
                 inds++;
             } else {
+                log.printExclog("FRQ is unchecked - Setting all related properties to 0.");
                 props.setProperty("frq","0");
                 props.setProperty("frqLit","0");
                 props.setProperty("frqUnlit","0");
-                frqLitCB.setSelected(false);
+                frqLitCB.setChecked(false);
             }
-            if (indCB.isSelected()) {
+            indCB = sv.findViewById(R.id.indCB);
+            indLitCB = sv.findViewById(R.id.indLitCB);
+            if (indCB.isChecked()) {
+                log.printExclog("IND is checked - Setting property \"ind\" to 1.");
                 props.setProperty("ind","1");
-                if (indLitCB.isSelected()) {
+                if (indLitCB.isChecked()) {
+                    log.printExclog("Lit IND is checked - Setting property \"indLit\" to 1 and \"indUnlit\" to 0.");
                     props.setProperty("indLit","1");
                     props.setProperty("indUnlit","0");
+                    log.printExclog("Adding 1 to litInds.");
                     litInds++;
                 } else {
+                    log.printExclog("Lit IND is unchecked - Setting property \"indLit\" to 0 and \"indUnlit\" to 1.");
                     props.setProperty("indLit","0");
                     props.setProperty("indUnlit","1");
+                    log.printExclog("Adding 1 to unlitInds.");
                     unlitInds++;
                 }
+                log.printExclog("Adding 1 to inds.");
                 inds++;
             } else {
+                log.printExclog("IND is unchecked - Setting all related properties to 0.");
                 props.setProperty("ind","0");
                 props.setProperty("indLit","0");
                 props.setProperty("indUnlit","0");
-                indLitCB.setSelected(false);
+                indLitCB.setChecked(false);
             }
-            if (msaCB.isSelected()) {
+            msaCB = sv.findViewById(R.id.msaCB);
+            msaLitCB = sv.findViewById(R.id.msaLitCB);
+            if (msaCB.isChecked()) {
+                log.printExclog("MSA is checked - Setting property \"msa\" to 1.");
                 props.setProperty("msa","1");
-                if (msaLitCB.isSelected()) {
+                if (msaLitCB.isChecked()) {
+                    log.printExclog("Lit MSA is checked - Setting property \"msaLit\" to 1 and \"msaUnlit\" to 0.");
                     props.setProperty("msaLit","1");
                     props.setProperty("msaUnlit","0");
+                    log.printExclog("Adding 1 to litInds.");
                     litInds++;
                 } else {
+                    log.printExclog("Lit MSA is unchecked - Setting property \"msaLit\" to 0 and \"msaUnlit\" to 1.");
                     props.setProperty("msaLit","0");
                     props.setProperty("msaUnlit","1");
+                    log.printExclog("Adding 1 to unlitInds.");
                     unlitInds++;
                 }
+                log.printExclog("Adding 1 to inds.");
                 inds++;
             } else {
+                log.printExclog("MSA is unchecked - Setting all related properties to 0.");
                 props.setProperty("msa","0");
                 props.setProperty("msaLit","0");
                 props.setProperty("msaUnlit","0");
-                msaLitCB.setSelected(false);
+                msaLitCB.setChecked(false);
             }
-            if (nsaCB.isSelected()) {
+            nsaCB = sv.findViewById(R.id.nsaCB);
+            nsaLitCB = sv.findViewById(R.id.nsaLitCB);
+            if (nsaCB.isChecked()) {
+                log.printExclog("NSA is checked - Setting property \"nsa\" to 1.");
                 props.setProperty("nsa","1");
-                if (nsaLitCB.isSelected()) {
+                if (nsaLitCB.isChecked()) {
+                    log.printExclog("Lit NSA is checked - Setting property \"nsaLit\" to 1 and \"nsaUnlit\" to 0.");
                     props.setProperty("nsaLit","1");
                     props.setProperty("nsaUnlit","0");
+                    log.printExclog("Adding 1 to litInds.");
                     litInds++;
                 } else {
+                    log.printExclog("Lit NSA is unchecked - Setting property \"nsaLit\" to 0 and \"nsaUnlit\" to 1.");
                     props.setProperty("nsaLit","0");
                     props.setProperty("nsaUnlit","1");
+                    log.printExclog("Adding 1 to unlitInds.");
                     unlitInds++;
                 }
+                log.printExclog("Adding 1 to inds.");
                 inds++;
             } else {
+                log.printExclog("NSA is unchecked - Setting all related properties to 0.");
                 props.setProperty("nsa","0");
                 props.setProperty("nsaLit","0");
                 props.setProperty("nsaUnlit","0");
-                nsaLitCB.setSelected(false);
+                nsaLitCB.setChecked(false);
             }
-            if (sigCB.isSelected()) {
+            sigCB = sv.findViewById(R.id.sigCB);
+            sigLitCB = sv.findViewById(R.id.sigLitCB);
+            if (sigCB.isChecked()) {
+                log.printExclog("SIG is checked - Setting property \"sig\" to 1.");
                 props.setProperty("sig","1");
-                if (sigLitCB.isSelected()) {
+                if (sigLitCB.isChecked()) {
+                    log.printExclog("Lit SIG is checked - Setting property \"sigLit\" to 1 and \"sigUnlit\" to 0.");
                     props.setProperty("sigLit","1");
                     props.setProperty("sigUnlit","0");
+                    log.printExclog("Adding 1 to litInds.");
                     litInds++;
                 } else {
+                    log.printExclog("Lit SIG is unchecked - Setting property \"sigLit\" to 0 and \"sigUnlit\" to 1.");
                     props.setProperty("sigLit","0");
                     props.setProperty("sigUnlit","1");
+                    log.printExclog("Adding 1 to unlitInds.");
                     unlitInds++;
                 }
+                log.printExclog("Adding 1 to inds.");
                 inds++;
             } else {
+                log.printExclog("SIG is unchecked - Setting all related properties to 0.");
                 props.setProperty("sig","0");
                 props.setProperty("sigLit","0");
                 props.setProperty("sigUnlit","0");
-                sigLitCB.setSelected(false);
+                sigLitCB.setChecked(false);
             }
-            if (sndCB.isSelected()) {
+            sndCB = sv.findViewById(R.id.sndCB);
+            sndLitCB = sv.findViewById(R.id.sndLitCB);
+            if (sndCB.isChecked()) {
+                log.printExclog("SND is checked - Setting property \"snd\" to 1.");
                 props.setProperty("snd","1");
-                if (sndLitCB.isSelected()) {
+                if (sndLitCB.isChecked()) {
+                    log.printExclog("Lit SND is checked - Setting property \"sndLit\" to 1 and \"sndUnlit\" to 0.");
                     props.setProperty("sndLit","1");
                     props.setProperty("sndUnlit","0");
+                    log.printExclog("Adding 1 to litInds.");
                     litInds++;
                 } else {
+                    log.printExclog("Lit SND is unchecked - Setting property \"sndLit\" to 0 and \"sndUnlit\" to 1.");
                     props.setProperty("sndLit","0");
                     props.setProperty("sndUnlit","1");
+                    log.printExclog("Adding 1 to unlitInds.");
                     unlitInds++;
                 }
+                log.printExclog("Adding 1 to inds.");
                 inds++;
             } else {
+                log.printExclog("SND is unchecked - Setting all related properties to 0.");
                 props.setProperty("snd","0");
                 props.setProperty("sndLit","0");
                 props.setProperty("sndUnlit","0");
-                sndLitCB.setSelected(false);
+                sndLitCB.setChecked(false);
             }
-            if (trnCB.isSelected()) {
+            trnCB = sv.findViewById(R.id.trnCB);
+            trnLitCB = sv.findViewById(R.id.trnLitCB);
+            if (trnCB.isChecked()) {
+                log.printExclog("TRN is checked - Setting property \"trn\" to 1.");
                 props.setProperty("trn","1");
-                if (trnLitCB.isSelected()) {
+                if (trnLitCB.isChecked()) {
+                    log.printExclog("Lit TRN is checked - Setting property \"trnLit\" to 1 and \"trnUnlit\" to 0.");
                     props.setProperty("trnLit","1");
                     props.setProperty("trnUnlit","0");
+                    log.printExclog("Adding 1 to litInds.");
                     litInds++;
                 } else {
+                    log.printExclog("Lit TRN is unchecked - Setting property \"trnLit\" to 0 and \"trnUnlit\" to 1.");
                     props.setProperty("trnLit","0");
                     props.setProperty("trnUnlit","1");
+                    log.printExclog("Adding 1 to unlitInds.");
                     unlitInds++;
                 }
+                log.printExclog("Adding 1 to inds.");
                 inds++;
             } else {
+                log.printExclog("TRN is unchecked - Setting all related properties to 0.");
                 props.setProperty("trn","0");
                 props.setProperty("trnLit","0");
                 props.setProperty("trnUnlit","0");
-                trnLitCB.setSelected(false);
+                trnLitCB.setChecked(false);
             }
-            if (modIndTxt.getText().toString().equals("")) modIndTxt.setText("0");
+            log.printExclog("Ind value: " + inds);
             props.setProperty("totalInds",String.valueOf(inds));
+            modIndTxt = sv.findViewById(R.id.modIndTXT);
+            if (modIndTxt.getText().toString().equals("")) {
+                log.printExclog("Mod Indicator text is empty, setting to 0.");
+                modIndTxt.setText("0");
+            } else log.printExclog("Mod indicator value: " + modIndTxt.getText().toString());
+            log.printExclog("Ind value (+ mods): " + (inds + Integer.parseInt(modIndTxt.getText().toString())));
             props.setProperty("totalIndsPlusMods",String.valueOf(inds+Integer.parseInt(modIndTxt.getText().toString())));
+            log.printExclog("Lit Inds value: " + litInds);
             props.setProperty("totalIndsLit",String.valueOf(litInds));
+            log.printExclog("Unlit Inds value: " + unlitInds);
             props.setProperty("totalIndsUnlit",String.valueOf(unlitInds));
             // batteries
-            if (aaTxt.getText().toString().equals("")) aaTxt.setText("0");
-            if (dTxt.getText().toString().equals("")) dTxt.setText("0");
-            props.setProperty("batteriesTotal",Integer.toString(Integer.parseInt(aaTxt.getText().toString()) + Integer.parseInt(dTxt.getText().toString())));
-            props.setProperty("batteryHolders",Integer.toString((Integer.parseInt(aaTxt.getText().toString()) / 2) + Integer.parseInt(dTxt.getText().toString())));
+            aaTxt = sv.findViewById(R.id.aaTXT);
+            dTxt = sv.findViewById(R.id.dTXT);
+            if (aaTxt.getText().toString().equals("")) {
+                log.printExclog("AA text is empty, setting to 0.");
+                aaTxt.setText("0");
+            } else log.printExclog("AA value: " + aaTxt.getText().toString());
             props.setProperty("batteriesAA",aaTxt.getText().toString());
+            if (dTxt.getText().toString().equals("")) {
+                log.printExclog("D text is empty, setting to 0.");
+                dTxt.setText("0");
+            } else log.printExclog("D value: " + dTxt.getText().toString());
             props.setProperty("batteriesD",dTxt.getText().toString());
+            log.printExclog("Total Batteries value: " + Integer.parseInt(aaTxt.getText().toString()) + Integer.parseInt(dTxt.getText().toString()));
+            props.setProperty("batteriesTotal",Integer.toString(Integer.parseInt(aaTxt.getText().toString()) + Integer.parseInt(dTxt.getText().toString())));
+            log.printExclog("AA Battery Holders: " + Integer.parseInt(aaTxt.getText().toString()) / 2);
+            log.printExclog("D Battery Holders: " + Integer.parseInt(dTxt.getText().toString()));
+            log.printExclog("Battery Holders value: " + (Integer.parseInt(aaTxt.getText().toString()) / 2) + Integer.parseInt(dTxt.getText().toString()));
+            props.setProperty("batteryHolders",Integer.toString((Integer.parseInt(aaTxt.getText().toString()) / 2) + Integer.parseInt(dTxt.getText().toString())));
             // ports
-            if (dvidTxt.getText().toString().equals("")) dvidTxt.setText("0");
-            if (parallelTxt.getText().toString().equals("")) parallelTxt.setText("0");
-            if (ps2Txt.getText().toString().equals("")) ps2Txt.setText("0");
-            if (rj45Txt.getText().toString().equals("")) rj45Txt.setText("0");
-            if (serialTxt.getText().toString().equals("")) serialTxt.setText("0");
-            if (stereoRCATxt.getText().toString().equals("")) stereoRCATxt.setText("0");
+            dvidTxt = sv.findViewById(R.id.dvidTXT);
+            if (dvidTxt.getText().toString().equals("")) {
+                log.printExclog("DVI-D text is empty, setting to 0.");
+                dvidTxt.setText("0");
+            } else log.printExclog("DVI-D Quantity value: " + dvidTxt.getText().toString());
             String dvidQuantity = dvidTxt.getText().toString();
-            String parallelQuantity = parallelTxt.getText().toString();
-            String ps2Quantity = ps2Txt.getText().toString();
-            String rj45Quantity = rj45Txt.getText().toString();
-            String serialQuantity = serialTxt.getText().toString();
-            String stereoRCAQuantity = stereoRCATxt.getText().toString();
             props.setProperty("dvidQuantity",dvidQuantity);
+            parallelTxt = sv.findViewById(R.id.parallelTXT);
+            if (parallelTxt.getText().toString().equals("")) {
+                log.printExclog("Parallel text is empty, setting to 0.");
+                parallelTxt.setText("0");
+            } else log.printExclog("Parallel Quantity value: " + parallelTxt.getText().toString());
+            String parallelQuantity = parallelTxt.getText().toString();
             props.setProperty("parallelQuantity",parallelQuantity);
+            ps2Txt = sv.findViewById(R.id.ps2TXT);
+            if (ps2Txt.getText().toString().equals("")) {
+                log.printExclog("PS/2 text is empty, setting to 0.");
+                ps2Txt.setText("0");
+            } else log.printExclog("PS/2 Quantity value: " + ps2Txt.getText().toString());
+            String ps2Quantity = ps2Txt.getText().toString();
             props.setProperty("ps2Quantity",ps2Quantity);
+            rj45Txt = sv.findViewById(R.id.rj45TXT);
+            if (rj45Txt.getText().toString().equals("")) {
+                log.printExclog("RJ-45 text is empty, setting to 0.");
+                rj45Txt.setText("0");
+            } else log.printExclog("RJ-45 Quantity value: " + rj45Txt.getText().toString());
+            String rj45Quantity = rj45Txt.getText().toString();
             props.setProperty("rj45Quantity",rj45Quantity);
+            serialTxt = sv.findViewById(R.id.serialTXT);
+            if (serialTxt.getText().toString().equals("")) {
+                log.printExclog("Serial text is empty, setting to 0.");
+                serialTxt.setText("0");
+            } else log.printExclog("Serial Quantity value: " + serialTxt.getText().toString());
+            String serialQuantity = serialTxt.getText().toString();
             props.setProperty("serialQuantity",serialQuantity);
+            stereoRCATxt = sv.findViewById(R.id.stereoRCATXT);
+            if (stereoRCATxt.getText().toString().equals("")) {
+                log.printExclog("Stereo RCA text is empty, setting to 0.");
+                stereoRCATxt.setText("0");
+            } else log.printExclog("Stereo RCA Quantity value: " + stereoRCATxt.getText().toString());
+            String stereoRCAQuantity = stereoRCATxt.getText().toString();
             props.setProperty("stereoRCAQuantity",stereoRCAQuantity);
             int ports = 0;
             ports += Integer.parseInt(dvidQuantity) + Integer.parseInt(parallelQuantity) +
                     Integer.parseInt(ps2Quantity) + Integer.parseInt(rj45Quantity) +
                     Integer.parseInt(serialQuantity) + Integer.parseInt(stereoRCAQuantity);
+            log.printExclog("Total Ports value: " + ports);
             props.setProperty("totalPorts",String.valueOf(ports));
-            if (modPortTxt.getText().toString().equals("")) modPortTxt.setText("0");
+            if (modPortTxt.getText().toString().equals("")) {
+                log.printExclog("Mod Port text is empty, setting to 0.");
+                modPortTxt.setText("0");
+            } else log.printExclog("Mod Port value: " + modPortTxt.getText().toString());
             ports += Integer.parseInt(modPortTxt.getText().toString());
+            log.printExclog("Total Ports (+ mods) value: " + ports);
             props.setProperty("totalPortsPlusMods",String.valueOf(ports));
             int portTypes = 0;
             if (Integer.parseInt(dvidQuantity) > 0) {
+                log.printExclog("DVI-D Quantity > 0, DVI-D exist value set to 1.");
                 props.setProperty("dvid","1");
                 portTypes++;
             }
-            else props.setProperty("dvid","0");
+            else {
+                log.printExclog("DVI-D Quantity = 0, DVI-D exist value set to 0.");
+                props.setProperty("dvid","0");
+            }
             if (Integer.parseInt(parallelQuantity) > 0) {
+                log.printExclog("Parallel Quantity > 0, Parallel exist value set to 1.");
                 props.setProperty("parallel","1");
                 portTypes++;
             }
-            else props.setProperty("parallel","0");
+            else {
+                log.printExclog("Parallel Quantity = 0, Parallel exist value set to 0.");
+                props.setProperty("parallel","0");
+            }
             if (Integer.parseInt(ps2Quantity) > 0) {
+                log.printExclog("PS/2 Quantity > 0, PS/2 exist value set to 1.");
                 props.setProperty("ps2","1");
                 portTypes++;
             }
-            else props.setProperty("ps2","0");
+            else {
+                log.printExclog("PS/2 Quantity = 0, PS/2 exist value set to 0.");
+                props.setProperty("ps2","0");
+            }
             if (Integer.parseInt(rj45Quantity) > 0) {
+                log.printExclog("RJ-45 Quantity > 0, RJ-45 exist value set to 1.");
                 props.setProperty("rj45","1");
                 portTypes++;
             }
-            else props.setProperty("rj45","0");
+            else {
+                log.printExclog("RJ-45 Quantity = 0, RJ-45 exist value set to 0.");
+                props.setProperty("rj45","0");
+            }
             if (Integer.parseInt(serialQuantity) > 0) {
+                log.printExclog("Serial Quantity > 0, Serial exist value set to 1.");
                 props.setProperty("serial", "1");
                 portTypes++;
             }
-            else props.setProperty("serial","0");
+            else {
+                log.printExclog("Serial Quantity = 0, Serial exist value set to 0.");
+                props.setProperty("serial","0");
+            }
             if (Integer.parseInt(stereoRCAQuantity) > 0) {
+                log.printExclog("Stereo RCA Quantity > 0, Stereo RCA exist value set to 1.");
                 props.setProperty("stereoRCA","1");
                 portTypes++;
             }
-            else props.setProperty("stereoRCA","0");
+            else {
+                log.printExclog("Stereo RCA Quantity = 0, Stereo RCA exist value set to 0.");
+                props.setProperty("stereoRCA","0");
+            }
+            log.printExclog("Total Port Type value: " + portTypes);
             props.setProperty("totalPortTypes",String.valueOf(portTypes));
             // SN
+            snTxt = sv.findViewById(R.id.snTXT);
             sn = snTxt.getText().toString();
-            String snTemp = sn;
+            log.printExclog("SN Text: " + sn);
+            String[] snTempArr = sn.split("");
+            for (int i = 0; i < snTempArr.length; i++) {
+                log.printExclog("Uncleaned SN Arr (Index " + i + "): " + snTempArr[i]);
+            }
             String[] snArr = string.removeLast(string.moveOnceLeft(sn.split("")));
+            for (int i = 0; i < snArr.length; i++) {
+                log.printExclog("Cleaned SN Arr (Index " + i + "): " + snArr[i]);
+            }
             try {
+                log.printExclog("SN 1 value: " + snArr[0]);
                 props.setProperty("sn1",snArr[0]);
             } catch (ArrayIndexOutOfBoundsException ex) {
+                log.printExclog("SN 1 value empty. Setting to default [B]");
                 props.setProperty("sn1","B");
             }
             try {
+                log.printExclog("SN 2 value: " + snArr[1]);
                 props.setProperty("sn2",snArr[1]);
             } catch (ArrayIndexOutOfBoundsException ex) {
+                log.printExclog("SN 2 value empty. Setting to default [B]");
                 props.setProperty("sn2","B");
             }
             try {
+                log.printExclog("SN 3 value: " + snArr[2]);
                 props.setProperty("sn3",snArr[2]);
             } catch (ArrayIndexOutOfBoundsException ex) {
+                log.printExclog("SN 3 value empty. Setting to default [B]");
                 props.setProperty("sn3","B");
             }
             try {
+                log.printExclog("SN 4 value: " + snArr[3]);
                 props.setProperty("sn4",snArr[3]);
             } catch (ArrayIndexOutOfBoundsException ex) {
+                log.printExclog("SN 4 value empty. Setting to default [0]");
                 props.setProperty("sn4","0");
             }
             try {
+                log.printExclog("SN 5 value: " + snArr[4]);
                 props.setProperty("sn5",snArr[4]);
             } catch (ArrayIndexOutOfBoundsException ex) {
+                log.printExclog("SN 5 value empty. Setting to default [0]");
                 props.setProperty("sn5","0");
             }
             try {
+                log.printExclog("SN 6 value: " + snArr[5]);
                 props.setProperty("sn6",snArr[5]);
             } catch (ArrayIndexOutOfBoundsException ex) {
+                log.printExclog("SN 6 value empty. Setting to default [0]");
                 props.setProperty("sn6","0");
             }
             String vowel = "f";
-            for (String s : snArr) if (string.isVowel(s)) vowel = "t";
+            for (int i = 0; i < snArr.length; i++) {
+                String s = snArr[i];
+                if (string.isVowel(s)) {
+                    log.printExclog("SN vowel check [#" + i + "] (" + s + ") = true");
+                    vowel = "t";
+                } else log.printExclog("SN vowel check [#" + i + "] (" + s + ") = false");
+            }
+            log.printExclog("SN Vowel value: " + vowel);
             props.setProperty("snVowel",vowel);
+            log.printExclog("SN First Digit value: " + string.firstInt(sn));
             props.setProperty("snFirstDig",String.valueOf(string.firstInt(sn)));
+            log.printExclog("SN Last Digit value: " + string.lastInt(sn));
             props.setProperty("snLastDig",String.valueOf(string.lastInt(sn)));
+            log.printExclog("SN Total Digits value: " + string.totalDigits(sn));
             props.setProperty("snTotalDigs",String.valueOf(string.totalDigits(sn)));
+            log.printExclog("SN Total Letters value: " + string.totalLetters(sn));
             props.setProperty("snTotalLets",String.valueOf(string.totalLetters(sn)));
             // Modules
-            if (moduleTxt.getText().toString().equals("")) moduleTxt.setText("0");
+            moduleTxt = sv.findViewById(R.id.moduleTXT);
+            if (moduleTxt.getText().toString().equals("")) {
+                log.printExclog("Module text empty, setting to 0.");
+                moduleTxt.setText("0");
+            } else log.printExclog("Module value: " + moduleTxt.getText().toString());
             props.setProperty("modules",moduleTxt.getText().toString());
             // Plates
-            if (plateTxt.getText().toString().equals("")) plateTxt.setText("0");
+            plateTxt = sv.findViewById(R.id.plateTXT);
+            if (plateTxt.getText().toString().equals("")) {
+                log.printExclog("Port Plate text empty, setting to 0.");
+                plateTxt.setText("0");
+            } else log.printExclog("Port Plate value: " + plateTxt.getText().toString());
             props.setProperty("plates",plateTxt.getText().toString());
             // Mod Indicators
             props.setProperty("modInd",modIndTxt.getText().toString());
@@ -622,38 +874,46 @@ public class BombSettings extends Fragment {
             try {
                 FileWriter writer = new FileWriter(Props.configFile);
                 props.store(writer,"settings");
+                Toast.makeText(getActivity(),"Saved!",Toast.LENGTH_SHORT).show();
+                endTime = System.nanoTime();
+                calcTime = endTime - startTime;
+                log.print("Bomb settings done saving. Took " + (calcTime / 1000000) + " ms.");
+                log.printExclog("Start time: " + startTime);
+                log.printExclog("End time: " + endTime);
+                log.printExclog("Exact calculated time: " + calcTime);
             } catch (Exception ex) {
-                System.out.println("Exception occurred when trying to save! (Probably an IO Exception) printing stack trace...");
-                ex.printStackTrace();
+                Toast.makeText(getActivity(),"Failed to save! Check log for error details.",Toast.LENGTH_LONG).show();
+                log.print("Exception occurred when trying to save! (Probably an IO Exception) printing stack trace...");
+                log.printStackTrace(ex);
             }
-            Toast.makeText(getActivity(),"Saved!",Toast.LENGTH_SHORT).show();
         });
         // clear button
         currNormalBtn = sv.findViewById(R.id.clearBtn);
         currNormalBtn.setOnClickListener((View v) -> {
+            log.printExclog("Click listened: Clear Button");
             // indicators
-            bobCB.setSelected(false);
-            bobLitCB.setSelected(false);
-            carCB.setSelected(false);
-            carLitCB.setSelected(false);
-            clrCB.setSelected(false);
-            clrLitCB.setSelected(false);
-            frkCB.setSelected(false);
-            frkLitCB.setSelected(false);
-            frqCB.setSelected(false);
-            frqLitCB.setSelected(false);
-            indCB.setSelected(false);
-            indLitCB.setSelected(false);
-            msaCB.setSelected(false);
-            msaLitCB.setSelected(false);
-            nsaCB.setSelected(false);
-            nsaLitCB.setSelected(false);
-            sigCB.setSelected(false);
-            sigLitCB.setSelected(false);
-            sndCB.setSelected(false);
-            sndLitCB.setSelected(false);
-            trnCB.setSelected(false);
-            trnLitCB.setSelected(false);
+            bobCB.setChecked(false);
+            bobLitCB.setChecked(false);
+            carCB.setChecked(false);
+            carLitCB.setChecked(false);
+            clrCB.setChecked(false);
+            clrLitCB.setChecked(false);
+            frkCB.setChecked(false);
+            frkLitCB.setChecked(false);
+            frqCB.setChecked(false);
+            frqLitCB.setChecked(false);
+            indCB.setChecked(false);
+            indLitCB.setChecked(false);
+            msaCB.setChecked(false);
+            msaLitCB.setChecked(false);
+            nsaCB.setChecked(false);
+            nsaLitCB.setChecked(false);
+            sigCB.setChecked(false);
+            sigLitCB.setChecked(false);
+            sndCB.setChecked(false);
+            sndLitCB.setChecked(false);
+            trnCB.setChecked(false);
+            trnLitCB.setChecked(false);
             // batteries
             aaTxt.setText("");
             dTxt.setText("");
@@ -676,6 +936,7 @@ public class BombSettings extends Fragment {
         // dark theme
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(getContext());
         if (sharedPrefs.getBoolean("theme",false)) {
+            log.printExclog("Detected using Dark Theme. Setting all icons to white tints...");
             int[][] state = new int[][]{
                     new int[]{-android.R.attr.state_enabled},
                     new int[]{android.R.attr.state_enabled},
@@ -738,8 +999,8 @@ public class BombSettings extends Fragment {
             currBtn = sv.findViewById(R.id.moduleRmvBTN);
             currBtn.setImageTintList(cs);
         }
-        long endTime = System.nanoTime();
-        long calcTime = endTime - startTime;
+        endTime = System.nanoTime();
+        calcTime = endTime - startTime;
         log.print("Bomb Settings done loading. Took " + (calcTime / 1000000)+ " ms.");
         log.printExclog("Start time: " + startTime);
         log.printExclog("End time: " + endTime);
