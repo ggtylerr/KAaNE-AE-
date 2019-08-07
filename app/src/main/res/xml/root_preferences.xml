@@ -6,12 +6,14 @@
         <SwitchPreferenceCompat
             app:key="log_menu"
             app:title="@string/options_log"
-            app:summaryOff="@string/options_log_off"/>
+            app:summaryOff="@string/options_log_off"
+            android:icon="@drawable/ic_view_list_black_24dp"/>
 
         <SwitchPreferenceCompat
             app:key="excessive_log"
             app:title="@string/options_excessive_log"
-            app:summary="@string/options_excessive_log_summary"/>
+            app:summary="@string/options_excessive_log_summary"
+            android:icon="@drawable/ic_exclog"/>
 
     </PreferenceCategory>
 
@@ -20,7 +22,8 @@
         <SwitchPreferenceCompat
             app:key="theme"
             app:title="@string/options_theme"
-            app:summary="@string/options_theme_summary"/>
+            app:summary="@string/options_theme_summary"
+            android:icon="@drawable/ic_brightness_medium_black_24dp"/>
 
     </PreferenceCategory>
 
@@ -29,26 +32,34 @@
             app:title="@string/options_version_title"
             app:summary="@string/options_version"/>
         <Preference
-            app:title="@string/options_github">
+            app:key="github"
+            app:title="@string/options_github"
+            android:icon="@drawable/ic_github">
             <intent
                 android:action="android.intent.action.VIEW"
                 android:data="@string/options_github_url" />
         </Preference>
         <Preference
-            app:title="@string/options_discord">
+            app:key="discord"
+            app:title="@string/options_discord"
+            android:icon="@drawable/ic_discord_logo_black">
             <intent
                 android:action="android.intent.action.VIEW"
                 android:data="@string/options_discord_url"/>
         </Preference>
         <Preference
-            app:title="@string/options_wiki">
+            app:key="wiki"
+            app:title="@string/options_wiki"
+            android:icon="@drawable/ic_book_black_24dp">
             <intent
                 android:action="android.intent.action.VIEW"
                 android:data="@string/options_wiki_url"/>
         </Preference>
         <Preference
+            app:key="blog"
             app:title="@string/options_blog"
-            app:summary="@string/options_blog_summary">
+            app:summary="@string/options_blog_summary"
+            android:icon="@drawable/ic_library_books_black_24dp">
             <intent
                 android:action="android.intent.action.VIEW"
                 android:data="@string/options_blog_url"/>
