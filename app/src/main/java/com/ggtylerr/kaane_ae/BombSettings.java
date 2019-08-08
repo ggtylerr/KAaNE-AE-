@@ -784,7 +784,8 @@ public class BombSettings extends Fragment {
             // SN
             snTxt = sv.findViewById(R.id.snTXT);
             sn = snTxt.getText().toString();
-            log.printExclog("SN Text: " + sn);
+            log.printExclog("SN Value: " + sn);
+            props.setProperty("sn",sn);
             String[] snTempArr = sn.split("");
             for (int i = 0; i < snTempArr.length; i++) {
                 log.printExclog("Uncleaned SN Arr (Index " + i + "): " + snTempArr[i]);
