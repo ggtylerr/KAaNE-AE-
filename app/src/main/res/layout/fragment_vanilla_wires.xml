@@ -6,17 +6,71 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Spinner
-        android:id="@+id/vanilla_wires_wire1spin"
-        style="@android:style/Widget.Holo.Light.Spinner"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+    <ImageView
+        android:id="@+id/vanilla_wires_w1_none"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:entries="@array/vanilla_wires_colors"
-        app:layout_constraintEnd_toStartOf="@+id/vanilla_wires_wire1String"
+        app:layout_constraintEnd_toStartOf="@+id/vanilla_wires_w1_red"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/none" />
+
+    <ImageView
+        android:id="@+id/vanilla_wires_w1_red"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/vanilla_wires_w1_yellow"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wires_w1_none"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/red" />
+
+    <ImageView
+        android:id="@+id/vanilla_wires_w1_yellow"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/vanilla_wires_w1_blue"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wires_w1_red"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/yellow" />
+
+    <ImageView
+        android:id="@+id/vanilla_wires_w1_blue"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/vanilla_wires_w1_white"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wires_w1_yellow"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/blue" />
+
+    <ImageView
+        android:id="@+id/vanilla_wires_w1_white"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/vanilla_wires_w1_black"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wires_w1_blue"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/white" />
+
+    <ImageView
+        android:id="@+id/vanilla_wires_w1_black"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/vanilla_wires_wire1String"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wires_w1_white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/black" />
 
     <TextView
         android:id="@+id/vanilla_wires_wire1String"
@@ -25,22 +79,70 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:text="@string/vanilla_wires_w1"
-        app:layout_constraintBottom_toBottomOf="@+id/vanilla_wires_wire1spin"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_wires_w1_black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/vanilla_wires_wire1spin"
-        app:layout_constraintTop_toTopOf="@+id/vanilla_wires_wire1spin" />
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wires_w1_black"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_wires_w1_black" />
 
-    <Spinner
-        android:id="@+id/vanilla_wires_wire2spin"
-        style="@android:style/Widget.Holo.Light.Spinner"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+    <ImageView
+        android:id="@+id/vanilla_wires_w2_none"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:entries="@array/vanilla_wires_colors"
-        app:layout_constraintEnd_toStartOf="@+id/vanilla_wires_wire2String"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/vanilla_wires_wire1spin" />
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wires_w1_none"
+        app:srcCompat="@drawable/none" />
+
+    <ImageView
+        android:id="@+id/vanilla_wires_w2_red"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wires_w2_none"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wires_w1_red"
+        app:srcCompat="@drawable/red" />
+
+    <ImageView
+        android:id="@+id/vanilla_wires_w2_yellow"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wires_w2_red"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wires_w1_yellow"
+        app:srcCompat="@drawable/yellow" />
+
+    <ImageView
+        android:id="@+id/vanilla_wires_w2_blue"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wires_w2_yellow"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wires_w1_blue"
+        app:srcCompat="@drawable/blue" />
+
+    <ImageView
+        android:id="@+id/vanilla_wires_w2_white"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wires_w2_blue"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wires_w1_white"
+        app:srcCompat="@drawable/white" />
+
+    <ImageView
+        android:id="@+id/vanilla_wires_w2_black"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wires_w2_white"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wires_w1_black"
+        app:srcCompat="@drawable/black" />
 
     <TextView
         android:id="@+id/vanilla_wires_wire2String"
@@ -49,22 +151,70 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:text="@string/vanilla_wires_w2"
-        app:layout_constraintBottom_toBottomOf="@+id/vanilla_wires_wire2spin"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_wires_w2_black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/vanilla_wires_wire2spin"
-        app:layout_constraintTop_toTopOf="@+id/vanilla_wires_wire2spin" />
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wires_w2_black"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_wires_w2_black" />
 
-    <Spinner
-        android:id="@+id/vanilla_wires_wire3spin"
-        style="@android:style/Widget.Holo.Light.Spinner"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+    <ImageView
+        android:id="@+id/vanilla_wires_w3_none"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:entries="@array/vanilla_wires_colors"
-        app:layout_constraintEnd_toStartOf="@+id/vanilla_wires_wire3String"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/vanilla_wires_wire2spin" />
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wires_w2_none"
+        app:srcCompat="@drawable/none" />
+
+    <ImageView
+        android:id="@+id/vanilla_wires_w3_red"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wires_w3_none"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wires_w2_red"
+        app:srcCompat="@drawable/red" />
+
+    <ImageView
+        android:id="@+id/vanilla_wires_w3_yellow"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wires_w3_red"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wires_w2_yellow"
+        app:srcCompat="@drawable/yellow" />
+
+    <ImageView
+        android:id="@+id/vanilla_wires_w3_blue"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wires_w3_yellow"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wires_w2_blue"
+        app:srcCompat="@drawable/blue" />
+
+    <ImageView
+        android:id="@+id/vanilla_wires_w3_white"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wires_w3_blue"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wires_w2_white"
+        app:srcCompat="@drawable/white" />
+
+    <ImageView
+        android:id="@+id/vanilla_wires_w3_black"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wires_w3_white"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wires_w2_black"
+        app:srcCompat="@drawable/black" />
 
     <TextView
         android:id="@+id/vanilla_wires_wire3String"
@@ -73,22 +223,70 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:text="@string/vanilla_wires_w3"
-        app:layout_constraintBottom_toBottomOf="@+id/vanilla_wires_wire3spin"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_wires_w3_black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/vanilla_wires_wire3spin"
-        app:layout_constraintTop_toTopOf="@+id/vanilla_wires_wire3spin" />
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wires_w3_black"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_wires_w3_black" />
 
-    <Spinner
-        android:id="@+id/vanilla_wires_wire4spin"
-        style="@android:style/Widget.Holo.Light.Spinner"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+    <ImageView
+        android:id="@+id/vanilla_wires_w4_none"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:entries="@array/vanilla_wires_colors"
-        app:layout_constraintEnd_toStartOf="@+id/vanilla_wires_wire4String"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/vanilla_wires_wire3spin" />
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wires_w3_none"
+        app:srcCompat="@drawable/none" />
+
+    <ImageView
+        android:id="@+id/vanilla_wires_w4_red"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wires_w4_none"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wires_w3_red"
+        app:srcCompat="@drawable/red" />
+
+    <ImageView
+        android:id="@+id/vanilla_wires_w4_yellow"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wires_w4_red"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wires_w3_yellow"
+        app:srcCompat="@drawable/yellow" />
+
+    <ImageView
+        android:id="@+id/vanilla_wires_w4_blue"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wires_w4_yellow"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wires_w3_blue"
+        app:srcCompat="@drawable/blue" />
+
+    <ImageView
+        android:id="@+id/vanilla_wires_w4_white"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wires_w4_blue"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wires_w3_white"
+        app:srcCompat="@drawable/white" />
+
+    <ImageView
+        android:id="@+id/vanilla_wires_w4_black"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wires_w4_white"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wires_w3_black"
+        app:srcCompat="@drawable/black" />
 
     <TextView
         android:id="@+id/vanilla_wires_wire4String"
@@ -97,22 +295,70 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:text="@string/vanilla_wires_w4"
-        app:layout_constraintBottom_toBottomOf="@+id/vanilla_wires_wire4spin"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_wires_w4_black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/vanilla_wires_wire4spin"
-        app:layout_constraintTop_toTopOf="@+id/vanilla_wires_wire4spin" />
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wires_w4_black"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_wires_w4_black" />
 
-    <Spinner
-        android:id="@+id/vanilla_wires_wire5spin"
-        style="@android:style/Widget.Holo.Light.Spinner"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+    <ImageView
+        android:id="@+id/vanilla_wires_w5_none"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:entries="@array/vanilla_wires_colors"
-        app:layout_constraintEnd_toStartOf="@+id/vanilla_wires_wire5String"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/vanilla_wires_wire4spin" />
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wires_w4_none"
+        app:srcCompat="@drawable/none" />
+
+    <ImageView
+        android:id="@+id/vanilla_wires_w5_red"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wires_w5_none"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wires_w4_red"
+        app:srcCompat="@drawable/red" />
+
+    <ImageView
+        android:id="@+id/vanilla_wires_w5_yellow"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wires_w5_red"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wires_w4_yellow"
+        app:srcCompat="@drawable/yellow" />
+
+    <ImageView
+        android:id="@+id/vanilla_wires_w5_blue"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wires_w5_yellow"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wires_w4_blue"
+        app:srcCompat="@drawable/blue" />
+
+    <ImageView
+        android:id="@+id/vanilla_wires_w5_white"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wires_w5_blue"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wires_w4_white"
+        app:srcCompat="@drawable/white" />
+
+    <ImageView
+        android:id="@+id/vanilla_wires_w5_black"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wires_w5_white"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wires_w4_black"
+        app:srcCompat="@drawable/black" />
 
     <TextView
         android:id="@+id/vanilla_wires_wire5String"
@@ -121,22 +367,70 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:text="@string/vanilla_wires_w5"
-        app:layout_constraintBottom_toBottomOf="@+id/vanilla_wires_wire5spin"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_wires_w5_black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/vanilla_wires_wire5spin"
-        app:layout_constraintTop_toTopOf="@+id/vanilla_wires_wire5spin" />
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wires_w5_black"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_wires_w5_black" />
 
-    <Spinner
-        android:id="@+id/vanilla_wires_wire6spin"
-        style="@android:style/Widget.Holo.Light.Spinner"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+    <ImageView
+        android:id="@+id/vanilla_wires_w6_none"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:entries="@array/vanilla_wires_colors"
-        app:layout_constraintEnd_toStartOf="@+id/vanilla_wires_wire6String"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/vanilla_wires_wire5spin" />
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wires_w5_none"
+        app:srcCompat="@drawable/none" />
+
+    <ImageView
+        android:id="@+id/vanilla_wires_w6_red"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wires_w6_none"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wires_w5_red"
+        app:srcCompat="@drawable/red" />
+
+    <ImageView
+        android:id="@+id/vanilla_wires_w6_yellow"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wires_w6_red"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wires_w5_yellow"
+        app:srcCompat="@drawable/yellow" />
+
+    <ImageView
+        android:id="@+id/vanilla_wires_w6_blue"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wires_w6_yellow"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wires_w5_blue"
+        app:srcCompat="@drawable/blue" />
+
+    <ImageView
+        android:id="@+id/vanilla_wires_w6_white"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wires_w6_blue"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wires_w5_white"
+        app:srcCompat="@drawable/white" />
+
+    <ImageView
+        android:id="@+id/vanilla_wires_w6_black"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wires_w6_white"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wires_w5_black"
+        app:srcCompat="@drawable/black" />
 
     <TextView
         android:id="@+id/vanilla_wires_wire6String"
@@ -145,10 +439,10 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:text="@string/vanilla_wires_w6"
-        app:layout_constraintBottom_toBottomOf="@+id/vanilla_wires_wire6spin"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_wires_w6_black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/vanilla_wires_wire6spin"
-        app:layout_constraintTop_toTopOf="@+id/vanilla_wires_wire6spin" />
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wires_w6_black"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_wires_w6_black" />
 
     <Button
         android:id="@+id/vanilla_wires_okBtn"
@@ -161,7 +455,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/vanilla_wires_wire6spin" />
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wires_w6_black" />
 
     <TextView
         android:id="@+id/vanilla_wires_output"
