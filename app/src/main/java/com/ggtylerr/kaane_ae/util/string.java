@@ -232,7 +232,7 @@ public class string {
     public static String[] exclude(String[] arr, String s) {
         List<String> list = new ArrayList<>();
         for (int i = 0; i < arr.length; i++)
-            if (!arr[i].equals(s)) list.add(s);
+            if (!arr[i].equals(s)) list.add(arr[i]);
         return list.toArray(new String[0]);
     }
 }
