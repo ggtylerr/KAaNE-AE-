@@ -11,13 +11,11 @@ The KTaNE assistant app for Androids.
 
 # Notes
 
-There is **NO** APK available yet. I will build and sign one whenever there's something at least ready. If you _really_ want to try this on your phone, download Android Studio, download the project, open it in Android Studio, and follow [this guide.](https://developer.android.com/studio/run/)
-
 This app is **NOT** available on the Google Play Store. Even after I make an APK available, I'll most likely release it on the store when the first beta build is out. I'll also have to pay a $25 license and I'm not planning on putting ads, so that's another reason why I'm not going to release it there for a while. I'm also not sure how lengthy their verification process is.
 
 **In the home screen, there's a button that requests for storage permissions. The app absolutely needs these permissions for settings, logs, etc. KAaNE [AE] stores these files in /Downloads/kaane-ae-/. It does not collect any other information or use any other files.**
 
-The only thing done currently is the bomb settings, a temporary home screen, and proper navigation. Everything else is a placeholder for future screens. _EDIT: There's now an app settings menu and work has been started on vanilla wires._
+Vanilla Button and Keypad is currently a placeholder screen.
 
 Config file is found in `Downloads/kaane-ae-/config.properties`. This will be changed whenever I figure out how to make a proper directory without Android freaking out.
 
