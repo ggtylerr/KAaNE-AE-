@@ -31,8 +31,6 @@ If you want to help development, make a pull request with your changes.
 
 Further info can be found in the wiki. [Here's a link.](https://kaane.miraheze.org/wiki/Main_Page)
 
-NOTE: There's currently no info on the app in the wiki.
-
 There's also now an official discord server which can be joined using [this link.](https://discord.gg/SdaFUAm)
 
 ## License
