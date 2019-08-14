@@ -17,8 +17,6 @@ This app is **NOT** available on the Google Play Store. Even after I make an APK
 
 **In the home screen, there's a button that requests for storage permissions. The app absolutely needs these permissions for settings, logs, etc. KAaNE [AE] stores these files in /Downloads/kaane-ae-/. It does not collect any other information or use any other files.**
 
-Vanilla Button and Keypad is currently a placeholder screen.
-
 Config file is found in `Downloads/kaane-ae-/config.properties`. This will be changed whenever I figure out how to make a proper directory without Android freaking out.
 
 If you have a small screen, the bomb settings might have cropped text. You can easily fix this by rotating your screen or by using an emulator.
