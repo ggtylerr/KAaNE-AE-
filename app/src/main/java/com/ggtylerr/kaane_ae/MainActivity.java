@@ -58,6 +58,7 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         if(savedInstanceState == null) displaySelectedScreen(R.id.nav_home);
+        navigationView.setCheckedItem(R.id.nav_home);
 
         // dark theme
         sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
@@ -132,6 +133,7 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_vanilla_wires: fragment = new Wires(); break;
             case R.id.nav_vanilla_button: fragment = new Button(); break;
             case R.id.nav_vanilla_keypad: fragment = new Keypad(); break;
+            // Dev Screens
             case R.id.nav_dev_log: fragment = new LogFragment(); break;
         }
 
@@ -146,7 +148,6 @@ public class MainActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
     }
 
-    @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         displaySelectedScreen(item.getItemId());
@@ -154,5 +155,8 @@ public class MainActivity extends AppCompatActivity
     }
     public static boolean grabExclogPreference() {
         return sharedPrefs.getBoolean("excessive_log",false);
+    }
+    public static boolean grabThemePreference() {
+        return sharedPrefs.getBoolean("theme",false);
     }
 }

@@ -1,6 +1,7 @@
 package com.ggtylerr.kaane_ae.util;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -234,5 +235,15 @@ public class string {
         for (int i = 0; i < arr.length; i++)
             if (!arr[i].equals(s)) list.add(arr[i]);
         return list.toArray(new String[0]);
+    }
+    // arrHas
+    // -----------
+    // returns true if an array has a string
+    // -----------
+    // example:
+    // {"1","2","3"},"4" - false
+    // {"1","2","3"},"1" - true
+    public static boolean arrHas(String[] arr, String s) {
+        return Arrays.asList(arr).contains(s);
     }
 }

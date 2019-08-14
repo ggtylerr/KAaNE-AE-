@@ -15,26 +15,30 @@
     </group>
     <item android:title="@string/menu_vanilla">
         <menu>
-            <item
-                android:id="@+id/nav_vanilla_wires"
-                android:icon="@drawable/ic_wires"
-                android:title="@string/menu_vanilla_wires" />
-            <item
-                android:id="@+id/nav_vanilla_button"
-                android:icon="@drawable/ic_button"
-                android:title="@string/menu_vanilla_button" />
-            <item
-                android:id="@+id/nav_vanilla_keypad"
-                android:icon="@drawable/ic_keypad"
-                android:title="@string/menu_vanilla_keypad"/>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_vanilla_wires"
+                    android:icon="@drawable/ic_wires"
+                    android:title="@string/menu_vanilla_wires" />
+                <item
+                    android:id="@+id/nav_vanilla_button"
+                    android:icon="@drawable/ic_button"
+                    android:title="@string/menu_vanilla_button" />
+                <item
+                    android:id="@+id/nav_vanilla_keypad"
+                    android:icon="@drawable/ic_keypad"
+                    android:title="@string/menu_vanilla_keypad"/>
+            </group>
         </menu>
     </item>
     <item android:title="@string/menu_dev">
         <menu>
-            <item
-                android:id="@+id/nav_dev_log"
-                android:icon="@drawable/ic_view_list_black_24dp"
-                android:title="@string/menu_dev_log"/>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_dev_log"
+                    android:icon="@drawable/ic_view_list_black_24dp"
+                    android:title="@string/menu_dev_log"/>
+            </group>
         </menu>
     </item>
 </menu>
