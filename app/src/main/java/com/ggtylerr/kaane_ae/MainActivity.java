@@ -23,14 +23,13 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.preference.PreferenceManager;
 
 import android.view.Menu;
-import android.view.View;
 
 /**
  * KAaNE [AE]
  *
  * The KTaNE assistant program for Androids
  *
- * Alpha [α] v0.1
+ * Alpha [α] v0.2.1
  *
  * ~~~developed by ggtylerr~~~
  */
@@ -131,6 +130,7 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_vanilla_button: fragment = new Button(); break;
             case R.id.nav_vanilla_keypad: fragment = new Keypad(); break;
             case R.id.nav_vanilla_simon_says: fragment = new SimonSays(); break;
+            case R.id.nav_vanilla_whos_on_first: fragment = new WhosOnFirst(); break;
             // Dev Screens
             case R.id.nav_dev_log: fragment = new LogFragment(); break;
         }

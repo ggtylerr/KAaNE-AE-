@@ -26,6 +26,7 @@ public class SimonSays extends Fragment {
         // Logic
         View button = v.findViewById(R.id.vanilla_simon_says_btn);
         button.setOnClickListener((View view) -> {
+            log.printExclog("Click listened: Button");
             // Get vowel + strikes
             Properties props = Props.load(new Properties());
             boolean vowel = props.getProperty("snVowel").equals("t");

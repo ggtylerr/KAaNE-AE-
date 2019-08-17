@@ -33,6 +33,10 @@
                     android:icon="@drawable/ic_simon_says"
                     android:title="@string/menu_vanilla_simon_says"
                     />
+                <item
+                    android:id="@+id/nav_vanilla_whos_on_first"
+                    android:title="@string/menu_vanilla_whos_on_first"
+                    />
             </group>
         </menu>
     </item>
