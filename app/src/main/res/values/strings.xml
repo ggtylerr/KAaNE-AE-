@@ -44,6 +44,7 @@
     <string name="menu_vanilla_wires">Wires</string>
     <string name="menu_vanilla_button">The Button</string>
     <string name="menu_vanilla_keypad">Keypad</string>
+    <string name="menu_vanilla_simon_says">Simon Says</string>
 
     <!-- Dev Menu -->
     <string name="menu_dev">Developer Screens</string>
@@ -117,6 +118,14 @@
     <string name="vanilla_button_press">Press and immediately release.</string>
     <string name="vanilla_button_rahb">Hold the button. Depending on the color of the LED strip, release the button when the number shows up in the bomb timer. It can be in any position.
     \nBlue: 4\nYellow: 5\nOther: 1</string>
+
+    <!-- Vanilla Simon Says -->
+    <string name="vanilla_simon_says_strikes"># of strikes</string>
+    <string-array name="vanilla_simon_says_strikes">
+        <item>Zero</item>
+        <item>One</item>
+        <item>Two+</item>
+    </string-array>
 
     <!-- Log String -->
     <string name="log_empty">Log is empty.</string>

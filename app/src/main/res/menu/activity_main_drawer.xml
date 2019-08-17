@@ -28,6 +28,11 @@
                     android:id="@+id/nav_vanilla_keypad"
                     android:icon="@drawable/ic_keypad"
                     android:title="@string/menu_vanilla_keypad"/>
+                <item
+                    android:id="@+id/nav_vanilla_simon_says"
+                    android:icon="@drawable/ic_simon_says"
+                    android:title="@string/menu_vanilla_simon_says"
+                    />
             </group>
         </menu>
     </item>

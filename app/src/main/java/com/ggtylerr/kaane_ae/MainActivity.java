@@ -1,6 +1,5 @@
 package com.ggtylerr.kaane_ae;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
@@ -13,9 +12,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 
 import android.view.MenuItem;
 
-import com.ggtylerr.kaane_ae.vanilla.Button;
-import com.ggtylerr.kaane_ae.vanilla.Keypad;
-import com.ggtylerr.kaane_ae.vanilla.Wires;
+import com.ggtylerr.kaane_ae.vanilla.*;
 import com.google.android.material.navigation.NavigationView;
 import androidx.drawerlayout.widget.DrawerLayout;
 
@@ -133,6 +130,7 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_vanilla_wires: fragment = new Wires(); break;
             case R.id.nav_vanilla_button: fragment = new Button(); break;
             case R.id.nav_vanilla_keypad: fragment = new Keypad(); break;
+            case R.id.nav_vanilla_simon_says: fragment = new SimonSays(); break;
             // Dev Screens
             case R.id.nav_dev_log: fragment = new LogFragment(); break;
         }
