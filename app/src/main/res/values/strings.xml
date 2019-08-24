@@ -11,6 +11,10 @@
     <string name="generic_ok">OK</string>
     <string name="generic_clear">CLEAR</string>
     <string name="generic_lc_clear">Clear</string>
+    <string name="generic_next">NEXT</string>
+    <string name="generic_lc_next">Next</string>
+    <string name="generic_reset">RESET</string>
+    <string name="generic_lc_reset">Reset</string>
 
     <!-- Setting Strings -->
     <string name="title_activity_settings">Settings</string>
@@ -24,7 +28,7 @@
     <string name="options_theme_summary">Changes will apply after restarting.</string>
     <string name="options_header_about">About</string>
     <string name="options_version_title">Version</string>
-    <string name="options_version">Alpha [α] v0.2.1</string>
+    <string name="options_version">Alpha [α] v0.3</string>
     <string name="options_github">GitHub Repo</string>
     <string name="options_github_url">https://github.com/ggtylerr/KAaNE-AE-</string>
     <string name="options_discord">Discord Server</string>
@@ -46,6 +50,7 @@
     <string name="menu_vanilla_keypad">Keypad</string>
     <string name="menu_vanilla_simon_says">Simon Says</string>
     <string name="menu_vanilla_whos_on_first">Who\'s On First</string>
+    <string name="menu_vanilla_memory">Memory</string>
 
     <!-- Dev Menu -->
     <string name="menu_dev">Developer Screens</string>
@@ -219,6 +224,24 @@
     <string name="vanilla_whos_on_first_out_your">UH UH, YOU ARE, UH HUH, YOUR</string>
     <string name="vanilla_whos_on_first_out_you_re">YOU, YOU\'RE</string>
     <string name="vanilla_whos_on_first_out_you_are">YOUR, NEXT, LIKE, UH HUH, WHAT?, DONE, UH UH, HOLD, YOU, U, YOU\'RE, SURE, UR, YOU ARE</string>
+
+    <!-- Vanilla Memory -->
+    <string name="vanilla_memory_stage_1">Stage 1</string>
+    <string name="vanilla_memory_stage_2">Stage 2</string>
+    <string name="vanilla_memory_stage_3">Stage 3</string>
+    <string name="vanilla_memory_stage_4">Stage 4</string>
+    <string name="vanilla_memory_stage_5">Stage 5</string>
+    <string name="vanilla_memory_display">Display</string>
+    <string name="vanilla_memory_label">Label %1$s</string>
+    <string name="vanilla_memory_position">Position %1$s</string>
+    <string-array name="vanilla_memory_numbers">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+    <string name="vanilla_memory_out">Press Position %1$s / Label %2$s</string>
+    <string name="vanilla_memory_out_s5">Press Label %1$s</string>
 
     <!-- Log String -->
     <string name="log_empty">Log is empty.</string>

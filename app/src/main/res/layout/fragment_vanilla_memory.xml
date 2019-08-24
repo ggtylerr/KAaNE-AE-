@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/vanilla_memory_stage1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/vanilla_memory_stage_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/vanilla_memory_stage1_out"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/vanilla_memory_stage1_reset"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_memory_stage1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/vanilla_memory_stage1_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/generic_reset"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_memory_stage1_out"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_memory_stage1_out"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_memory_stage1_out" />
+
+    <View
+        android:id="@+id/vanilla_memory_line1"
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:layout_marginTop="16dp"
+        android:background="#D6D6D6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_memory_stage1" />
+
+    <Spinner
+        android:id="@+id/vanilla_memory_stage1_display_spin"
+        style="@style/Widget.AppCompat.Spinner.Underlined"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:entries="@array/vanilla_memory_numbers"
+        app:layout_constraintEnd_toStartOf="@+id/vanilla_memory_stage1_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_memory_line1" />
+
+    <TextView
+        android:id="@+id/vanilla_memory_stage1_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/vanilla_memory_display"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_memory_stage1_display_spin"
+        app:layout_constraintEnd_toStartOf="@+id/vanilla_memory_stage1_display_btn"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_memory_stage1_display_spin"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_memory_stage1_display_spin" />
+
+    <Button
+        android:id="@+id/vanilla_memory_stage1_display_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/generic_ok"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_memory_stage1_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_memory_stage1_text"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_memory_stage1_text" />
+
+    <Spinner
+        android:id="@+id/vanilla_memory_stage1_btn_spin"
+        style="@style/Widget.AppCompat.Spinner.Underlined"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:entries="@array/vanilla_memory_numbers"
+        app:layout_constraintEnd_toStartOf="@+id/vanilla_memory_stage1_btn_text"
+        app:layout_constraintStart_toStartOf="@+id/vanilla_memory_line2"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_memory_stage1_display_spin" />
+
+    <TextView
+        android:id="@+id/vanilla_memory_stage1_btn_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_memory_stage1_btn_spin"
+        app:layout_constraintEnd_toStartOf="@+id/vanilla_memory_stage1_next"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_memory_stage1_btn_spin"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_memory_stage1_btn_spin" />
+
+    <Button
+        android:id="@+id/vanilla_memory_stage1_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/generic_next"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_memory_stage1_btn_spin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_memory_stage1_btn_spin" />
+
+    <View
+        android:id="@+id/vanilla_memory_line2"
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:layout_marginTop="16dp"
+        android:background="#D6D6D6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_memory_stage1_btn_spin" />
+
+    <TextView
+        android:id="@+id/vanilla_memory_stage2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/vanilla_memory_stage_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_memory_line2" />
+
+    <TextView
+        android:id="@+id/vanilla_memory_stage2_out"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/vanilla_memory_stage2_reset"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_memory_stage2"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_memory_line2" />
+
+    <Button
+        android:id="@+id/vanilla_memory_stage2_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/generic_reset"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_memory_stage2_out"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_memory_stage2_out" />
+
+    <View
+        android:id="@+id/vanilla_memory_line3"
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:layout_marginTop="16dp"
+        android:background="#D6D6D6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_memory_stage2" />
+
+    <Spinner
+        android:id="@+id/vanilla_memory_stage2_display_spin"
+        style="@style/Widget.AppCompat.Spinner.Underlined"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:entries="@array/vanilla_memory_numbers"
+        app:layout_constraintEnd_toStartOf="@+id/vanilla_memory_stage2_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_memory_line3" />
+
+    <TextView
+        android:id="@+id/vanilla_memory_stage2_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/vanilla_memory_display"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_memory_stage2_display_spin"
+        app:layout_constraintEnd_toStartOf="@+id/vanilla_memory_stage2_display_btn"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_memory_stage2_display_spin"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_memory_stage2_display_spin" />
+
+    <Button
+        android:id="@+id/vanilla_memory_stage2_display_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/generic_ok"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_memory_stage2_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_memory_stage2_text"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_memory_stage2_text" />
+
+    <Spinner
+        android:id="@+id/vanilla_memory_stage2_btn_spin"
+        style="@style/Widget.AppCompat.Spinner.Underlined"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:entries="@array/vanilla_memory_numbers"
+        app:layout_constraintEnd_toStartOf="@+id/vanilla_memory_stage2_btn_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_memory_stage2_display_spin" />
+
+    <TextView
+        android:id="@+id/vanilla_memory_stage2_btn_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_memory_stage2_btn_spin"
+        app:layout_constraintEnd_toStartOf="@+id/vanilla_memory_stage2_next"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_memory_stage2_btn_spin"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_memory_stage2_btn_spin" />
+
+    <Button
+        android:id="@+id/vanilla_memory_stage2_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/generic_next"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_memory_stage2_btn_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_memory_stage2_btn_text" />
+
+    <View
+        android:id="@+id/vanilla_memory_line4"
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:layout_marginTop="16dp"
+        android:background="#D6D6D6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_memory_stage2_btn_spin" />
+
+    <TextView
+        android:id="@+id/vanilla_memory_stage3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/vanilla_memory_stage_3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_memory_line4" />
+
+    <TextView
+        android:id="@+id/vanilla_memory_stage3_out"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/vanilla_memory_stage3_reset"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_memory_stage3"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_memory_line4" />
+
+    <Button
+        android:id="@+id/vanilla_memory_stage3_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/generic_reset"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_memory_stage3_out"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_memory_stage3_out" />
+
+    <View
+        android:id="@+id/vanilla_memory_line5"
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:layout_marginTop="16dp"
+        android:background="#D6D6D6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_memory_stage3" />
+
+    <Spinner
+        android:id="@+id/vanilla_memory_stage3_display_spin"
+        style="@style/Widget.AppCompat.Spinner.Underlined"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:entries="@array/vanilla_memory_numbers"
+        app:layout_constraintEnd_toStartOf="@+id/vanilla_memory_stage3_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_memory_line5" />
+
+    <TextView
+        android:id="@+id/vanilla_memory_stage3_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/vanilla_memory_display"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_memory_stage3_display_spin"
+        app:layout_constraintEnd_toStartOf="@+id/vanilla_memory_stage3_display_btn"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_memory_stage3_display_spin"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_memory_stage3_display_spin" />
+
+    <Button
+        android:id="@+id/vanilla_memory_stage3_display_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/generic_ok"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_memory_stage3_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_memory_stage3_text" />
+
+    <Spinner
+        android:id="@+id/vanilla_memory_stage3_btn_spin"
+        style="@style/Widget.AppCompat.Spinner.Underlined"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:entries="@array/vanilla_memory_numbers"
+        app:layout_constraintEnd_toStartOf="@+id/vanilla_memory_stage3_btn_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_memory_stage3_display_spin" />
+
+    <TextView
+        android:id="@+id/vanilla_memory_stage3_btn_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_memory_stage3_btn_spin"
+        app:layout_constraintEnd_toStartOf="@+id/vanilla_memory_stage3_next"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_memory_stage3_btn_spin"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_memory_stage3_btn_spin" />
+
+    <Button
+        android:id="@+id/vanilla_memory_stage3_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/generic_next"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_memory_stage3_btn_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_memory_stage3_btn_text" />
+
+    <View
+        android:id="@+id/vanilla_memory_line6"
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:layout_marginTop="16dp"
+        android:background="#D6D6D6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_memory_stage3_btn_spin" />
+
+    <TextView
+        android:id="@+id/vanilla_memory_stage4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/vanilla_memory_stage_4"
+        app:layout_constraintEnd_toStartOf="@+id/vanilla_memory_stage4_out"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_memory_line6" />
+
+    <TextView
+        android:id="@+id/vanilla_memory_stage4_out"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/vanilla_memory_stage4_reset"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_memory_stage4"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_memory_line6" />
+
+    <Button
+        android:id="@+id/vanilla_memory_stage4_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/generic_reset"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_memory_stage4_out"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_memory_stage4_out" />
+
+    <View
+        android:id="@+id/vanilla_memory_line7"
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:layout_marginTop="16dp"
+        android:background="#D6D6D6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_memory_stage4" />
+
+    <Spinner
+        android:id="@+id/vanilla_memory_stage4_display_spin"
+        style="@style/Widget.AppCompat.Spinner.Underlined"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:entries="@array/vanilla_memory_numbers"
+        app:layout_constraintEnd_toStartOf="@+id/vanilla_memory_stage4_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_memory_line7" />
+
+    <TextView
+        android:id="@+id/vanilla_memory_stage4_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/vanilla_memory_display"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_memory_stage4_display_spin"
+        app:layout_constraintEnd_toStartOf="@+id/vanilla_memory_stage4_display_btn"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_memory_stage4_display_spin"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_memory_stage4_display_spin" />
+
+    <Button
+        android:id="@+id/vanilla_memory_stage4_display_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/generic_ok"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_memory_stage4_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_memory_stage4_text" />
+
+    <Spinner
+        android:id="@+id/vanilla_memory_stage4_btn_spin"
+        style="@style/Widget.AppCompat.Spinner.Underlined"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:entries="@array/vanilla_memory_numbers"
+        app:layout_constraintEnd_toStartOf="@+id/vanilla_memory_stage4_btn_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_memory_stage4_display_spin" />
+
+    <TextView
+        android:id="@+id/vanilla_memory_stage4_btn_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_memory_stage4_btn_spin"
+        app:layout_constraintEnd_toStartOf="@+id/vanilla_memory_stage4_next"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_memory_stage4_btn_spin"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_memory_stage4_btn_spin" />
+
+    <Button
+        android:id="@+id/vanilla_memory_stage4_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/generic_next"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_memory_stage4_btn_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_memory_stage4_btn_text" />
+
+    <View
+        android:id="@+id/vanilla_memory_line8"
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:layout_marginTop="16dp"
+        android:background="#D6D6D6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_memory_stage4_btn_spin" />
+
+    <TextView
+        android:id="@+id/vanilla_memory_stage5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/vanilla_memory_stage_5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_memory_line8" />
+
+    <TextView
+        android:id="@+id/vanilla_memory_stage5_out"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_memory_stage5"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_memory_line8" />
+
+    <View
+        android:id="@+id/vanilla_memory_line9"
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:layout_marginTop="16dp"
+        android:background="#D6D6D6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_memory_stage5_out" />
+
+    <Spinner
+        android:id="@+id/vanilla_memory_stage5_display_spin"
+        style="@style/Widget.AppCompat.Spinner.Underlined"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:entries="@array/vanilla_memory_numbers"
+        app:layout_constraintEnd_toStartOf="@+id/vanilla_memory_stage5_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vanilla_memory_line9" />
+
+    <TextView
+        android:id="@+id/vanilla_memory_stage5_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/vanilla_memory_display"
+        app:layout_constraintBottom_toBottomOf="@id/vanilla_memory_stage5_display_spin"
+        app:layout_constraintEnd_toStartOf="@+id/vanilla_memory_stage5_display_btn"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_memory_stage5_display_spin"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_memory_stage5_display_spin" />
+
+    <Button
+        android:id="@+id/vanilla_memory_stage5_display_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/generic_ok"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_memory_stage5_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_memory_stage5_text" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

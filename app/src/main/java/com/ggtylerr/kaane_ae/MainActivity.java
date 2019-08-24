@@ -131,6 +131,7 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_vanilla_keypad: fragment = new Keypad(); break;
             case R.id.nav_vanilla_simon_says: fragment = new SimonSays(); break;
             case R.id.nav_vanilla_whos_on_first: fragment = new WhosOnFirst(); break;
+            case R.id.nav_vanilla_memory: fragment = new Memory(); break;
             // Dev Screens
             case R.id.nav_dev_log: fragment = new LogFragment(); break;
         }

@@ -35,7 +35,13 @@
                     />
                 <item
                     android:id="@+id/nav_vanilla_whos_on_first"
+                    android:icon="@drawable/ic_whos_on_first"
                     android:title="@string/menu_vanilla_whos_on_first"
+                    />
+                <item
+                    android:id="@+id/nav_vanilla_memory"
+                    android:icon="@drawable/ic_memory"
+                    android:title="@string/menu_vanilla_memory"
                     />
             </group>
         </menu>
