@@ -29,7 +29,7 @@ import android.view.Menu;
  *
  * The KTaNE assistant program for Androids
  *
- * Alpha [α] v0.2.1
+ * Alpha [α] v0.3
  *
  * ~~~developed by ggtylerr~~~
  */
@@ -132,6 +132,7 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_vanilla_simon_says: fragment = new SimonSays(); break;
             case R.id.nav_vanilla_whos_on_first: fragment = new WhosOnFirst(); break;
             case R.id.nav_vanilla_memory: fragment = new Memory(); break;
+            case R.id.nav_vanilla_morse_code: fragment = new MorseCode(); break;
             // Dev Screens
             case R.id.nav_dev_log: fragment = new LogFragment(); break;
         }

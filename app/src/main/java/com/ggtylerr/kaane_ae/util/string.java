@@ -104,6 +104,7 @@ public class string {
     // lastChar
     // -----------
     // returns the last character.
+    // -----------
     // example:
     // "Hello World!" - '!'
     // "hello world" - 'd'
@@ -116,6 +117,7 @@ public class string {
     // -----------
     // returns the last int. if there is none, it'll return with 0.
     // -----------
+    // example:
     // "12345" - 5
     // "999959999" - 9
     // "a3i0u" - 0
@@ -124,6 +126,20 @@ public class string {
         String[] sArr = s.split("");
         for (int i = sArr.length-1; i<sArr.length && i>=0; i--) if (isDigit(sArr[i])) return Integer.parseInt(sArr[i]);
         return 0;
+    }
+    // removeLast(String)
+    // -----------
+    // returns a string without the last character
+    // -----------
+    // example:
+    // "Hello World!" - "Hello World"
+    // "Woah" - "Woa"
+    // "a" - ""
+    // "" - ""
+    public static String removeLast(String s) {
+        if (s != null && s.length() > 0)
+            s = s.substring(0, s.length() - 1);
+        return s;
     }
     // totalLetters
     // -----------

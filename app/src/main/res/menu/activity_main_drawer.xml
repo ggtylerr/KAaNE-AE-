@@ -43,6 +43,11 @@
                     android:icon="@drawable/ic_memory"
                     android:title="@string/menu_vanilla_memory"
                     />
+                <item
+                    android:id="@+id/nav_vanilla_morse_code"
+                    android:icon="@drawable/ic_morse_code"
+                    android:title="@string/menu_vanilla_morse_code"
+                    />
             </group>
         </menu>
     </item>

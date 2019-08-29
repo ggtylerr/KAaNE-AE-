@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/vanilla_morse_code_dot_btn1"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/vanilla_morse_code_dot"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toStartOf="@+id/vanilla_morse_code_dash_btn1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/vanilla_morse_code_dash_btn1"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/vanilla_morse_code_dash"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toStartOf="@+id/vanilla_morse_code_backspace_btn1"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_morse_code_dot_btn1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/vanilla_morse_code_backspace_btn1"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/vanilla_morse_code_backspace"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toStartOf="@+id/vanilla_morse_code_char1"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_morse_code_dash_btn1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/vanilla_morse_code_char1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/black_border"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_morse_code_backspace_btn1"
+        app:layout_constraintEnd_toStartOf="@+id/vanilla_morse_code_btn1"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_morse_code_backspace_btn1"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_morse_code_backspace_btn1" />
+
+    <Button
+        android:id="@+id/vanilla_morse_code_btn1"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/generic_ok"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_morse_code_backspace_btn1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_morse_code_char1"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_morse_code_backspace_btn1" />
+
+    <Button
+        android:id="@+id/vanilla_morse_code_dot_btn2"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/vanilla_morse_code_dot"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toStartOf="@+id/vanilla_morse_code_dash_btn2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_morse_code_dot_btn1" />
+
+    <Button
+        android:id="@+id/vanilla_morse_code_dash_btn2"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="@string/vanilla_morse_code_dash"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toStartOf="@+id/vanilla_morse_code_backspace_btn2"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_morse_code_dot_btn2"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_morse_code_dash_btn1" />
+
+    <Button
+        android:id="@+id/vanilla_morse_code_backspace_btn2"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="@string/vanilla_morse_code_backspace"
+        android:textSize="36sp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_morse_code_dash_btn2"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_morse_code_backspace_btn1" />
+
+    <TextView
+        android:id="@+id/vanilla_morse_code_char2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/black_border"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_morse_code_backspace_btn2"
+        app:layout_constraintEnd_toStartOf="@+id/vanilla_morse_code_btn2"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_morse_code_backspace_btn2"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_morse_code_backspace_btn2" />
+
+    <Button
+        android:id="@+id/vanilla_morse_code_btn2"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/generic_ok"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_morse_code_backspace_btn2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_morse_code_char2"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_morse_code_backspace_btn2" />
+
+    <Button
+        android:id="@+id/vanilla_morse_code_dot_btn3"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/vanilla_morse_code_dot"
+        android:textSize="36sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_morse_code_dot_btn2" />
+
+    <Button
+        android:id="@+id/vanilla_morse_code_dash_btn3"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="@string/vanilla_morse_code_dash"
+        android:textSize="36sp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_morse_code_dot_btn3"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_morse_code_dash_btn2" />
+
+    <Button
+        android:id="@+id/vanilla_morse_code_backspace_btn3"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="@string/vanilla_morse_code_backspace"
+        android:textSize="36sp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_morse_code_dash_btn3"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_morse_code_backspace_btn2" />
+
+    <TextView
+        android:id="@+id/vanilla_morse_code_char3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/black_border"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_morse_code_backspace_btn3"
+        app:layout_constraintEnd_toStartOf="@+id/vanilla_morse_code_btn3"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_morse_code_backspace_btn3"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_morse_code_backspace_btn3" />
+
+    <Button
+        android:id="@+id/vanilla_morse_code_btn3"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/generic_ok"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_morse_code_backspace_btn3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_morse_code_char3"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_morse_code_backspace_btn3" />
+
+    <TextView
+        android:id="@+id/vanilla_morse_code_out"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_morse_code_backspace_btn3" />
+</androidx.constraintlayout.widget.ConstraintLayout>

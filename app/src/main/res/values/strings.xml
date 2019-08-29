@@ -51,6 +51,7 @@
     <string name="menu_vanilla_simon_says">Simon Says</string>
     <string name="menu_vanilla_whos_on_first">Who\'s On First</string>
     <string name="menu_vanilla_memory">Memory</string>
+    <string name="menu_vanilla_morse_code">Morse Code</string>
 
     <!-- Dev Menu -->
     <string name="menu_dev">Developer Screens</string>
@@ -242,6 +243,30 @@
     </string-array>
     <string name="vanilla_memory_out">Press Position %1$s / Label %2$s</string>
     <string name="vanilla_memory_out_s5">Press Label %1$s</string>
+
+    <!-- Vanilla Morse Code -->
+    <!-- Note: Dot, Dash and Backspace should only be changed if symbols are broken in different languages.-->
+    <string name="vanilla_morse_code_dot">•</string>
+    <string name="vanilla_morse_code_dash">-</string>
+    <string name="vanilla_morse_code_backspace">←</string>
+    <string name="vanilla_morse_code_beats">BEATS - 3.600 MHz</string>
+    <string name="vanilla_morse_code_bistro">BISTRO - 3.522 MHz</string>
+    <string name="vanilla_morse_code_bombs">BOMBS - 3.565 MHz</string>
+    <string name="vanilla_morse_code_boxes">BOXES - 3.535 MHz</string>
+    <string name="vanilla_morse_code_break">BREAK - 3.572 MHz</string>
+    <string name="vanilla_morse_code_brick">BRICK - 3.575 MHz</string>
+    <string name="vanilla_morse_code_flick">FLICK - 3.555 MHz</string>
+    <string name="vanilla_morse_code_halls">HALLS - 3.515 MHz</string>
+    <string name="vanilla_morse_code_leaks">LEAKS - 3.542 MHz</string>
+    <string name="vanilla_morse_code_shell">SHELL - 3.505 MHz</string>
+    <string name="vanilla_morse_code_slick">SLICK - 3.522 MHz</string>
+    <string name="vanilla_morse_code_steak">STEAK - 3.582 MHz</string>
+    <string name="vanilla_morse_code_sting">STING - 3.592 MHz</string>
+    <string name="vanilla_morse_code_strobe">STROBE - 3.545 MHz</string>
+    <string name="vanilla_morse_code_trick">TRICK - 3.532 MHz</string>
+    <string name="vanilla_morse_code_vector">VECTOR - 3.595 MHz</string>
+    <string name="vanilla_morse_code_info">Need more characters - Current Text: %1$s</string>
+    <string name="vanilla_morse_code_error">Incorrect character / character not used in position</string>
 
     <!-- Log String -->
     <string name="log_empty">Log is empty.</string>

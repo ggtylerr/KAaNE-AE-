@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
@@ -22,15 +22,15 @@
         <item name="android:tint">@color/white</item>
         <item name="android:background">@color/darkColorPrimary</item>
         <item name="android:actionBarStyle">@style/AppTheme.Dark.ActionBar</item>
-        <item name="android:buttonTint">@color/darkColorPrimaryDark</item>
+        <!-- Not working 'cause Android is a very good OS that works perfectly -->
+        <item name="buttonStyle">@style/AppTheme.Dark.Button</item>
         <item name="android:buttonStyle">@style/AppTheme.Dark.Button</item>
     </style>
     <style name="AppTheme.Dark.ActionBar" parent="Widget.AppCompat.Light.ActionBar">
         <item name="android:background">@color/darkColorPrimaryDark</item>
     </style>
-    <style name="AppTheme.Dark.Button" parent="ThemeOverlay.AppCompat">
-        <item name="colorAccent">@color/darkColorPrimaryDark</item>
-        <item name="color">@color/darkColorPrimaryDark</item>
-        <item name="android:backgroundTint">@color/darkColorPrimaryDark</item>
+    <style name="AppTheme.Dark.Button" parent="@android:style/Widget.Button">
+        <item name="android:background">@color/darkColorPrimaryDark</item>
+        <item name="android:textColor">@color/button_text_style</item>
     </style>
 </resources>
