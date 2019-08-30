@@ -133,6 +133,7 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_vanilla_whos_on_first: fragment = new WhosOnFirst(); break;
             case R.id.nav_vanilla_memory: fragment = new Memory(); break;
             case R.id.nav_vanilla_morse_code: fragment = new MorseCode(); break;
+            case R.id.nav_vanilla_complicated_wires: fragment = new ComplicatedWires(); break;
             // Dev Screens
             case R.id.nav_dev_log: fragment = new LogFragment(); break;
         }

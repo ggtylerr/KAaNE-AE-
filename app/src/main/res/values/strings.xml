@@ -52,6 +52,7 @@
     <string name="menu_vanilla_whos_on_first">Who\'s On First</string>
     <string name="menu_vanilla_memory">Memory</string>
     <string name="menu_vanilla_morse_code">Morse Code</string>
+    <string name="menu_vanilla_complicated_wires">Complicated Wires</string>
 
     <!-- Dev Menu -->
     <string name="menu_dev">Developer Screens</string>
@@ -267,6 +268,14 @@
     <string name="vanilla_morse_code_vector">VECTOR - 3.595 MHz</string>
     <string name="vanilla_morse_code_info">Need more characters - Current Text: %1$s</string>
     <string name="vanilla_morse_code_error">Incorrect character / character not used in position</string>
+
+    <!-- Vanilla Complicated Wires -->
+    <string name="vanilla_complicated_wires_red">Red</string>
+    <string name="vanilla_complicated_wires_blue">Blue</string>
+    <string name="vanilla_complicated_wires_star">Star</string>
+    <string name="vanilla_complicated_wires_led">Led</string>
+    <string name="vanilla_complicated_wires_cut">CUT</string>
+    <string name="vanilla_complicated_wires_dont_cut">DON\'T CUT</string>
 
     <!-- Log String -->
     <string name="log_empty">Log is empty.</string>
