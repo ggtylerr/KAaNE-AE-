@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
@@ -14,7 +15,6 @@ import com.ggtylerr.kaane_ae.R;
 import com.ggtylerr.kaane_ae.util.log;
 
 public class WireSequences extends Fragment {
-    private String cutMsg;
     private int red;
     private int blue;
     private int black;
@@ -541,7 +541,6 @@ public class WireSequences extends Fragment {
             w12black.setBackgroundResource(oBorderID);
         });
         // Default values
-        cutMsg = getResources().getString(R.string.vanilla_wire_sequences_cut);
         red = 0;
         blue = 0;
         black = 0;
@@ -578,6 +577,19 @@ public class WireSequences extends Fragment {
         w10none.setBackgroundResource(borderID);
         w11none.setBackgroundResource(borderID);
         w12none.setBackgroundResource(borderID);
+        // Default Components
+        TextView w1 = v.findViewById(R.id.vanilla_wire_sequences_w1);
+        TextView w2 = v.findViewById(R.id.vanilla_wire_sequences_w2);
+        TextView w3 = v.findViewById(R.id.vanilla_wire_sequences_w3);
+        TextView w4 = v.findViewById(R.id.vanilla_wire_sequences_w4);
+        TextView w5 = v.findViewById(R.id.vanilla_wire_sequences_w5);
+        TextView w6 = v.findViewById(R.id.vanilla_wire_sequences_w6);
+        TextView w7 = v.findViewById(R.id.vanilla_wire_sequences_w7);
+        TextView w8 = v.findViewById(R.id.vanilla_wire_sequences_w8);
+        TextView w9 = v.findViewById(R.id.vanilla_wire_sequences_w9);
+        TextView w10 = v.findViewById(R.id.vanilla_wire_sequences_w10);
+        TextView w11 = v.findViewById(R.id.vanilla_wire_sequences_w11);
+        TextView w12 = v.findViewById(R.id.vanilla_wire_sequences_w12);
         v.findViewById(R.id.vanilla_wire_sequences_line2).setVisibility(View.INVISIBLE);
         v.findViewById(R.id.vanilla_wire_sequences_stage2).setVisibility(View.INVISIBLE);
         v.findViewById(R.id.vanilla_wire_sequences_stage2_ok).setVisibility(View.INVISIBLE);
@@ -588,19 +600,19 @@ public class WireSequences extends Fragment {
         w4blue.setVisibility(View.INVISIBLE);
         w4black.setVisibility(View.INVISIBLE);
         v.findViewById(R.id.vanilla_wire_sequences_w4_spin).setVisibility(View.INVISIBLE);
-        v.findViewById(R.id.vanilla_wire_sequences_w4).setVisibility(View.INVISIBLE);
+        w4.setVisibility(View.INVISIBLE);
         w5none.setVisibility(View.INVISIBLE);
         w5red.setVisibility(View.INVISIBLE);
         w5blue.setVisibility(View.INVISIBLE);
         w5black.setVisibility(View.INVISIBLE);
         v.findViewById(R.id.vanilla_wire_sequences_w5_spin).setVisibility(View.INVISIBLE);
-        v.findViewById(R.id.vanilla_wire_sequences_w5).setVisibility(View.INVISIBLE);
+        w5.setVisibility(View.INVISIBLE);
         w6none.setVisibility(View.INVISIBLE);
         w6red.setVisibility(View.INVISIBLE);
         w6blue.setVisibility(View.INVISIBLE);
         w6black.setVisibility(View.INVISIBLE);
         v.findViewById(R.id.vanilla_wire_sequences_w6_spin).setVisibility(View.INVISIBLE);
-        v.findViewById(R.id.vanilla_wire_sequences_w6).setVisibility(View.INVISIBLE);
+        w6.setVisibility(View.INVISIBLE);
         v.findViewById(R.id.vanilla_wire_sequences_line4).setVisibility(View.INVISIBLE);
         v.findViewById(R.id.vanilla_wire_sequences_stage3).setVisibility(View.INVISIBLE);
         v.findViewById(R.id.vanilla_wire_sequences_stage3_ok).setVisibility(View.INVISIBLE);
@@ -611,19 +623,19 @@ public class WireSequences extends Fragment {
         w7blue.setVisibility(View.INVISIBLE);
         w7black.setVisibility(View.INVISIBLE);
         v.findViewById(R.id.vanilla_wire_sequences_w7_spin).setVisibility(View.INVISIBLE);
-        v.findViewById(R.id.vanilla_wire_sequences_w7).setVisibility(View.INVISIBLE);
+        w7.setVisibility(View.INVISIBLE);
         w8none.setVisibility(View.INVISIBLE);
         w8red.setVisibility(View.INVISIBLE);
         w8blue.setVisibility(View.INVISIBLE);
         w8black.setVisibility(View.INVISIBLE);
         v.findViewById(R.id.vanilla_wire_sequences_w8_spin).setVisibility(View.INVISIBLE);
-        v.findViewById(R.id.vanilla_wire_sequences_w8).setVisibility(View.INVISIBLE);
+        w8.setVisibility(View.INVISIBLE);
         w9none.setVisibility(View.INVISIBLE);
         w9red.setVisibility(View.INVISIBLE);
         w9blue.setVisibility(View.INVISIBLE);
         w9black.setVisibility(View.INVISIBLE);
         v.findViewById(R.id.vanilla_wire_sequences_w9_spin).setVisibility(View.INVISIBLE);
-        v.findViewById(R.id.vanilla_wire_sequences_w9).setVisibility(View.INVISIBLE);
+        w9.setVisibility(View.INVISIBLE);
         v.findViewById(R.id.vanilla_wire_sequences_line6).setVisibility(View.INVISIBLE);
         v.findViewById(R.id.vanilla_wire_sequences_stage4).setVisibility(View.INVISIBLE);
         v.findViewById(R.id.vanilla_wire_sequences_stage4_ok).setVisibility(View.INVISIBLE);
@@ -634,19 +646,19 @@ public class WireSequences extends Fragment {
         w10blue.setVisibility(View.INVISIBLE);
         w10black.setVisibility(View.INVISIBLE);
         v.findViewById(R.id.vanilla_wire_sequences_w10_spin).setVisibility(View.INVISIBLE);
-        v.findViewById(R.id.vanilla_wire_sequences_w10).setVisibility(View.INVISIBLE);
+        w10.setVisibility(View.INVISIBLE);
         w11none.setVisibility(View.INVISIBLE);
         w11red.setVisibility(View.INVISIBLE);
         w11blue.setVisibility(View.INVISIBLE);
         w11black.setVisibility(View.INVISIBLE);
         v.findViewById(R.id.vanilla_wire_sequences_w11_spin).setVisibility(View.INVISIBLE);
-        v.findViewById(R.id.vanilla_wire_sequences_w11).setVisibility(View.INVISIBLE);
+        w11.setVisibility(View.INVISIBLE);
         w12none.setVisibility(View.INVISIBLE);
         w12red.setVisibility(View.INVISIBLE);
         w12blue.setVisibility(View.INVISIBLE);
         w12black.setVisibility(View.INVISIBLE);
         v.findViewById(R.id.vanilla_wire_sequences_w12_spin).setVisibility(View.INVISIBLE);
-        v.findViewById(R.id.vanilla_wire_sequences_w12).setVisibility(View.INVISIBLE);
+        w12.setVisibility(View.INVISIBLE);
         // Stage 1
         v.findViewById(R.id.vanilla_wire_sequences_stage1_ok).setOnClickListener((View view) -> {
             log.print("Click listened: Stage 1 Button");
@@ -675,9 +687,9 @@ public class WireSequences extends Fragment {
             char w3Letter = letterArr[w3LetterPos].toCharArray()[0];
             log.print("W3 Letter: " + w3Letter);
             // TextViews
-            TextView w1out = v.findViewById(R.id.vanilla_wire_sequences_w1);
-            TextView w2out = v.findViewById(R.id.vanilla_wire_sequences_w2);
-            TextView w3out = v.findViewById(R.id.vanilla_wire_sequences_w3);
+            w1.setText("");
+            w2.setText("");
+            w3.setText("");
             // Wire 1
             switch (w1color) {
                 case "Red":
@@ -685,36 +697,28 @@ public class WireSequences extends Fragment {
                     int logic = redLogic(red,w1Letter);
                     if (logic == 1) {
                         log.print("W1: Cut");
-                        w1out.setText(R.string.vanilla_wire_sequences_cut);
-                    }
-                    else {
-                        log.print("W1: Don't cut");
-                        w1out.setText("");
-                    }
+                        w1.setText(R.string.vanilla_wire_sequences_cut);
+                    } else log.print("W1: Don't cut");
                     break;
                 case "Blue":
                     blue++;
                     logic = blueLogic(blue,w1Letter);
                     if (logic == 1) {
                         log.print("W1: Cut");
-                        w1out.setText(R.string.vanilla_wire_sequences_cut);
-                    }
-                    else {
-                        log.print("W1: Don't cut");
-                        w1out.setText("");
-                    }
+                        w1.setText(R.string.vanilla_wire_sequences_cut);
+                    } else log.print("W1: Don't cut");
                     break;
                 case "Black":
                     black++;
                     logic = blackLogic(black,w1Letter);
                     if (logic == 1) {
                         log.print("W1: Cut");
-                        w1out.setText(R.string.vanilla_wire_sequences_cut);
-                    }
-                    else {
-                        log.print("W1: Don't cut");
-                        w1out.setText("");
-                    }
+                        w1.setText(R.string.vanilla_wire_sequences_cut);
+                    } else log.print("W1: Don't cut");
+                    break;
+                default:
+                    log.print("W1: Empty");
+                    w1.setText("");
                     break;
             }
             switch (w2color) {
@@ -723,36 +727,28 @@ public class WireSequences extends Fragment {
                     int logic = redLogic(red,w2Letter);
                     if (logic == 1) {
                         log.print("W2: Cut");
-                        w2out.setText(R.string.vanilla_wire_sequences_cut);
-                    }
-                    else {
-                        log.print("W2: Don't cut");
-                        w2out.setText("");
-                    }
+                        w2.setText(R.string.vanilla_wire_sequences_cut);
+                    } else log.print("W2: Don't cut");
                     break;
                 case "Blue":
                     blue++;
                     logic = blueLogic(blue,w2Letter);
                     if (logic == 1) {
                         log.print("W2: Cut");
-                        w2out.setText(R.string.vanilla_wire_sequences_cut);
-                    }
-                    else {
-                        log.print("W2: Don't cut");
-                        w2out.setText("");
-                    }
+                        w2.setText(R.string.vanilla_wire_sequences_cut);
+                    } else log.print("W2: Don't cut");
                     break;
                 case "Black":
                     black++;
                     logic = blackLogic(black,w2Letter);
                     if (logic == 1) {
                         log.print("W2: Cut");
-                        w2out.setText(R.string.vanilla_wire_sequences_cut);
-                    }
-                    else {
-                        log.print("W2: Don't cut");
-                        w2out.setText("");
-                    }
+                        w2.setText(R.string.vanilla_wire_sequences_cut);
+                    } else log.print("W2: Don't cut");
+                    break;
+                default:
+                    log.print("W2: Empty");
+                    w2.setText("");
                     break;
             }
             switch (w3color) {
@@ -761,37 +757,29 @@ public class WireSequences extends Fragment {
                     int logic = redLogic(red,w3Letter);
                     if (logic == 1) {
                         log.print("W3: Cut");
-                        w3out.setText(R.string.vanilla_wire_sequences_cut);
+                        w3.setText(R.string.vanilla_wire_sequences_cut);
                     }
-                    else {
-                        log.print("W3: Don't cut");
-                        w3out.setText("");
-                    }
+                    else log.print("W3: Don't cut");
                     break;
                 case "Blue":
                     blue++;
                     logic = blueLogic(blue,w3Letter);
                     if (logic == 1) {
                         log.print("W3: Cut");
-                        w3out.setText(R.string.vanilla_wire_sequences_cut);
+                        w3.setText(R.string.vanilla_wire_sequences_cut);
                     }
-                    else {
-                        log.print("W3: Don't cut");
-                        w3out.setText("");
-                    }
+                    else log.print("W3: Don't cut");
                     break;
                 case "Black":
                     black++;
                     logic = blackLogic(black,w3Letter);
                     if (logic == 1) {
                         log.print("W3: Cut");
-                        w3out.setText(R.string.vanilla_wire_sequences_cut);
+                        w3.setText(R.string.vanilla_wire_sequences_cut);
                     }
-                    else {
-                        log.print("W3: Don't cut");
-                        w3out.setText("");
-                    }
+                    else log.print("W3: Don't cut");
                     break;
+                default: log.print("W3: Empty"); break;
             }
             // Print occurrences
             log.print("Red occurrences: " + red);
@@ -808,19 +796,19 @@ public class WireSequences extends Fragment {
             w4blue.setVisibility(View.VISIBLE);
             w4black.setVisibility(View.VISIBLE);
             v.findViewById(R.id.vanilla_wire_sequences_w4_spin).setVisibility(View.VISIBLE);
-            v.findViewById(R.id.vanilla_wire_sequences_w4).setVisibility(View.VISIBLE);
+            w4.setVisibility(View.VISIBLE);
             w5none.setVisibility(View.VISIBLE);
             w5red.setVisibility(View.VISIBLE);
             w5blue.setVisibility(View.VISIBLE);
             w5black.setVisibility(View.VISIBLE);
             v.findViewById(R.id.vanilla_wire_sequences_w5_spin).setVisibility(View.VISIBLE);
-            v.findViewById(R.id.vanilla_wire_sequences_w5).setVisibility(View.VISIBLE);
+            w5.setVisibility(View.VISIBLE);
             w6none.setVisibility(View.VISIBLE);
             w6red.setVisibility(View.VISIBLE);
             w6blue.setVisibility(View.VISIBLE);
             w6black.setVisibility(View.VISIBLE);
             v.findViewById(R.id.vanilla_wire_sequences_w6_spin).setVisibility(View.VISIBLE);
-            v.findViewById(R.id.vanilla_wire_sequences_w6).setVisibility(View.VISIBLE);
+            w6.setVisibility(View.VISIBLE);
             // Make stage 3 and 4 invisible
             v.findViewById(R.id.vanilla_wire_sequences_line4).setVisibility(View.INVISIBLE);
             v.findViewById(R.id.vanilla_wire_sequences_stage3).setVisibility(View.INVISIBLE);
@@ -832,19 +820,19 @@ public class WireSequences extends Fragment {
             w7blue.setVisibility(View.INVISIBLE);
             w7black.setVisibility(View.INVISIBLE);
             v.findViewById(R.id.vanilla_wire_sequences_w7_spin).setVisibility(View.INVISIBLE);
-            v.findViewById(R.id.vanilla_wire_sequences_w7).setVisibility(View.INVISIBLE);
+            w7.setVisibility(View.INVISIBLE);
             w8none.setVisibility(View.INVISIBLE);
             w8red.setVisibility(View.INVISIBLE);
             w8blue.setVisibility(View.INVISIBLE);
             w8black.setVisibility(View.INVISIBLE);
             v.findViewById(R.id.vanilla_wire_sequences_w8_spin).setVisibility(View.INVISIBLE);
-            v.findViewById(R.id.vanilla_wire_sequences_w8).setVisibility(View.INVISIBLE);
+            w8.setVisibility(View.INVISIBLE);
             w9none.setVisibility(View.INVISIBLE);
             w9red.setVisibility(View.INVISIBLE);
             w9blue.setVisibility(View.INVISIBLE);
             w9black.setVisibility(View.INVISIBLE);
             v.findViewById(R.id.vanilla_wire_sequences_w9_spin).setVisibility(View.INVISIBLE);
-            v.findViewById(R.id.vanilla_wire_sequences_w9).setVisibility(View.INVISIBLE);
+            w9.setVisibility(View.INVISIBLE);
             v.findViewById(R.id.vanilla_wire_sequences_line6).setVisibility(View.INVISIBLE);
             v.findViewById(R.id.vanilla_wire_sequences_stage4).setVisibility(View.INVISIBLE);
             v.findViewById(R.id.vanilla_wire_sequences_stage4_ok).setVisibility(View.INVISIBLE);
@@ -855,19 +843,19 @@ public class WireSequences extends Fragment {
             w10blue.setVisibility(View.INVISIBLE);
             w10black.setVisibility(View.INVISIBLE);
             v.findViewById(R.id.vanilla_wire_sequences_w10_spin).setVisibility(View.INVISIBLE);
-            v.findViewById(R.id.vanilla_wire_sequences_w10).setVisibility(View.INVISIBLE);
+            w10.setVisibility(View.INVISIBLE);
             w11none.setVisibility(View.INVISIBLE);
             w11red.setVisibility(View.INVISIBLE);
             w11blue.setVisibility(View.INVISIBLE);
             w11black.setVisibility(View.INVISIBLE);
             v.findViewById(R.id.vanilla_wire_sequences_w11_spin).setVisibility(View.INVISIBLE);
-            v.findViewById(R.id.vanilla_wire_sequences_w11).setVisibility(View.INVISIBLE);
+            w11.setVisibility(View.INVISIBLE);
             w12none.setVisibility(View.INVISIBLE);
             w12red.setVisibility(View.INVISIBLE);
             w12blue.setVisibility(View.INVISIBLE);
             w12black.setVisibility(View.INVISIBLE);
             v.findViewById(R.id.vanilla_wire_sequences_w12_spin).setVisibility(View.INVISIBLE);
-            v.findViewById(R.id.vanilla_wire_sequences_w12).setVisibility(View.INVISIBLE);
+            w12.setVisibility(View.INVISIBLE);
         });
         // Stage 2
         v.findViewById(R.id.vanilla_wire_sequences_stage2_ok).setOnClickListener((View view) -> {
@@ -897,9 +885,9 @@ public class WireSequences extends Fragment {
             char w6Letter = letterArr[w6LetterPos].toCharArray()[0];
             log.print("W6 Letter: " + w6Letter);
             // TextViews
-            TextView w4out = v.findViewById(R.id.vanilla_wire_sequences_w4);
-            TextView w5out = v.findViewById(R.id.vanilla_wire_sequences_w5);
-            TextView w6out = v.findViewById(R.id.vanilla_wire_sequences_w6);
+            w4.setText("");
+            w5.setText("");
+            w6.setText("");
             // Stage 2 values
             s2red = red;
             log.printExclog("Previous stage red occurrences: " + s2red);
@@ -914,37 +902,26 @@ public class WireSequences extends Fragment {
                     int logic = redLogic(red,w4Letter);
                     if (logic == 1) {
                         log.print("W4: Cut");
-                        w4out.setText(R.string.vanilla_wire_sequences_cut);
-                    }
-                    else {
-                        log.print("W4: Don't cut");
-                        w4out.setText("");
-                    }
+                        w4.setText(R.string.vanilla_wire_sequences_cut);
+                    } else log.print("W4: Don't cut");
                     break;
                 case "Blue":
                     blue++;
                     logic = blueLogic(blue,w4Letter);
                     if (logic == 1) {
                         log.print("W4: Cut");
-                        w4out.setText(R.string.vanilla_wire_sequences_cut);
-                    }
-                    else {
-                        log.print("W4: Don't cut");
-                        w4out.setText("");
-                    }
+                        w4.setText(R.string.vanilla_wire_sequences_cut);
+                    } else log.print("W4: Don't cut");
                     break;
                 case "Black":
                     black++;
                     logic = blackLogic(black,w4Letter);
                     if (logic == 1) {
                         log.print("W4: Cut");
-                        w4out.setText(R.string.vanilla_wire_sequences_cut);
-                    }
-                    else {
-                        log.print("W4: Don't cut");
-                        w4out.setText("");
-                    }
+                        w4.setText(R.string.vanilla_wire_sequences_cut);
+                    } else log.print("W4: Don't cut");
                     break;
+                default: log.print("W4: Empty"); break;
             }
             switch (w5color) {
                 case "Red":
@@ -952,36 +929,28 @@ public class WireSequences extends Fragment {
                     int logic = redLogic(red,w5Letter);
                     if (logic == 1) {
                         log.print("W5: Cut");
-                        w5out.setText(R.string.vanilla_wire_sequences_cut);
-                    }
-                    else {
-                        log.print("W5: Don't cut");
-                        w5out.setText("");
-                    }
+                        w5.setText(R.string.vanilla_wire_sequences_cut);
+                    } else log.print("W5: Don't cut");
                     break;
                 case "Blue":
                     blue++;
                     logic = blueLogic(blue,w5Letter);
                     if (logic == 1) {
                         log.print("W5: Cut");
-                        w5out.setText(R.string.vanilla_wire_sequences_cut);
-                    }
-                    else {
-                        log.print("W5: Don't cut");
-                        w5out.setText("");
-                    }
+                        w5.setText(R.string.vanilla_wire_sequences_cut);
+                    } else log.print("W5: Don't cut");
                     break;
                 case "Black":
                     black++;
                     logic = blackLogic(black,w5Letter);
                     if (logic == 1) {
                         log.print("W5: Cut");
-                        w5out.setText(R.string.vanilla_wire_sequences_cut);
-                    }
-                    else {
-                        log.print("W5: Don't cut");
-                        w5out.setText("");
-                    }
+                        w5.setText(R.string.vanilla_wire_sequences_cut);
+                    } else log.print("W5: Don't cut");
+                    break;
+                default:
+                    log.print("W5: Empty");
+                    w5.setText("");
                     break;
             }
             switch (w6color) {
@@ -990,36 +959,28 @@ public class WireSequences extends Fragment {
                     int logic = redLogic(red,w6Letter);
                     if (logic == 1) {
                         log.print("W6: Cut");
-                        w6out.setText(R.string.vanilla_wire_sequences_cut);
-                    }
-                    else {
-                        log.print("W6: Don't cut");
-                        w6out.setText("");
-                    }
+                        w6.setText(R.string.vanilla_wire_sequences_cut);
+                    } else log.print("W6: Don't cut");
                     break;
                 case "Blue":
                     blue++;
                     logic = blueLogic(blue,w6Letter);
                     if (logic == 1) {
                         log.print("W6: Cut");
-                        w6out.setText(R.string.vanilla_wire_sequences_cut);
-                    }
-                    else {
-                        log.print("W6: Don't cut");
-                        w6out.setText("");
-                    }
+                        w6.setText(R.string.vanilla_wire_sequences_cut);
+                    } else log.print("W6: Don't cut");
                     break;
                 case "Black":
                     black++;
                     logic = blackLogic(black,w6Letter);
                     if (logic == 1) {
                         log.print("W6: Cut");
-                        w6out.setText(R.string.vanilla_wire_sequences_cut);
-                    }
-                    else {
-                        log.print("W6: Don't cut");
-                        w6out.setText("");
-                    }
+                        w6.setText(R.string.vanilla_wire_sequences_cut);
+                    } else log.print("W6: Don't cut");
+                    break;
+                default:
+                    log.print("W6: Empty");
+                    w6.setText("");
                     break;
             }
             // Print occurrences
@@ -1037,19 +998,19 @@ public class WireSequences extends Fragment {
             w7blue.setVisibility(View.VISIBLE);
             w7black.setVisibility(View.VISIBLE);
             v.findViewById(R.id.vanilla_wire_sequences_w7_spin).setVisibility(View.VISIBLE);
-            v.findViewById(R.id.vanilla_wire_sequences_w7).setVisibility(View.VISIBLE);
+            w7.setVisibility(View.VISIBLE);
             w8none.setVisibility(View.VISIBLE);
             w8red.setVisibility(View.VISIBLE);
             w8blue.setVisibility(View.VISIBLE);
             w8black.setVisibility(View.VISIBLE);
             v.findViewById(R.id.vanilla_wire_sequences_w8_spin).setVisibility(View.VISIBLE);
-            v.findViewById(R.id.vanilla_wire_sequences_w8).setVisibility(View.VISIBLE);
+            w8.setVisibility(View.VISIBLE);
             w9none.setVisibility(View.VISIBLE);
             w9red.setVisibility(View.VISIBLE);
             w9blue.setVisibility(View.VISIBLE);
             w9black.setVisibility(View.VISIBLE);
             v.findViewById(R.id.vanilla_wire_sequences_w9_spin).setVisibility(View.VISIBLE);
-            v.findViewById(R.id.vanilla_wire_sequences_w9).setVisibility(View.VISIBLE);
+            w9.setVisibility(View.VISIBLE);
             // Make stage 4 invisible
             v.findViewById(R.id.vanilla_wire_sequences_line6).setVisibility(View.INVISIBLE);
             v.findViewById(R.id.vanilla_wire_sequences_stage4).setVisibility(View.INVISIBLE);
@@ -1061,19 +1022,19 @@ public class WireSequences extends Fragment {
             w10blue.setVisibility(View.INVISIBLE);
             w10black.setVisibility(View.INVISIBLE);
             v.findViewById(R.id.vanilla_wire_sequences_w10_spin).setVisibility(View.INVISIBLE);
-            v.findViewById(R.id.vanilla_wire_sequences_w10).setVisibility(View.INVISIBLE);
+            w10.setVisibility(View.INVISIBLE);
             w11none.setVisibility(View.INVISIBLE);
             w11red.setVisibility(View.INVISIBLE);
             w11blue.setVisibility(View.INVISIBLE);
             w11black.setVisibility(View.INVISIBLE);
             v.findViewById(R.id.vanilla_wire_sequences_w11_spin).setVisibility(View.INVISIBLE);
-            v.findViewById(R.id.vanilla_wire_sequences_w11).setVisibility(View.INVISIBLE);
+            w11.setVisibility(View.INVISIBLE);
             w12none.setVisibility(View.INVISIBLE);
             w12red.setVisibility(View.INVISIBLE);
             w12blue.setVisibility(View.INVISIBLE);
             w12black.setVisibility(View.INVISIBLE);
             v.findViewById(R.id.vanilla_wire_sequences_w12_spin).setVisibility(View.INVISIBLE);
-            v.findViewById(R.id.vanilla_wire_sequences_w12).setVisibility(View.INVISIBLE);
+            w12.setVisibility(View.INVISIBLE);
         });
         // Stage 3
         v.findViewById(R.id.vanilla_wire_sequences_stage3_ok).setOnClickListener((View view) -> {
@@ -1103,9 +1064,9 @@ public class WireSequences extends Fragment {
             char w9Letter = letterArr[w9LetterPos].toCharArray()[0];
             log.print("W9 Letter: " + w9Letter);
             // TextViews
-            TextView w7out = v.findViewById(R.id.vanilla_wire_sequences_w7);
-            TextView w8out = v.findViewById(R.id.vanilla_wire_sequences_w8);
-            TextView w9out = v.findViewById(R.id.vanilla_wire_sequences_w9);
+            w7.setText("");
+            w8.setText("");
+            w9.setText("");
             // Stage 3 values
             s3red = red;
             log.printExclog("Previous stage red occurrences: " + s3red);
@@ -1120,37 +1081,26 @@ public class WireSequences extends Fragment {
                     int logic = redLogic(red,w7Letter);
                     if (logic == 1) {
                         log.print("W7: Cut");
-                        w7out.setText(R.string.vanilla_wire_sequences_cut);
-                    }
-                    else {
-                        log.print("W7: Don't cut");
-                        w7out.setText("");
-                    }
+                        w7.setText(R.string.vanilla_wire_sequences_cut);
+                    } else log.print("W7: Don't cut");
                     break;
                 case "Blue":
                     blue++;
                     logic = blueLogic(blue,w7Letter);
                     if (logic == 1) {
                         log.print("W7: Cut");
-                        w7out.setText(R.string.vanilla_wire_sequences_cut);
-                    }
-                    else {
-                        log.print("W7: Don't cut");
-                        w7out.setText("");
-                    }
+                        w7.setText(R.string.vanilla_wire_sequences_cut);
+                    } else log.print("W7: Don't cut");
                     break;
                 case "Black":
                     black++;
                     logic = blackLogic(black,w7Letter);
                     if (logic == 1) {
                         log.print("W7: Cut");
-                        w7out.setText(R.string.vanilla_wire_sequences_cut);
-                    }
-                    else {
-                        log.print("W7: Don't cut");
-                        w7out.setText("");
-                    }
+                        w7.setText(R.string.vanilla_wire_sequences_cut);
+                    } else log.print("W7: Don't cut");
                     break;
+                default: log.print("W7: Empty"); break;
             }
             switch (w8color) {
                 case "Red":
@@ -1158,37 +1108,26 @@ public class WireSequences extends Fragment {
                     int logic = redLogic(red,w8Letter);
                     if (logic == 1) {
                         log.print("W8: Cut");
-                        w8out.setText(R.string.vanilla_wire_sequences_cut);
-                    }
-                    else {
-                        log.print("W8: Don't cut");
-                        w8out.setText("");
-                    }
+                        w8.setText(R.string.vanilla_wire_sequences_cut);
+                    } else log.print("W8: Don't cut");
                     break;
                 case "Blue":
                     blue++;
                     logic = blueLogic(blue,w8Letter);
                     if (logic == 1) {
                         log.print("W8: Cut");
-                        w8out.setText(R.string.vanilla_wire_sequences_cut);
-                    }
-                    else {
-                        log.print("W8: Don't cut");
-                        w8out.setText("");
-                    }
+                        w8.setText(R.string.vanilla_wire_sequences_cut);
+                    } else log.print("W8: Don't cut");
                     break;
                 case "Black":
                     black++;
                     logic = blackLogic(black,w8Letter);
                     if (logic == 1) {
                         log.print("W8: Cut");
-                        w8out.setText(R.string.vanilla_wire_sequences_cut);
-                    }
-                    else {
-                        log.print("W8: Don't cut");
-                        w8out.setText("");
-                    }
+                        w8.setText(R.string.vanilla_wire_sequences_cut);
+                    } else log.print("W8: Don't cut");
                     break;
+                default: log.print("W8: Empty"); break;
             }
             switch (w9color) {
                 case "Red":
@@ -1196,37 +1135,26 @@ public class WireSequences extends Fragment {
                     int logic = redLogic(red,w9Letter);
                     if (logic == 1) {
                         log.print("W9: Cut");
-                        w9out.setText(R.string.vanilla_wire_sequences_cut);
-                    }
-                    else {
-                        log.print("W9: Don't cut");
-                        w9out.setText("");
-                    }
+                        w9.setText(R.string.vanilla_wire_sequences_cut);
+                    } else log.print("W9: Don't cut");
                     break;
                 case "Blue":
                     blue++;
                     logic = blueLogic(blue,w9Letter);
                     if (logic == 1) {
                         log.print("W9: Cut");
-                        w9out.setText(R.string.vanilla_wire_sequences_cut);
-                    }
-                    else {
-                        log.print("W9: Don't cut");
-                        w9out.setText("");
-                    }
+                        w9.setText(R.string.vanilla_wire_sequences_cut);
+                    } else log.print("W9: Don't cut");
                     break;
                 case "Black":
                     black++;
                     logic = blackLogic(black,w9Letter);
                     if (logic == 1) {
                         log.print("W9: Cut");
-                        w9out.setText(R.string.vanilla_wire_sequences_cut);
-                    }
-                    else {
-                        log.print("W9: Don't cut");
-                        w9out.setText("");
-                    }
+                        w9.setText(R.string.vanilla_wire_sequences_cut);
+                    } else log.print("W9: Don't cut");
                     break;
+                default: log.print("W9: Empty"); break;
             }
             // Print occurrences
             log.print("Red occurrences: " + red);
@@ -1285,9 +1213,9 @@ public class WireSequences extends Fragment {
             char w12Letter = letterArr[w12LetterPos].toCharArray()[0];
             log.print("W12 Letter: " + w12Letter);
             // TextViews
-            TextView w10out = v.findViewById(R.id.vanilla_wire_sequences_w10);
-            TextView w11out = v.findViewById(R.id.vanilla_wire_sequences_w11);
-            TextView w12out = v.findViewById(R.id.vanilla_wire_sequences_w12);
+            w10.setText("");
+            w11.setText("");
+            w12.setText("");
             // Stage 4 values
             s4red = red;
             log.printExclog("Previous stage red occurrences: " + s4red);
@@ -1302,37 +1230,26 @@ public class WireSequences extends Fragment {
                     int logic = redLogic(red,w10Letter);
                     if (logic == 1) {
                         log.print("W10: Cut");
-                        w10out.setText(R.string.vanilla_wire_sequences_cut);
-                    }
-                    else {
-                        log.print("W10: Don't cut");
-                        w10out.setText("");
-                    }
+                        w10.setText(R.string.vanilla_wire_sequences_cut);
+                    } else log.print("W10: Don't cut");
                     break;
                 case "Blue":
                     blue++;
                     logic = blueLogic(blue,w10Letter);
                     if (logic == 1) {
                         log.print("W10: Cut");
-                        w10out.setText(R.string.vanilla_wire_sequences_cut);
-                    }
-                    else {
-                        log.print("W10: Don't cut");
-                        w10out.setText("");
-                    }
+                        w10.setText(R.string.vanilla_wire_sequences_cut);
+                    } else log.print("W10: Don't cut");
                     break;
                 case "Black":
                     black++;
                     logic = blackLogic(black,w10Letter);
                     if (logic == 1) {
                         log.print("W10: Cut");
-                        w10out.setText(R.string.vanilla_wire_sequences_cut);
-                    }
-                    else {
-                        log.print("W10: Don't cut");
-                        w10out.setText("");
-                    }
+                        w10.setText(R.string.vanilla_wire_sequences_cut);
+                    } else log.print("W10: Don't cut");
                     break;
+                default: log.print("W10: Empty"); break;
             }
             switch (w11color) {
                 case "Red":
@@ -1340,37 +1257,26 @@ public class WireSequences extends Fragment {
                     int logic = redLogic(red,w11Letter);
                     if (logic == 1) {
                         log.print("W11: Cut");
-                        w11out.setText(R.string.vanilla_wire_sequences_cut);
-                    }
-                    else {
-                        log.print("W11: Don't cut");
-                        w11out.setText("");
-                    }
+                        w11.setText(R.string.vanilla_wire_sequences_cut);
+                    } else log.print("W11: Don't cut");
                     break;
                 case "Blue":
                     blue++;
                     logic = blueLogic(blue,w11Letter);
                     if (logic == 1) {
                         log.print("W11: Cut");
-                        w11out.setText(R.string.vanilla_wire_sequences_cut);
-                    }
-                    else {
-                        log.print("W11: Don't cut");
-                        w11out.setText("");
-                    }
+                        w11.setText(R.string.vanilla_wire_sequences_cut);
+                    } else log.print("W11: Don't cut");
                     break;
                 case "Black":
                     black++;
                     logic = blackLogic(black,w11Letter);
                     if (logic == 1) {
                         log.print("W11: Cut");
-                        w11out.setText(R.string.vanilla_wire_sequences_cut);
-                    }
-                    else {
-                        log.print("W11: Don't cut");
-                        w11out.setText("");
-                    }
+                        w11.setText(R.string.vanilla_wire_sequences_cut);
+                    } else log.print("W11: Don't cut");
                     break;
+                default: log.print("W11: Empty"); break;
             }
             switch (w12color) {
                 case "Red":
@@ -1378,37 +1284,26 @@ public class WireSequences extends Fragment {
                     int logic = redLogic(red,w12Letter);
                     if (logic == 1) {
                         log.print("W12: Cut");
-                        w12out.setText(R.string.vanilla_wire_sequences_cut);
-                    }
-                    else {
-                        log.print("W12: Don't cut");
-                        w12out.setText("");
-                    }
+                        w12.setText(R.string.vanilla_wire_sequences_cut);
+                    } else log.print("W12: Don't cut");
                     break;
                 case "Blue":
                     blue++;
                     logic = blueLogic(blue,w12Letter);
                     if (logic == 1) {
                         log.print("W12: Cut");
-                        w12out.setText(R.string.vanilla_wire_sequences_cut);
-                    }
-                    else {
-                        log.print("W12: Don't cut");
-                        w12out.setText("");
-                    }
+                        w12.setText(R.string.vanilla_wire_sequences_cut);
+                    } else log.print("W12: Don't cut");
                     break;
                 case "Black":
                     black++;
                     logic = blackLogic(black,w12Letter);
                     if (logic == 1) {
                         log.print("W12: Cut");
-                        w12out.setText(R.string.vanilla_wire_sequences_cut);
-                    }
-                    else {
-                        log.print("W12: Don't cut");
-                        w12out.setText("");
-                    }
+                        w12.setText(R.string.vanilla_wire_sequences_cut);
+                    } else log.print("W12: Don't cut");
                     break;
+                default: log.print("W12: Empty"); break;
             }
             // Print occurrences
             log.print("Red occurrences: " + red);
@@ -1429,19 +1324,19 @@ public class WireSequences extends Fragment {
             w4blue.setVisibility(View.INVISIBLE);
             w4black.setVisibility(View.INVISIBLE);
             v.findViewById(R.id.vanilla_wire_sequences_w4_spin).setVisibility(View.INVISIBLE);
-            v.findViewById(R.id.vanilla_wire_sequences_w4).setVisibility(View.INVISIBLE);
+            w4.setVisibility(View.INVISIBLE);
             w5none.setVisibility(View.INVISIBLE);
             w5red.setVisibility(View.INVISIBLE);
             w5blue.setVisibility(View.INVISIBLE);
             w5black.setVisibility(View.INVISIBLE);
             v.findViewById(R.id.vanilla_wire_sequences_w5_spin).setVisibility(View.INVISIBLE);
-            v.findViewById(R.id.vanilla_wire_sequences_w5).setVisibility(View.INVISIBLE);
+            w5.setVisibility(View.INVISIBLE);
             w6none.setVisibility(View.INVISIBLE);
             w6red.setVisibility(View.INVISIBLE);
             w6blue.setVisibility(View.INVISIBLE);
             w6black.setVisibility(View.INVISIBLE);
             v.findViewById(R.id.vanilla_wire_sequences_w6_spin).setVisibility(View.INVISIBLE);
-            v.findViewById(R.id.vanilla_wire_sequences_w6).setVisibility(View.INVISIBLE);
+            w6.setVisibility(View.INVISIBLE);
             v.findViewById(R.id.vanilla_wire_sequences_line4).setVisibility(View.INVISIBLE);
             v.findViewById(R.id.vanilla_wire_sequences_stage3).setVisibility(View.INVISIBLE);
             v.findViewById(R.id.vanilla_wire_sequences_stage3_ok).setVisibility(View.INVISIBLE);
@@ -1489,29 +1384,17 @@ public class WireSequences extends Fragment {
             v.findViewById(R.id.vanilla_wire_sequences_w12_spin).setVisibility(View.INVISIBLE);
             v.findViewById(R.id.vanilla_wire_sequences_w12).setVisibility(View.INVISIBLE);
             // Set text
-            TextView w1 = v.findViewById(R.id.vanilla_wire_sequences_w1);
             w1.setText(R.string.vanilla_wire_sequences_w1);
-            TextView w2 = v.findViewById(R.id.vanilla_wire_sequences_w2);
             w2.setText(R.string.vanilla_wire_sequences_w2);
-            TextView w3 = v.findViewById(R.id.vanilla_wire_sequences_w3);
             w3.setText(R.string.vanilla_wire_sequences_w3);
-            TextView w4 = v.findViewById(R.id.vanilla_wire_sequences_w4);
             w4.setText(R.string.vanilla_wire_sequences_w4);
-            TextView w5 = v.findViewById(R.id.vanilla_wire_sequences_w5);
             w5.setText(R.string.vanilla_wire_sequences_w5);
-            TextView w6 = v.findViewById(R.id.vanilla_wire_sequences_w6);
             w6.setText(R.string.vanilla_wire_sequences_w6);
-            TextView w7 = v.findViewById(R.id.vanilla_wire_sequences_w7);
             w7.setText(R.string.vanilla_wire_sequences_w7);
-            TextView w8 = v.findViewById(R.id.vanilla_wire_sequences_w8);
             w8.setText(R.string.vanilla_wire_sequences_w8);
-            TextView w9 = v.findViewById(R.id.vanilla_wire_sequences_w9);
             w9.setText(R.string.vanilla_wire_sequences_w9);
-            TextView w10 = v.findViewById(R.id.vanilla_wire_sequences_w10);
             w10.setText(R.string.vanilla_wire_sequences_w10);
-            TextView w11 = v.findViewById(R.id.vanilla_wire_sequences_w11);
             w11.setText(R.string.vanilla_wire_sequences_w11);
-            TextView w12 = v.findViewById(R.id.vanilla_wire_sequences_w12);
             w12.setText(R.string.vanilla_wire_sequences_w12);
             // Set selections
             Spinner w1spin = v.findViewById(R.id.vanilla_wire_sequences_w1_spin);
@@ -1625,19 +1508,19 @@ public class WireSequences extends Fragment {
             w7blue.setVisibility(View.INVISIBLE);
             w7black.setVisibility(View.INVISIBLE);
             v.findViewById(R.id.vanilla_wire_sequences_w7_spin).setVisibility(View.INVISIBLE);
-            v.findViewById(R.id.vanilla_wire_sequences_w7).setVisibility(View.INVISIBLE);
+            w7.setVisibility(View.INVISIBLE);
             w8none.setVisibility(View.INVISIBLE);
             w8red.setVisibility(View.INVISIBLE);
             w8blue.setVisibility(View.INVISIBLE);
             w8black.setVisibility(View.INVISIBLE);
             v.findViewById(R.id.vanilla_wire_sequences_w8_spin).setVisibility(View.INVISIBLE);
-            v.findViewById(R.id.vanilla_wire_sequences_w8).setVisibility(View.INVISIBLE);
+            w8.setVisibility(View.INVISIBLE);
             w9none.setVisibility(View.INVISIBLE);
             w9red.setVisibility(View.INVISIBLE);
             w9blue.setVisibility(View.INVISIBLE);
             w9black.setVisibility(View.INVISIBLE);
             v.findViewById(R.id.vanilla_wire_sequences_w9_spin).setVisibility(View.INVISIBLE);
-            v.findViewById(R.id.vanilla_wire_sequences_w9).setVisibility(View.INVISIBLE);
+            w9.setVisibility(View.INVISIBLE);
             v.findViewById(R.id.vanilla_wire_sequences_line6).setVisibility(View.INVISIBLE);
             v.findViewById(R.id.vanilla_wire_sequences_stage4).setVisibility(View.INVISIBLE);
             v.findViewById(R.id.vanilla_wire_sequences_stage4_ok).setVisibility(View.INVISIBLE);
@@ -1662,35 +1545,14 @@ public class WireSequences extends Fragment {
             v.findViewById(R.id.vanilla_wire_sequences_w12_spin).setVisibility(View.INVISIBLE);
             v.findViewById(R.id.vanilla_wire_sequences_w12).setVisibility(View.INVISIBLE);
             // Set text
-            Spinner w4spin = v.findViewById(R.id.vanilla_wire_sequences_w4_spin);
-            w4spin.setSelection(0);
-            w4none.setBackgroundResource(borderID);
-            w4red.setBackgroundResource(noBorderID);
-            w4blue.setBackgroundResource(noBorderID);
-            w4black.setBackgroundResource(noBorderID);
-            Spinner w5spin = v.findViewById(R.id.vanilla_wire_sequences_w5_spin);
-            w5spin.setSelection(0);
-            w5none.setBackgroundResource(borderID);
-            w5red.setBackgroundResource(noBorderID);
-            w5blue.setBackgroundResource(noBorderID);
-            w5black.setBackgroundResource(noBorderID);
-            Spinner w6spin = v.findViewById(R.id.vanilla_wire_sequences_w6_spin);
-            w6spin.setSelection(0);
-            w6none.setBackgroundResource(borderID);
-            w6red.setBackgroundResource(noBorderID);
-            w6blue.setBackgroundResource(noBorderID);
-            w6black.setBackgroundResource(noBorderID);
-            TextView w7 = v.findViewById(R.id.vanilla_wire_sequences_w7);
+            w4.setText(getResources().getString(R.string.vanilla_wire_sequences_w4));
+            w5.setText(getResources().getString(R.string.vanilla_wire_sequences_w5));
+            w6.setText(getResources().getString(R.string.vanilla_wire_sequences_w6));
             w7.setText(R.string.vanilla_wire_sequences_w7);
-            TextView w8 = v.findViewById(R.id.vanilla_wire_sequences_w8);
             w8.setText(R.string.vanilla_wire_sequences_w8);
-            TextView w9 = v.findViewById(R.id.vanilla_wire_sequences_w9);
             w9.setText(R.string.vanilla_wire_sequences_w9);
-            TextView w10 = v.findViewById(R.id.vanilla_wire_sequences_w10);
             w10.setText(R.string.vanilla_wire_sequences_w10);
-            TextView w11 = v.findViewById(R.id.vanilla_wire_sequences_w11);
             w11.setText(R.string.vanilla_wire_sequences_w11);
-            TextView w12 = v.findViewById(R.id.vanilla_wire_sequences_w12);
             w12.setText(R.string.vanilla_wire_sequences_w12);
             // Set selections
             Spinner w4spin = v.findViewById(R.id.vanilla_wire_sequences_w4_spin);
@@ -1791,17 +1653,11 @@ public class WireSequences extends Fragment {
             v.findViewById(R.id.vanilla_wire_sequences_w12_spin).setVisibility(View.INVISIBLE);
             v.findViewById(R.id.vanilla_wire_sequences_w12).setVisibility(View.INVISIBLE);
             // Set text
-            TextView w7 = v.findViewById(R.id.vanilla_wire_sequences_w7);
             w7.setText(R.string.vanilla_wire_sequences_w7);
-            TextView w8 = v.findViewById(R.id.vanilla_wire_sequences_w8);
             w8.setText(R.string.vanilla_wire_sequences_w8);
-            TextView w9 = v.findViewById(R.id.vanilla_wire_sequences_w9);
             w9.setText(R.string.vanilla_wire_sequences_w9);
-            TextView w10 = v.findViewById(R.id.vanilla_wire_sequences_w10);
             w10.setText(R.string.vanilla_wire_sequences_w10);
-            TextView w11 = v.findViewById(R.id.vanilla_wire_sequences_w11);
             w11.setText(R.string.vanilla_wire_sequences_w11);
-            TextView w12 = v.findViewById(R.id.vanilla_wire_sequences_w12);
             w12.setText(R.string.vanilla_wire_sequences_w12);
             // Set selections
             Spinner w7spin = v.findViewById(R.id.vanilla_wire_sequences_w7_spin);
@@ -1854,11 +1710,8 @@ public class WireSequences extends Fragment {
         v.findViewById(R.id.vanilla_wire_sequences_stage4_reset).setOnClickListener((View view) -> {
             log.print("Click listened: Stage 4 Reset");
             // Set text
-            TextView w10 = v.findViewById(R.id.vanilla_wire_sequences_w10);
             w10.setText(R.string.vanilla_wire_sequences_w10);
-            TextView w11 = v.findViewById(R.id.vanilla_wire_sequences_w11);
             w11.setText(R.string.vanilla_wire_sequences_w11);
-            TextView w12 = v.findViewById(R.id.vanilla_wire_sequences_w12);
             w12.setText(R.string.vanilla_wire_sequences_w12);
             // Set selections
             Spinner w10spin = v.findViewById(R.id.vanilla_wire_sequences_w10_spin);
@@ -1945,7 +1798,7 @@ public class WireSequences extends Fragment {
     }
 
     @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         getActivity().setTitle("Wire Sequences");
     }

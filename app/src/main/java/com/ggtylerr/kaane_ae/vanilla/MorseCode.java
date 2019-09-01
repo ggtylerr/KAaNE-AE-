@@ -130,10 +130,10 @@ public class MorseCode extends Fragment {
                 log.print("Chars are either BO, BR, or ST - Need other characters.");
                 String str = firstChar + String.valueOf(c);
                 out.setText(getResources().getString(R.string.vanilla_morse_code_info,str));
-                v.findViewById(R.id.vanilla_morse_code_dot_btn3).setEnabled(false);
-                v.findViewById(R.id.vanilla_morse_code_dash_btn3).setEnabled(false);
-                v.findViewById(R.id.vanilla_morse_code_backspace_btn3).setEnabled(false);
-                v.findViewById(R.id.vanilla_morse_code_btn3).setEnabled(false);
+                v.findViewById(R.id.vanilla_morse_code_dot_btn3).setEnabled(true);
+                v.findViewById(R.id.vanilla_morse_code_dash_btn3).setEnabled(true);
+                v.findViewById(R.id.vanilla_morse_code_backspace_btn3).setEnabled(true);
+                v.findViewById(R.id.vanilla_morse_code_btn3).setEnabled(true);
                 secondChar = c;
             } else if (firstChar == 'B' && c == 'E') {
                 log.print("1st char is B and 2nd is E - Determining word as \"BEATS\"");
