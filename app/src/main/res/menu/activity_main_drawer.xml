@@ -48,10 +48,15 @@
                     android:icon="@drawable/ic_morse_code"
                     android:title="@string/menu_vanilla_morse_code"
                     />
-                <!-- TODO: Make icon -->
                 <item
                     android:id="@+id/nav_vanilla_complicated_wires"
+                    android:icon="@drawable/ic_complicated_wires"
                     android:title="@string/menu_vanilla_complicated_wires"
+                    />
+                <item
+                    android:id="@+id/nav_vanilla_wire_sequences"
+                    android:icon="@drawable/ic_wire_sequences"
+                    android:title="@string/menu_vanilla_wire_sequences"
                     />
             </group>
         </menu>

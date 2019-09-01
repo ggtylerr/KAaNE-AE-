@@ -1,0 +1,961 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/vanilla_wire_sequences_stage1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/vanilla_memory_stage_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/vanilla_wire_sequences_stage1_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/generic_ok"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_wire_sequences_stage1"
+        app:layout_constraintEnd_toStartOf="@+id/vanilla_wire_sequences_stage1_reset"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_wire_sequences_stage1" />
+
+    <Button
+        android:id="@+id/vanilla_wire_sequences_stage1_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/generic_reset"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_wire_sequences_stage1_ok"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_wire_sequences_stage1_ok" />
+
+    <View
+        android:id="@+id/vanilla_wire_sequences_line1"
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:layout_marginTop="16dp"
+        android:background="#D6D6D6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wire_sequences_stage1" />
+
+    <ImageView
+        android:id="@+id/vanilla_wire_sequences_w1_none"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wire_sequences_line1"
+        app:srcCompat="@drawable/none" />
+
+    <ImageView
+        android:id="@+id/vanilla_wire_sequences_w1_red"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wire_sequences_w1_none"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wire_sequences_line1"
+        app:srcCompat="@drawable/red" />
+
+    <ImageView
+        android:id="@+id/vanilla_wire_sequences_w1_blue"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wire_sequences_w1_red"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wire_sequences_line1"
+        app:srcCompat="@drawable/blue" />
+
+    <ImageView
+        android:id="@+id/vanilla_wire_sequences_w1_black"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wire_sequences_w1_blue"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wire_sequences_line1"
+        app:srcCompat="@drawable/black" />
+
+    <Spinner
+        android:id="@+id/vanilla_wire_sequences_w1_spin"
+        style="@style/Widget.AppCompat.Spinner.Underlined"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:entries="@array/vanilla_wire_sequences_letter"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_wire_sequences_w1_black"
+        app:layout_constraintEnd_toStartOf="@+id/vanilla_wire_sequences_w1"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wire_sequences_w1_black"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_wire_sequences_w1_black" />
+
+    <TextView
+        android:id="@+id/vanilla_wire_sequences_w1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/vanilla_wire_sequences_w1"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_wire_sequences_w1_spin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_wire_sequences_w1_spin" />
+
+    <ImageView
+        android:id="@+id/vanilla_wire_sequences_w2_none"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wire_sequences_w1_none"
+        app:srcCompat="@drawable/none" />
+
+    <ImageView
+        android:id="@+id/vanilla_wire_sequences_w2_red"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wire_sequences_w2_none"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wire_sequences_w1_red"
+        app:srcCompat="@drawable/red" />
+
+    <ImageView
+        android:id="@+id/vanilla_wire_sequences_w2_blue"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wire_sequences_w2_red"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wire_sequences_w1_blue"
+        app:srcCompat="@drawable/blue" />
+
+    <ImageView
+        android:id="@+id/vanilla_wire_sequences_w2_black"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wire_sequences_w2_blue"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wire_sequences_w1_black"
+        app:srcCompat="@drawable/black" />
+
+    <Spinner
+        android:id="@+id/vanilla_wire_sequences_w2_spin"
+        style="@style/Widget.AppCompat.Spinner.Underlined"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:entries="@array/vanilla_wire_sequences_letter"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_wire_sequences_w2_black"
+        app:layout_constraintEnd_toStartOf="@+id/vanilla_wire_sequences_w2"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wire_sequences_w2_black"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_wire_sequences_w2_black" />
+
+    <TextView
+        android:id="@+id/vanilla_wire_sequences_w2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/vanilla_wire_sequences_w2"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_wire_sequences_w2_spin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_wire_sequences_w2_spin" />
+
+    <ImageView
+        android:id="@+id/vanilla_wire_sequences_w3_none"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wire_sequences_w2_none"
+        app:srcCompat="@drawable/none" />
+
+    <ImageView
+        android:id="@+id/vanilla_wire_sequences_w3_red"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wire_sequences_w3_none"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wire_sequences_w2_red"
+        app:srcCompat="@drawable/red" />
+
+    <ImageView
+        android:id="@+id/vanilla_wire_sequences_w3_blue"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wire_sequences_w3_red"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wire_sequences_w2_blue"
+        app:srcCompat="@drawable/blue" />
+
+    <ImageView
+        android:id="@+id/vanilla_wire_sequences_w3_black"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wire_sequences_w3_blue"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wire_sequences_w2_black"
+        app:srcCompat="@drawable/black" />
+
+    <Spinner
+        android:id="@+id/vanilla_wire_sequences_w3_spin"
+        style="@style/Widget.AppCompat.Spinner.Underlined"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:entries="@array/vanilla_wire_sequences_letter"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_wire_sequences_w3_black"
+        app:layout_constraintEnd_toStartOf="@+id/vanilla_wire_sequences_w3"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wire_sequences_w3_black"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_wire_sequences_w3_black" />
+
+    <TextView
+        android:id="@+id/vanilla_wire_sequences_w3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/vanilla_wire_sequences_w3"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_wire_sequences_w3_black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_wire_sequences_w3_black" />
+
+    <View
+        android:id="@+id/vanilla_wire_sequences_line2"
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:layout_marginTop="16dp"
+        android:background="#D6D6D6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wire_sequences_w3_black" />
+
+    <TextView
+        android:id="@+id/vanilla_wire_sequences_stage2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/vanilla_memory_stage_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wire_sequences_line2" />
+
+    <Button
+        android:id="@+id/vanilla_wire_sequences_stage2_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/generic_ok"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_wire_sequences_stage2"
+        app:layout_constraintEnd_toStartOf="@+id/vanilla_wire_sequences_stage2_reset"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_wire_sequences_stage2" />
+
+    <Button
+        android:id="@+id/vanilla_wire_sequences_stage2_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/generic_reset"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_wire_sequences_stage2_ok"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_wire_sequences_stage2_ok" />
+
+    <View
+        android:id="@+id/vanilla_wire_sequences_line3"
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:layout_marginTop="16dp"
+        android:background="#D6D6D6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wire_sequences_stage2" />
+
+    <ImageView
+        android:id="@+id/vanilla_wire_sequences_w4_none"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wire_sequences_line3"
+        app:srcCompat="@drawable/none" />
+
+    <ImageView
+        android:id="@+id/vanilla_wire_sequences_w4_red"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wire_sequences_w4_none"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wire_sequences_line3"
+        app:srcCompat="@drawable/red" />
+
+    <ImageView
+        android:id="@+id/vanilla_wire_sequences_w4_blue"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wire_sequences_w4_red"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wire_sequences_line3"
+        app:srcCompat="@drawable/blue" />
+
+    <ImageView
+        android:id="@+id/vanilla_wire_sequences_w4_black"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wire_sequences_w4_blue"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wire_sequences_line3"
+        app:srcCompat="@drawable/black" />
+
+    <Spinner
+        android:id="@+id/vanilla_wire_sequences_w4_spin"
+        style="@style/Widget.AppCompat.Spinner.Underlined"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:entries="@array/vanilla_wire_sequences_letter"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_wire_sequences_w4_black"
+        app:layout_constraintEnd_toStartOf="@+id/vanilla_wire_sequences_w4"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wire_sequences_w4_black"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_wire_sequences_w4_black" />
+
+    <TextView
+        android:id="@+id/vanilla_wire_sequences_w4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/vanilla_wire_sequences_w4"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_wire_sequences_w4_spin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_wire_sequences_w4_spin" />
+
+    <ImageView
+        android:id="@+id/vanilla_wire_sequences_w5_none"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wire_sequences_w4_none"
+        app:srcCompat="@drawable/none" />
+
+    <ImageView
+        android:id="@+id/vanilla_wire_sequences_w5_red"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wire_sequences_w5_none"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wire_sequences_w4_red"
+        app:srcCompat="@drawable/red" />
+
+    <ImageView
+        android:id="@+id/vanilla_wire_sequences_w5_blue"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wire_sequences_w5_red"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wire_sequences_w4_blue"
+        app:srcCompat="@drawable/blue" />
+
+    <ImageView
+        android:id="@+id/vanilla_wire_sequences_w5_black"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wire_sequences_w5_blue"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wire_sequences_w4_black"
+        app:srcCompat="@drawable/black" />
+
+    <Spinner
+        android:id="@+id/vanilla_wire_sequences_w5_spin"
+        style="@style/Widget.AppCompat.Spinner.Underlined"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:entries="@array/vanilla_wire_sequences_letter"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_wire_sequences_w5_black"
+        app:layout_constraintEnd_toStartOf="@+id/vanilla_wire_sequences_w5"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wire_sequences_w5_black"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_wire_sequences_w5_black" />
+
+    <TextView
+        android:id="@+id/vanilla_wire_sequences_w5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/vanilla_wire_sequences_w5"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_wire_sequences_w5_spin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_wire_sequences_w5_spin" />
+
+    <ImageView
+        android:id="@+id/vanilla_wire_sequences_w6_none"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wire_sequences_w5_none"
+        app:srcCompat="@drawable/none" />
+
+    <ImageView
+        android:id="@+id/vanilla_wire_sequences_w6_red"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wire_sequences_w6_none"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wire_sequences_w5_red"
+        app:srcCompat="@drawable/red" />
+
+    <ImageView
+        android:id="@+id/vanilla_wire_sequences_w6_blue"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wire_sequences_w6_red"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wire_sequences_w5_blue"
+        app:srcCompat="@drawable/blue" />
+
+    <ImageView
+        android:id="@+id/vanilla_wire_sequences_w6_black"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wire_sequences_w6_blue"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wire_sequences_w5_black"
+        app:srcCompat="@drawable/black" />
+
+    <Spinner
+        android:id="@+id/vanilla_wire_sequences_w6_spin"
+        style="@style/Widget.AppCompat.Spinner.Underlined"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:entries="@array/vanilla_wire_sequences_letter"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_wire_sequences_w6_black"
+        app:layout_constraintEnd_toStartOf="@+id/vanilla_wire_sequences_w6"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wire_sequences_w6_black"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_wire_sequences_w6_black" />
+
+    <TextView
+        android:id="@+id/vanilla_wire_sequences_w6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/vanilla_wire_sequences_w6"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_wire_sequences_w6_spin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_wire_sequences_w6_spin" />
+
+    <View
+        android:id="@+id/vanilla_wire_sequences_line4"
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:layout_marginTop="16dp"
+        android:background="#D6D6D6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wire_sequences_w6_black" />
+
+    <TextView
+        android:id="@+id/vanilla_wire_sequences_stage3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/vanilla_memory_stage_3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wire_sequences_line4" />
+
+    <Button
+        android:id="@+id/vanilla_wire_sequences_stage3_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/generic_ok"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_wire_sequences_stage3"
+        app:layout_constraintEnd_toStartOf="@+id/vanilla_wire_sequences_stage3_reset"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_wire_sequences_stage3" />
+
+    <Button
+        android:id="@+id/vanilla_wire_sequences_stage3_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/generic_reset"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_wire_sequences_stage3_ok"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_wire_sequences_stage3_ok" />
+
+    <View
+        android:id="@+id/vanilla_wire_sequences_line5"
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:layout_marginTop="16dp"
+        android:background="#D6D6D6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wire_sequences_stage3" />
+
+    <ImageView
+        android:id="@+id/vanilla_wire_sequences_w7_none"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wire_sequences_line5"
+        app:srcCompat="@drawable/none" />
+
+    <ImageView
+        android:id="@+id/vanilla_wire_sequences_w7_red"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wire_sequences_w7_none"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wire_sequences_line5"
+        app:srcCompat="@drawable/red" />
+
+    <ImageView
+        android:id="@+id/vanilla_wire_sequences_w7_blue"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wire_sequences_w7_red"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wire_sequences_line5"
+        app:srcCompat="@drawable/blue" />
+
+    <ImageView
+        android:id="@+id/vanilla_wire_sequences_w7_black"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wire_sequences_w7_blue"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wire_sequences_line5"
+        app:srcCompat="@drawable/black" />
+
+    <Spinner
+        android:id="@+id/vanilla_wire_sequences_w7_spin"
+        style="@style/Widget.AppCompat.Spinner.Underlined"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:entries="@array/vanilla_wire_sequences_letter"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_wire_sequences_w7_black"
+        app:layout_constraintEnd_toStartOf="@+id/vanilla_wire_sequences_w7"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wire_sequences_w7_black"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_wire_sequences_w7_black" />
+
+    <TextView
+        android:id="@+id/vanilla_wire_sequences_w7"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/vanilla_wire_sequences_w7"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_wire_sequences_w7_spin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_wire_sequences_w7_spin" />
+
+    <ImageView
+        android:id="@+id/vanilla_wire_sequences_w8_none"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wire_sequences_w7_none"
+        app:srcCompat="@drawable/none" />
+
+    <ImageView
+        android:id="@+id/vanilla_wire_sequences_w8_red"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wire_sequences_w8_none"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wire_sequences_w7_red"
+        app:srcCompat="@drawable/red" />
+
+    <ImageView
+        android:id="@+id/vanilla_wire_sequences_w8_blue"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wire_sequences_w8_red"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wire_sequences_w7_blue"
+        app:srcCompat="@drawable/blue" />
+
+    <ImageView
+        android:id="@+id/vanilla_wire_sequences_w8_black"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wire_sequences_w8_blue"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wire_sequences_w7_black"
+        app:srcCompat="@drawable/black" />
+
+    <Spinner
+        android:id="@+id/vanilla_wire_sequences_w8_spin"
+        style="@style/Widget.AppCompat.Spinner.Underlined"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:entries="@array/vanilla_wire_sequences_letter"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_wire_sequences_w8_black"
+        app:layout_constraintEnd_toStartOf="@+id/vanilla_wire_sequences_w8"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wire_sequences_w8_black"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_wire_sequences_w8_black" />
+
+    <TextView
+        android:id="@+id/vanilla_wire_sequences_w8"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/vanilla_wire_sequences_w8"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_wire_sequences_w8_spin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_wire_sequences_w8_spin" />
+
+    <ImageView
+        android:id="@+id/vanilla_wire_sequences_w9_none"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wire_sequences_w8_none"
+        app:srcCompat="@drawable/none" />
+
+    <ImageView
+        android:id="@+id/vanilla_wire_sequences_w9_red"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wire_sequences_w9_none"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wire_sequences_w8_red"
+        app:srcCompat="@drawable/red" />
+
+    <ImageView
+        android:id="@+id/vanilla_wire_sequences_w9_blue"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wire_sequences_w9_red"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wire_sequences_w8_blue"
+        app:srcCompat="@drawable/blue" />
+
+    <ImageView
+        android:id="@+id/vanilla_wire_sequences_w9_black"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wire_sequences_w9_blue"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wire_sequences_w8_black"
+        app:srcCompat="@drawable/black" />
+
+    <Spinner
+        android:id="@+id/vanilla_wire_sequences_w9_spin"
+        style="@style/Widget.AppCompat.Spinner.Underlined"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:entries="@array/vanilla_wire_sequences_letter"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_wire_sequences_w9_black"
+        app:layout_constraintEnd_toStartOf="@+id/vanilla_wire_sequences_w9"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wire_sequences_w9_black"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_wire_sequences_w9_black" />
+
+    <TextView
+        android:id="@+id/vanilla_wire_sequences_w9"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/vanilla_wire_sequences_w9"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_wire_sequences_w9_spin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_wire_sequences_w9_spin" />
+
+    <View
+        android:id="@+id/vanilla_wire_sequences_line6"
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:layout_marginTop="16dp"
+        android:background="#D6D6D6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wire_sequences_w9_black" />
+
+    <TextView
+        android:id="@+id/vanilla_wire_sequences_stage4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/vanilla_memory_stage_4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wire_sequences_line6" />
+
+    <Button
+        android:id="@+id/vanilla_wire_sequences_stage4_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/generic_ok"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_wire_sequences_stage4"
+        app:layout_constraintEnd_toStartOf="@+id/vanilla_wire_sequences_stage4_reset"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_wire_sequences_stage4" />
+
+    <Button
+        android:id="@+id/vanilla_wire_sequences_stage4_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/generic_reset"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_wire_sequences_stage4_ok"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_wire_sequences_stage4_ok" />
+
+    <View
+        android:id="@+id/vanilla_wire_sequences_line7"
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:layout_marginTop="16dp"
+        android:background="#D6D6D6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wire_sequences_stage4" />
+
+    <ImageView
+        android:id="@+id/vanilla_wire_sequences_w10_none"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wire_sequences_line7"
+        app:srcCompat="@drawable/none" />
+
+    <ImageView
+        android:id="@+id/vanilla_wire_sequences_w10_red"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wire_sequences_w10_none"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wire_sequences_line7"
+        app:srcCompat="@drawable/red" />
+
+    <ImageView
+        android:id="@+id/vanilla_wire_sequences_w10_blue"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wire_sequences_w10_red"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wire_sequences_line7"
+        app:srcCompat="@drawable/blue" />
+
+    <ImageView
+        android:id="@+id/vanilla_wire_sequences_w10_black"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wire_sequences_w10_blue"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wire_sequences_line7"
+        app:srcCompat="@drawable/black" />
+
+    <Spinner
+        android:id="@+id/vanilla_wire_sequences_w10_spin"
+        style="@style/Widget.AppCompat.Spinner.Underlined"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:entries="@array/vanilla_wire_sequences_letter"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_wire_sequences_w10_black"
+        app:layout_constraintEnd_toStartOf="@+id/vanilla_wire_sequences_w10"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wire_sequences_w10_black"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_wire_sequences_w10_black" />
+
+    <TextView
+        android:id="@+id/vanilla_wire_sequences_w10"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/vanilla_wire_sequences_w10"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_wire_sequences_w10_spin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_wire_sequences_w10_spin" />
+
+    <ImageView
+        android:id="@+id/vanilla_wire_sequences_w11_none"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wire_sequences_w10_none"
+        app:srcCompat="@drawable/none" />
+
+    <ImageView
+        android:id="@+id/vanilla_wire_sequences_w11_red"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wire_sequences_w11_none"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wire_sequences_w10_red"
+        app:srcCompat="@drawable/red" />
+
+    <ImageView
+        android:id="@+id/vanilla_wire_sequences_w11_blue"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wire_sequences_w11_red"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wire_sequences_w10_blue"
+        app:srcCompat="@drawable/blue" />
+
+    <ImageView
+        android:id="@+id/vanilla_wire_sequences_w11_black"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wire_sequences_w11_blue"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wire_sequences_w10_black"
+        app:srcCompat="@drawable/black" />
+
+    <Spinner
+        android:id="@+id/vanilla_wire_sequences_w11_spin"
+        style="@style/Widget.AppCompat.Spinner.Underlined"
+        android:layout_width="0dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:entries="@array/vanilla_wire_sequences_letter"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_wire_sequences_w11_black"
+        app:layout_constraintEnd_toStartOf="@+id/vanilla_wire_sequences_w11"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wire_sequences_w11_black"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_wire_sequences_w11_black" />
+
+    <TextView
+        android:id="@+id/vanilla_wire_sequences_w11"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/vanilla_wire_sequences_w11"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_wire_sequences_w11_spin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_wire_sequences_w11_spin" />
+
+    <ImageView
+        android:id="@+id/vanilla_wire_sequences_w12_none"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wire_sequences_w11_none"
+        app:srcCompat="@drawable/none" />
+
+    <ImageView
+        android:id="@+id/vanilla_wire_sequences_w12_red"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wire_sequences_w12_none"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wire_sequences_w11_red"
+        app:srcCompat="@drawable/red" />
+
+    <ImageView
+        android:id="@+id/vanilla_wire_sequences_w12_blue"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wire_sequences_w12_red"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wire_sequences_w11_blue"
+        app:srcCompat="@drawable/blue" />
+
+    <ImageView
+        android:id="@+id/vanilla_wire_sequences_w12_black"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wire_sequences_w12_blue"
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_wire_sequences_w11_black"
+        app:srcCompat="@drawable/black" />
+
+    <Spinner
+        android:id="@+id/vanilla_wire_sequences_w12_spin"
+        style="@style/Widget.AppCompat.Spinner.Underlined"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:entries="@array/vanilla_wire_sequences_letter"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_wire_sequences_w12_black"
+        app:layout_constraintEnd_toStartOf="@+id/vanilla_wire_sequences_w12"
+        app:layout_constraintStart_toEndOf="@+id/vanilla_wire_sequences_w12_black"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_wire_sequences_w12_black" />
+
+    <TextView
+        android:id="@+id/vanilla_wire_sequences_w12"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/vanilla_wire_sequences_w12"
+        app:layout_constraintBottom_toBottomOf="@+id/vanilla_wire_sequences_w12_spin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/vanilla_wire_sequences_w12_spin" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

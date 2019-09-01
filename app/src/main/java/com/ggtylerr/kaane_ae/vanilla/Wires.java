@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -113,7 +112,7 @@ public class Wires extends Fragment {
             w1NoneButton.setBackgroundResource(R.drawable.imagebutton_noborder);
             w1RedButton.setBackgroundResource(R.drawable.imagebutton_noborder);
             w1YellowButton.setBackgroundResource(R.drawable.imagebutton_noborder);
-            w1BlueButton.setBackgroundResource(R.drawable.imagebutton_border);
+            w1BlueButton.setBackgroundResource(R.drawable.imagebutton_oborder);
             w1WhiteButton.setBackgroundResource(R.drawable.imagebutton_noborder);
             w1BlackButton.setBackgroundResource(R.drawable.imagebutton_noborder);
         });
@@ -137,7 +136,7 @@ public class Wires extends Fragment {
             w1YellowButton.setBackgroundResource(R.drawable.imagebutton_noborder);
             w1BlueButton.setBackgroundResource(R.drawable.imagebutton_noborder);
             w1WhiteButton.setBackgroundResource(R.drawable.imagebutton_noborder);
-            w1BlackButton.setBackgroundResource(R.drawable.imagebutton_border);
+            w1BlackButton.setBackgroundResource(R.drawable.imagebutton_oborder);
         });
         // W2 Buttons
         w2NoneButton = view.findViewById(R.id.vanilla_wires_w2_none);
@@ -186,7 +185,7 @@ public class Wires extends Fragment {
             w2NoneButton.setBackgroundResource(R.drawable.imagebutton_noborder);
             w2RedButton.setBackgroundResource(R.drawable.imagebutton_noborder);
             w2YellowButton.setBackgroundResource(R.drawable.imagebutton_noborder);
-            w2BlueButton.setBackgroundResource(R.drawable.imagebutton_border);
+            w2BlueButton.setBackgroundResource(R.drawable.imagebutton_oborder);
             w2WhiteButton.setBackgroundResource(R.drawable.imagebutton_noborder);
             w2BlackButton.setBackgroundResource(R.drawable.imagebutton_noborder);
         });
@@ -210,7 +209,7 @@ public class Wires extends Fragment {
             w2YellowButton.setBackgroundResource(R.drawable.imagebutton_noborder);
             w2BlueButton.setBackgroundResource(R.drawable.imagebutton_noborder);
             w2WhiteButton.setBackgroundResource(R.drawable.imagebutton_noborder);
-            w2BlackButton.setBackgroundResource(R.drawable.imagebutton_border);
+            w2BlackButton.setBackgroundResource(R.drawable.imagebutton_oborder);
         });
         // W3 Buttons
         w3NoneButton = view.findViewById(R.id.vanilla_wires_w3_none);
@@ -259,7 +258,7 @@ public class Wires extends Fragment {
             w3NoneButton.setBackgroundResource(R.drawable.imagebutton_noborder);
             w3RedButton.setBackgroundResource(R.drawable.imagebutton_noborder);
             w3YellowButton.setBackgroundResource(R.drawable.imagebutton_noborder);
-            w3BlueButton.setBackgroundResource(R.drawable.imagebutton_border);
+            w3BlueButton.setBackgroundResource(R.drawable.imagebutton_oborder);
             w3WhiteButton.setBackgroundResource(R.drawable.imagebutton_noborder);
             w3BlackButton.setBackgroundResource(R.drawable.imagebutton_noborder);
         });
@@ -283,7 +282,7 @@ public class Wires extends Fragment {
             w3YellowButton.setBackgroundResource(R.drawable.imagebutton_noborder);
             w3BlueButton.setBackgroundResource(R.drawable.imagebutton_noborder);
             w3WhiteButton.setBackgroundResource(R.drawable.imagebutton_noborder);
-            w3BlackButton.setBackgroundResource(R.drawable.imagebutton_border);
+            w3BlackButton.setBackgroundResource(R.drawable.imagebutton_oborder);
         });
         // W4 Buttons
         w4NoneButton = view.findViewById(R.id.vanilla_wires_w4_none);
@@ -332,7 +331,7 @@ public class Wires extends Fragment {
             w4NoneButton.setBackgroundResource(R.drawable.imagebutton_noborder);
             w4RedButton.setBackgroundResource(R.drawable.imagebutton_noborder);
             w4YellowButton.setBackgroundResource(R.drawable.imagebutton_noborder);
-            w4BlueButton.setBackgroundResource(R.drawable.imagebutton_border);
+            w4BlueButton.setBackgroundResource(R.drawable.imagebutton_oborder);
             w4WhiteButton.setBackgroundResource(R.drawable.imagebutton_noborder);
             w4BlackButton.setBackgroundResource(R.drawable.imagebutton_noborder);
         });
@@ -356,7 +355,7 @@ public class Wires extends Fragment {
             w4YellowButton.setBackgroundResource(R.drawable.imagebutton_noborder);
             w4BlueButton.setBackgroundResource(R.drawable.imagebutton_noborder);
             w4WhiteButton.setBackgroundResource(R.drawable.imagebutton_noborder);
-            w4BlackButton.setBackgroundResource(R.drawable.imagebutton_border);
+            w4BlackButton.setBackgroundResource(R.drawable.imagebutton_oborder);
         });
         // W5 Buttons
         w5NoneButton = view.findViewById(R.id.vanilla_wires_w5_none);
@@ -405,7 +404,7 @@ public class Wires extends Fragment {
             w5NoneButton.setBackgroundResource(R.drawable.imagebutton_noborder);
             w5RedButton.setBackgroundResource(R.drawable.imagebutton_noborder);
             w5YellowButton.setBackgroundResource(R.drawable.imagebutton_noborder);
-            w5BlueButton.setBackgroundResource(R.drawable.imagebutton_border);
+            w5BlueButton.setBackgroundResource(R.drawable.imagebutton_oborder);
             w5WhiteButton.setBackgroundResource(R.drawable.imagebutton_noborder);
             w5BlackButton.setBackgroundResource(R.drawable.imagebutton_noborder);
         });
@@ -429,7 +428,7 @@ public class Wires extends Fragment {
             w5YellowButton.setBackgroundResource(R.drawable.imagebutton_noborder);
             w5BlueButton.setBackgroundResource(R.drawable.imagebutton_noborder);
             w5WhiteButton.setBackgroundResource(R.drawable.imagebutton_noborder);
-            w5BlackButton.setBackgroundResource(R.drawable.imagebutton_border);
+            w5BlackButton.setBackgroundResource(R.drawable.imagebutton_oborder);
         });
         // W6 Buttons
         w6NoneButton = view.findViewById(R.id.vanilla_wires_w6_none);
@@ -478,7 +477,7 @@ public class Wires extends Fragment {
             w6NoneButton.setBackgroundResource(R.drawable.imagebutton_noborder);
             w6RedButton.setBackgroundResource(R.drawable.imagebutton_noborder);
             w6YellowButton.setBackgroundResource(R.drawable.imagebutton_noborder);
-            w6BlueButton.setBackgroundResource(R.drawable.imagebutton_border);
+            w6BlueButton.setBackgroundResource(R.drawable.imagebutton_oborder);
             w6WhiteButton.setBackgroundResource(R.drawable.imagebutton_noborder);
             w6BlackButton.setBackgroundResource(R.drawable.imagebutton_noborder);
         });
@@ -502,7 +501,7 @@ public class Wires extends Fragment {
             w6YellowButton.setBackgroundResource(R.drawable.imagebutton_noborder);
             w6BlueButton.setBackgroundResource(R.drawable.imagebutton_noborder);
             w6WhiteButton.setBackgroundResource(R.drawable.imagebutton_noborder);
-            w6BlackButton.setBackgroundResource(R.drawable.imagebutton_border);
+            w6BlackButton.setBackgroundResource(R.drawable.imagebutton_oborder);
         });
         // Default Buttons/Wires
         wire1 = getResources().getStringArray(R.array.vanilla_wires_colors)[0];

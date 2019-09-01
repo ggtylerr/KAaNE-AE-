@@ -29,8 +29,10 @@
 
     <PreferenceCategory app:title="@string/options_header_about">
         <Preference
+            app:key="version"
             app:title="@string/options_version_title"
-            app:summary="@string/options_version"/>
+            app:summary="@string/options_version"
+            android:icon="@drawable/ic_ver_alpha"/>
         <Preference
             app:key="github"
             app:title="@string/options_github"
@@ -50,7 +52,7 @@
         <Preference
             app:key="wiki"
             app:title="@string/options_wiki"
-            android:icon="@drawable/ic_book_black_24dp">
+            android:icon="@drawable/ic_public_black_24dp">
             <intent
                 android:action="android.intent.action.VIEW"
                 android:data="@string/options_wiki_url"/>

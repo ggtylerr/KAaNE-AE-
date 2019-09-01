@@ -53,6 +53,7 @@
     <string name="menu_vanilla_memory">Memory</string>
     <string name="menu_vanilla_morse_code">Morse Code</string>
     <string name="menu_vanilla_complicated_wires">Complicated Wires</string>
+    <string name="menu_vanilla_wire_sequences">Wire Sequences</string>
 
     <!-- Dev Menu -->
     <string name="menu_dev">Developer Screens</string>
@@ -276,6 +277,26 @@
     <string name="vanilla_complicated_wires_led">Led</string>
     <string name="vanilla_complicated_wires_cut">CUT</string>
     <string name="vanilla_complicated_wires_dont_cut">DON\'T CUT</string>
+
+    <!-- Vanilla Wire Sequences -->
+    <string name="vanilla_wire_sequences_w1">Wire 1</string>
+    <string name="vanilla_wire_sequences_w2">Wire 2</string>
+    <string name="vanilla_wire_sequences_w3">Wire 3</string>
+    <string name="vanilla_wire_sequences_w4">Wire 4</string>
+    <string name="vanilla_wire_sequences_w5">Wire 5</string>
+    <string name="vanilla_wire_sequences_w6">Wire 6</string>
+    <string name="vanilla_wire_sequences_w7">Wire 7</string>
+    <string name="vanilla_wire_sequences_w8">Wire 8</string>
+    <string name="vanilla_wire_sequences_w9">Wire 9</string>
+    <string name="vanilla_wire_sequences_w10">Wire 10</string>
+    <string name="vanilla_wire_sequences_w11">Wire 11</string>
+    <string name="vanilla_wire_sequences_w12">Wire 12</string>
+    <string-array name="vanilla_wire_sequences_letter">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+    </string-array>
+    <string name="vanilla_wire_sequences_cut">Cut</string>
 
     <!-- Log String -->
     <string name="log_empty">Log is empty.</string>

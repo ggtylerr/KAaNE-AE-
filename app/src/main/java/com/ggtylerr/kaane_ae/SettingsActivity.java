@@ -80,6 +80,9 @@ public class SettingsActivity extends AppCompatActivity {
                 pref = findPreference("theme");
                 icon = pref.getIcon();
                 icon.setTint(getResources().getColor(R.color.white));
+                pref = findPreference("version");
+                icon = pref.getIcon();
+                icon.setTint(getResources().getColor(R.color.white));
                 pref = findPreference("github");
                 icon = pref.getIcon();
                 icon.setTint(getResources().getColor(R.color.white));

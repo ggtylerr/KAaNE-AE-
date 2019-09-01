@@ -50,7 +50,7 @@ public class Button extends Fragment {
             log.printExclog("Click listened: Blue Button");
             redBtn.setBackgroundResource(R.drawable.imagebutton_noborder);
             yellowBtn.setBackgroundResource(R.drawable.imagebutton_noborder);
-            blueBtn.setBackgroundResource(R.drawable.imagebutton_border);
+            blueBtn.setBackgroundResource(R.drawable.imagebutton_oborder);
             whiteBtn.setBackgroundResource(R.drawable.imagebutton_noborder);
             color = "Blue";
         });
