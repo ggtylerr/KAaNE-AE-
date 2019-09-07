@@ -228,6 +228,6 @@ public class MorseCode extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        getActivity().setTitle("Morse Code");
+        getActivity().setTitle(getResources().getString(R.string.menu_vanilla_morse_code));
     }
 }

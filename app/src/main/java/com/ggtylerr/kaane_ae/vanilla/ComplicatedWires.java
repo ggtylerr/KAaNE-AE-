@@ -156,6 +156,6 @@ public class ComplicatedWires extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        getActivity().setTitle("Complicated Wires");
+        getActivity().setTitle(getResources().getString(R.string.menu_vanilla_complicated_wires));
     }
 }

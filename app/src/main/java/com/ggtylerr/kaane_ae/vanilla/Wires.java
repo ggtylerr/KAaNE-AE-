@@ -705,7 +705,7 @@ public class Wires extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        getActivity().setTitle("Wires");
+        getActivity().setTitle(getResources().getString(R.string.menu_vanilla_wires));
     }
 
     private int inverse(int i) {

@@ -107,6 +107,6 @@ public class WhosOnFirst extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        getActivity().setTitle("Who\'s On First");
+        getActivity().setTitle(getResources().getString(R.string.menu_vanilla_whos_on_first));
     }
 }

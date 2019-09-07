@@ -32,7 +32,7 @@
             app:key="version"
             app:title="@string/options_version_title"
             app:summary="@string/options_version"
-            android:icon="@drawable/ic_ver_alpha"/>
+            android:icon="@drawable/ic_ver_beta"/>
         <Preference
             app:key="github"
             app:title="@string/options_github"

@@ -1800,6 +1800,6 @@ public class WireSequences extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        getActivity().setTitle("Wire Sequences");
+        getActivity().setTitle(getResources().getString(R.string.menu_vanilla_wire_sequences));
     }
 }

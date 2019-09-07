@@ -55,6 +55,6 @@ public class SimonSays extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        getActivity().setTitle("Simon Says");
+        getActivity().setTitle(getResources().getString(R.string.menu_vanilla_simon_says));
     }
 }

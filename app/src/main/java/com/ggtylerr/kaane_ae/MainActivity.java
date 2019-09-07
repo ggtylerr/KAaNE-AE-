@@ -135,6 +135,7 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_vanilla_morse_code: fragment = new MorseCode(); break;
             case R.id.nav_vanilla_complicated_wires: fragment = new ComplicatedWires(); break;
             case R.id.nav_vanilla_wire_sequences: fragment = new WireSequences(); break;
+            case R.id.nav_vanilla_maze: fragment = new Maze(); break;
             // Dev Screens
             case R.id.nav_dev_log: fragment = new LogFragment(); break;
         }

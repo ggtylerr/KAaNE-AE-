@@ -167,7 +167,7 @@ public class Keypad extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        getActivity().setTitle("Keypad");
+        getActivity().setTitle(getResources().getString(R.string.menu_vanilla_keypad));
     }
 
     private class Adapter extends BaseAdapter {

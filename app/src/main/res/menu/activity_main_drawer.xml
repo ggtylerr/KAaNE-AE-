@@ -58,6 +58,11 @@
                     android:icon="@drawable/ic_wire_sequences"
                     android:title="@string/menu_vanilla_wire_sequences"
                     />
+                <item
+                    android:id="@+id/nav_vanilla_maze"
+                    android:icon="@drawable/ic_maze"
+                    android:title="@string/menu_vanilla_maze"
+                    />
             </group>
         </menu>
     </item>
