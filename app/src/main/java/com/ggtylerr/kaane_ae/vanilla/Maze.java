@@ -366,9 +366,129 @@ public class Maze extends Fragment {
             else mazeDot6_6.setImageDrawable(dot);
             mazeDot_marked[5][5] = !mazeDot_marked[5][5];
         });
+        // Logic
+        v.findViewById(R.id.vanilla_maze_btn).setOnClickListener((View view) -> {
+            log.printExclog("Click listened: btn");
+            // Print maze
+            String[] print = printMaze();
+            log.print(print[0]);
+            log.print(print[1]);
+            log.print(print[2]);
+            log.print(print[3]);
+            log.print(print[4]);
+            log.print(print[5]);
+            // find maze
+            ImageView maze = v.findViewById(R.id.vanilla_maze_out);
+            View error = v.findViewById(R.id.vanilla_maze_out_error);
+            if (mazeDot_marked[1][0] && mazeDot_marked[2][5]) {
+                error.setVisibility(View.INVISIBLE);
+                log.print("Maze found. Outputting.");
+                log.printExclog("Maze #0");
+                maze.setImageDrawable(getResources().getDrawable(R.drawable.maze0));
+                maze.setVisibility(View.VISIBLE);
+            } else if (mazeDot_marked[3][1] && mazeDot_marked[1][4]) {
+                error.setVisibility(View.INVISIBLE);
+                log.print("Maze found. Outputting.");
+                log.printExclog("Maze #1");
+                maze.setImageDrawable(getResources().getDrawable(R.drawable.maze1));
+                maze.setVisibility(View.VISIBLE);
+            } else if (mazeDot_marked[3][3] && mazeDot_marked[3][5]) {
+                error.setVisibility(View.INVISIBLE);
+                log.print("Maze found. Outputting.");
+                log.printExclog("Maze #2");
+                maze.setImageDrawable(getResources().getDrawable(R.drawable.maze2));
+                maze.setVisibility(View.VISIBLE);
+            } else if (mazeDot_marked[0][0] && mazeDot_marked[3][0]) {
+                error.setVisibility(View.INVISIBLE);
+                log.print("Maze found. Outputting.");
+                log.printExclog("Maze #3");
+                maze.setImageDrawable(getResources().getDrawable(R.drawable.maze3));
+                maze.setVisibility(View.VISIBLE);
+            } else if (mazeDot_marked[2][4] && mazeDot_marked[5][3]) {
+                error.setVisibility(View.INVISIBLE);
+                log.print("Maze found. Outputting.");
+                log.printExclog("Maze #4");
+                maze.setImageDrawable(getResources().getDrawable(R.drawable.maze4));
+                maze.setVisibility(View.VISIBLE);
+            } else if (mazeDot_marked[0][4] && mazeDot_marked[4][2]) {
+                error.setVisibility(View.INVISIBLE);
+                log.print("Maze found. Outputting.");
+                log.printExclog("Maze #5");
+                maze.setImageDrawable(getResources().getDrawable(R.drawable.maze5));
+                maze.setVisibility(View.VISIBLE);
+            } else if (mazeDot_marked[0][1] && mazeDot_marked[5][1]) {
+                error.setVisibility(View.INVISIBLE);
+                log.print("Maze found. Outputting.");
+                log.printExclog("Maze #6");
+                maze.setImageDrawable(getResources().getDrawable(R.drawable.maze6));
+                maze.setVisibility(View.VISIBLE);
+            } else if (mazeDot_marked[0][3] && mazeDot_marked[3][2]) {
+                error.setVisibility(View.INVISIBLE);
+                log.print("Maze found. Outputting.");
+                log.printExclog("Maze #7");
+                maze.setImageDrawable(getResources().getDrawable(R.drawable.maze7));
+                maze.setVisibility(View.VISIBLE);
+            } else if (mazeDot_marked[1][2] && mazeDot_marked[4][0]) {
+                error.setVisibility(View.INVISIBLE);
+                log.print("Maze found. Outputting.");
+                log.printExclog("Maze #8");
+                maze.setImageDrawable(getResources().getDrawable(R.drawable.maze8));
+                maze.setVisibility(View.VISIBLE);
+            } else {
+                log.print("Maze could not be found.");
+                maze.setVisibility(View.INVISIBLE);
+                error.setVisibility(View.VISIBLE);
+            }
+        });
         return v;
     }
 
+    public String[] printMaze() {
+        String[] out = {"","","","","",""};
+        String a = mazeDot_marked[0][0] ? "X" : " ";
+        String b = mazeDot_marked[0][1] ? "X" : " ";
+        String c = mazeDot_marked[0][2] ? "X" : " ";
+        String d = mazeDot_marked[0][3] ? "X" : " ";
+        String e = mazeDot_marked[0][4] ? "X" : " ";
+        String f = mazeDot_marked[0][5] ? "X" : " ";
+        out[0] = "[" + a + "][" + b + "][" + c + "][" + d + "][" + e + "][" + f + "]";
+        a = mazeDot_marked[1][0] ? "X" : " ";
+        b = mazeDot_marked[1][1] ? "X" : " ";
+        c = mazeDot_marked[1][2] ? "X" : " ";
+        d = mazeDot_marked[1][3] ? "X" : " ";
+        e = mazeDot_marked[1][4] ? "X" : " ";
+        f = mazeDot_marked[1][5] ? "X" : " ";
+        out[1] = "[" + a + "][" + b + "][" + c + "][" + d + "][" + e + "][" + f + "]";
+        a = mazeDot_marked[2][0] ? "X" : " ";
+        b = mazeDot_marked[2][1] ? "X" : " ";
+        c = mazeDot_marked[2][2] ? "X" : " ";
+        d = mazeDot_marked[2][3] ? "X" : " ";
+        e = mazeDot_marked[2][4] ? "X" : " ";
+        f = mazeDot_marked[2][5] ? "X" : " ";
+        out[2] = "[" + a + "][" + b + "][" + c + "][" + d + "][" + e + "][" + f + "]";
+        a = mazeDot_marked[3][0] ? "X" : " ";
+        b = mazeDot_marked[3][1] ? "X" : " ";
+        c = mazeDot_marked[3][2] ? "X" : " ";
+        d = mazeDot_marked[3][3] ? "X" : " ";
+        e = mazeDot_marked[3][4] ? "X" : " ";
+        f = mazeDot_marked[3][5] ? "X" : " ";
+        out[3] = "[" + a + "][" + b + "][" + c + "][" + d + "][" + e + "][" + f + "]";
+        a = mazeDot_marked[4][0] ? "X" : " ";
+        b = mazeDot_marked[4][1] ? "X" : " ";
+        c = mazeDot_marked[4][2] ? "X" : " ";
+        d = mazeDot_marked[4][3] ? "X" : " ";
+        e = mazeDot_marked[4][4] ? "X" : " ";
+        f = mazeDot_marked[4][5] ? "X" : " ";
+        out[4] = "[" + a + "][" + b + "][" + c + "][" + d + "][" + e + "][" + f + "]";
+        a = mazeDot_marked[5][0] ? "X" : " ";
+        b = mazeDot_marked[5][1] ? "X" : " ";
+        c = mazeDot_marked[5][2] ? "X" : " ";
+        d = mazeDot_marked[5][3] ? "X" : " ";
+        e = mazeDot_marked[5][4] ? "X" : " ";
+        f = mazeDot_marked[5][5] ? "X" : " ";
+        out[5] = "[" + a + "][" + b + "][" + c + "][" + d + "][" + e + "][" + f + "]";
+        return out;
+    }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {

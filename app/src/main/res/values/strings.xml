@@ -304,6 +304,9 @@
     </string-array>
     <string name="vanilla_wire_sequences_cut">Cut</string>
 
+    <!-- Vanilla Maze -->
+    <string name="vanilla_maze_error">Could not find maze.</string>
+
     <!-- Log String -->
     <string name="log_empty">Log is empty.</string>
 </resources>
