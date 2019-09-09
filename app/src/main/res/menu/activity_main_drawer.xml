@@ -63,6 +63,11 @@
                     android:icon="@drawable/ic_maze"
                     android:title="@string/menu_vanilla_maze"
                     />
+                <item
+                    android:id="@+id/nav_vanilla_password"
+                    android:icon="@drawable/ic_passwords"
+                    android:title="@string/menu_vanilla_password"
+                    />
             </group>
         </menu>
     </item>

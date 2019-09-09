@@ -443,7 +443,7 @@ public class Maze extends Fragment {
         return v;
     }
 
-    public String[] printMaze() {
+    private String[] printMaze() {
         String[] out = {"","","","","",""};
         String a = mazeDot_marked[0][0] ? "X" : " ";
         String b = mazeDot_marked[0][1] ? "X" : " ";

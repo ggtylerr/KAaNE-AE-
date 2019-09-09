@@ -307,6 +307,10 @@
     <!-- Vanilla Maze -->
     <string name="vanilla_maze_error">Could not find maze.</string>
 
+    <!-- Vanilla Password -->
+    <string name="vanilla_password_3rd">3rd column</string>
+    <string name="vanilla_password_5th">5th column</string>
+
     <!-- Log String -->
     <string name="log_empty">Log is empty.</string>
 </resources>
