@@ -56,6 +56,9 @@
     <string name="menu_vanilla_wire_sequences">Wire Sequences</string>
     <string name="menu_vanilla_maze">Maze</string>
     <string name="menu_vanilla_password">Password</string>
+    <string name="menu_vanilla_gas">Venting Gas</string>
+    <string name="menu_vanilla_discharge">Capacitor Discharge</string>
+    <string name="menu_vanilla_knob">Knob</string>
 
     <!-- Dev Menu -->
     <string name="menu_dev">Developer Screens</string>
@@ -310,6 +313,11 @@
     <!-- Vanilla Password -->
     <string name="vanilla_password_3rd">3rd column</string>
     <string name="vanilla_password_5th">5th column</string>
+
+    <!-- Vanilla Needy Strings -->
+    <string name="vanilla_gas_string">For the question \"VENT GAS?\" answer YES. \nFor the question \"DETONATE?\" answer NO.</string>
+    <string name="vanilla_discharge_string">Pull down the lever whenever possible.</string>
+    <string name="vanilla_knob_string">Based on the lights in the boxed areas, change the position of the knob.</string>
 
     <!-- Log String -->
     <string name="log_empty">Log is empty.</string>

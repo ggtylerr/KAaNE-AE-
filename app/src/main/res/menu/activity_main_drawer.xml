@@ -68,6 +68,21 @@
                     android:icon="@drawable/ic_passwords"
                     android:title="@string/menu_vanilla_password"
                     />
+                <item
+                    android:id="@+id/nav_vanilla_gas"
+                    android:icon="@drawable/ic_gas"
+                    android:title="@string/menu_vanilla_gas"
+                    />
+                <item
+                    android:id="@+id/nav_vanilla_discharge"
+                    android:icon="@drawable/ic_discharge"
+                    android:title="@string/menu_vanilla_discharge"
+                    />
+                <item
+                    android:id="@+id/nav_vanilla_knob"
+                    android:icon="@drawable/ic_knob"
+                    android:title="@string/menu_vanilla_knob"
+                    />
             </group>
         </menu>
     </item>
