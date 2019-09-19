@@ -1,19 +1,31 @@
 package com.ggtylerr.kaane_ae;
 
+import android.Manifest;
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.os.Environment;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceManager;
 import androidx.preference.SwitchPreferenceCompat;
 
+import com.ggtylerr.kaane_ae.util.Props;
 import com.ggtylerr.kaane_ae.util.log;
+
+import java.io.File;
 
 public class SettingsActivity extends AppCompatActivity {
 
@@ -38,6 +50,11 @@ public class SettingsActivity extends AppCompatActivity {
         }
     }
 
+    public void onBackPressed() {
+        // super.onBackPressed();
+        // Disabling back presses so the user doesn't accidentally break theme changes
+    }
+
     public static class SettingsFragment extends PreferenceFragmentCompat
         implements SharedPreferences.OnSharedPreferenceChangeListener {
         @Override
@@ -51,7 +68,33 @@ public class SettingsActivity extends AppCompatActivity {
             boolean checked = ((SwitchPreferenceCompat) pref).isChecked();
             editor.putBoolean(key,checked);
             editor.apply();
+            // exclog
             if (key.equals("excessive_log")) log.excessive_log = checked;
+            // theme
+            if (key.equals("theme")) {
+                Intent intent = new Intent(getActivity(), MainActivity.class);
+                startActivity(intent);
+            }
+            // location
+            if (key.equals("storage_location")) {
+                log.changed = true;
+                if (checked) {
+                    // Check if they have permissions
+                    if (ContextCompat.checkSelfPermission(getContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+                        Toast.makeText(getActivity(), "You need to accept storage permissions in order to write to external storage!", Toast.LENGTH_LONG).show();
+                        log.file = new File(MainActivity.context.getFilesDir(), "log.log");
+                        Props.configFile = new File(MainActivity.context.getFilesDir(), "config.properties");
+                    }
+                    else {
+                        log.file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + "/kaane-ae","log.log");
+                        Props.configFile = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + "/kaane-ae","config.properties");
+                    }
+                }
+                else {
+                    log.file = new File(MainActivity.context.getFilesDir(), "log.log");
+                    Props.configFile = new File(MainActivity.context.getFilesDir(), "config.properties");
+                }
+            }
         }
         @Override
         public void onResume() {

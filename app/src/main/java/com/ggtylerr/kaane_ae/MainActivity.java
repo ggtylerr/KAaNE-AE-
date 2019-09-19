@@ -1,5 +1,6 @@
 package com.ggtylerr.kaane_ae;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
@@ -37,6 +38,7 @@ import android.view.Menu;
 public class MainActivity extends AppCompatActivity 
         implements NavigationView.OnNavigationItemSelectedListener {
     private static SharedPreferences sharedPrefs;
+    public static Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,6 +88,8 @@ public class MainActivity extends AppCompatActivity
             MenuItem item = subMenu.getItem(0);
             item.setVisible(false);
         }
+
+        context = getApplicationContext();
     }
 
     @Override
@@ -94,7 +98,8 @@ public class MainActivity extends AppCompatActivity
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+//            super.onBackPressed();
+            // Disabling back presses so the user doesn't accidentally break theme changes
         }
     }
     @Override
@@ -165,5 +170,8 @@ public class MainActivity extends AppCompatActivity
     }
     public static boolean grabThemePreference() {
         return sharedPrefs.getBoolean("theme",false);
+    }
+    public static boolean grabLocationPreference() {
+        return sharedPrefs.getBoolean("storage_location",false);
     }
 }

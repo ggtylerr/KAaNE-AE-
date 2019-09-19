@@ -2,6 +2,8 @@ package com.ggtylerr.kaane_ae.util;
 
 import android.os.Environment;
 
+import com.ggtylerr.kaane_ae.MainActivity;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -10,9 +12,17 @@ import java.util.Properties;
 
 public class Props {
 
-    public static File configFile = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + "/kaane-ae","config.properties");
+    public static File configFile;
 
     public static Properties load(Properties props) {
+
+        if (!log.changed) {
+            if (MainActivity.grabLocationPreference())
+                configFile = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + "/kaane-ae","config.properties");
+            else
+                configFile = new File(MainActivity.context.getFilesDir(), "config.properties");
+        }
+
         try {
             FileReader reader = new FileReader(configFile);
             props.load(reader);

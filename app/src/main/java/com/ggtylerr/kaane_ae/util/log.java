@@ -1,9 +1,6 @@
 package com.ggtylerr.kaane_ae.util;
 
-import android.content.SharedPreferences;
 import android.os.Environment;
-
-import androidx.preference.PreferenceManager;
 
 import com.ggtylerr.kaane_ae.MainActivity;
 
@@ -14,18 +11,21 @@ import java.io.FileReader;
 import java.io.PrintStream;
 import java.io.PrintWriter;
 import java.io.StringWriter;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.stream.Stream;
 
 public class log {
     public static boolean excessive_log = MainActivity.grabExclogPreference();
     private static boolean setup = false;
     private static PrintStream o;
-    private static File file;
+    public static boolean changed = false;
+    public static File file;
     public static PrintStream setup() {
         setup = true;
-        file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + "/kaane-ae","log.log");
+        if (!changed) {
+            if (MainActivity.grabLocationPreference())
+                file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + "/kaane-ae","log.log");
+            else
+                file = new File(MainActivity.context.getFilesDir(), "log.log");
+        }
         try {
             o = new PrintStream(file);
         } catch (FileNotFoundException ex){

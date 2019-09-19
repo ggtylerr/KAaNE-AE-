@@ -18,7 +18,7 @@ import androidx.fragment.app.Fragment;
 import androidx.preference.PreferenceManager;
 
 public class HomeScreen extends Fragment {
-    int PermRequestCode = 69;
+    public static int PermRequestCode = 69;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
