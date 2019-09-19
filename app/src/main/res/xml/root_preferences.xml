@@ -8,6 +8,7 @@
             app:title="@string/options_storage_location"
             app:summaryOff="@string/options_storage_location_off"
             app:summaryOn="@string/options_storage_location_on"
+            android:icon="@drawable/ic_storage_black_24dp"
             />
 
     </PreferenceCategory>
