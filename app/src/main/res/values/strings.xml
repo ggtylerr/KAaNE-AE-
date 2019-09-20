@@ -334,6 +334,12 @@
     <string name="vanilla_discharge_string">Pull down the lever whenever possible.</string>
     <string name="vanilla_knob_string">Based on the lights in the boxed areas, change the position of the knob.</string>
 
+    <!-- Mod 101 Dalmatians -->
+    <string name="mod_101_dalmatians_3_dots">MARK 3 DOTS</string>
+    <string name="mod_101_dalmatians_4_dots">MARK 4 DOTS</string>
+    <string name="mod_101_dalmatians_all">MARK ALL</string>
+    <string name="mod_101_dalmatians_none">UNMARK</string>
+
     <!-- Log String -->
     <string name="log_empty">Log is empty.</string>
 </resources>

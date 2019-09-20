@@ -86,6 +86,56 @@
             </group>
         </menu>
     </item>
+    <item android:title="@string/menu_mod">
+        <menu>
+            <group android:checkableBehavior="single">
+                <!-- For some reason, the first item doesn't show up on here. So hopefully this works. -->
+                <item
+                    android:id="@+id/nav_none"
+                    android:title="" />
+                <item
+                    android:id="@+id/nav_mod_101_dalmatians"
+                    android:icon="@drawable/ic_101_dalmatians"
+                    android:title="@string/menu_mod_101_dalmatians" />
+                <item
+                    android:id="@+id/nav_mod_3d_maze"
+                    android:icon="@drawable/ic_3d_maze"
+                    android:title="@string/menu_mod_3d_maze" />
+                <item
+                    android:id="@+id/nav_mod_3d_tunnels"
+                    android:icon="@drawable/ic_3d_tunnels"
+                    android:title="@string/menu_mod_3d_tunnels" />
+                <item
+                    android:id="@+id/nav_mod_aa"
+                    android:icon="@drawable/ic_aa"
+                    android:title="@string/menu_mod_aa" />
+                <item
+                    android:id="@+id/nav_mod_accumulation"
+                    android:icon="@drawable/ic_accumulation"
+                    android:title="@string/menu_mod_accumulation" />
+                <item
+                    android:id="@+id/nav_mod_adjacent_letters"
+                    android:icon="@drawable/ic_adjacent_letters"
+                    android:title="@string/menu_mod_adjacent_letters" />
+                <item
+                    android:id="@+id/nav_mod_adv_venting_gas"
+                    android:icon="@drawable/ic_adv_venting_gas"
+                    android:title="@string/menu_mod_adv_venting_gas" />
+                <item
+                    android:id="@+id/nav_mod_adventure_game"
+                    android:icon="@drawable/ic_adventure_game"
+                    android:title="@string/menu_mod_adventure_game" />
+                <item
+                    android:id="@+id/nav_mod_atc"
+                    android:icon="@drawable/ic_atc"
+                    android:title="@string/menu_mod_atc" />
+                <item
+                    android:id="@+id/nav_mod_alchemy"
+                    android:icon="@drawable/ic_alchemy"
+                    android:title="@string/menu_mod_alchemy" />
+            </group>
+        </menu>
+    </item>
     <item android:title="@string/menu_dev">
         <menu>
             <group android:checkableBehavior="single">
