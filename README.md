@@ -13,13 +13,9 @@ The KTaNE assistant app for Androids.
 
 # Notes
 
-This app is **NOT** available on the Google Play Store. Even after I make an APK available, I'll most likely release it on the store when the first beta build is out. I'll also have to pay a $25 license and I'm not planning on putting ads, so that's another reason why I'm not going to release it there for a while. I'm also not sure how lengthy their verification process is.
+By default, files generated (like the config and log files) are stored in the internal app storage. To change this, go to the app settings (top right, settings), and press Location to change to external storage. You'll need to accept permissions in order to do this (you can do this from the home screen)
 
-**In the home screen, there's a button that requests for storage permissions. The app absolutely needs these permissions for settings, logs, etc. KAaNE [AE] stores these files in /Downloads/kaane-ae-/. It does not collect any other information or use any other files.**
-
-Config file is found in `Downloads/kaane-ae-/config.properties`. This will be changed whenever I figure out how to make a proper directory without Android freaking out.
-
-If you have a small screen, the bomb settings might have cropped text. You can easily fix this by rotating your screen or by using an emulator.
+If you have a small screen, some modules (like the bomb settings) might have cropped text. You can easily fix this by rotating your screen or by using an emulator.
 
 ## Contribute
 
