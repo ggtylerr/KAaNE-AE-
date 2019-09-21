@@ -640,7 +640,7 @@ public class Wires extends Fragment {
                     log.printExclog("W4 - " + newArr[3]);
                     log.printExclog("W5 - " + newArr[4]);
                     // Last wire black + last digit of SN is odd -> Cut 4th wire
-                    if (newArr[5].equals(black) && string.lastInt(sn) % 2 == 1) {
+                    if (newArr[4].equals(black) && string.lastInt(sn) % 2 == 1) {
                         log.printExclog("Rule 3.1 - Last wire black + last digit of SN is odd -> Cut 4th wire");
                         log.print("Cut the 4th wire.");
                         output.setText(res.getString(R.string.vanilla_wires_cut_msg,"4th"));

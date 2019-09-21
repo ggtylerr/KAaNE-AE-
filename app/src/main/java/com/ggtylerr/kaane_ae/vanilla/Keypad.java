@@ -102,6 +102,11 @@ public class Keypad extends Fragment {
             log.print("Solved Item 2: " + (solved[1] + 1));
             log.print("Solved Item 3: " + (solved[2] + 1));
             log.print("Solved Item 4: " + (solved[3] + 1));
+            // If it's negative, just set it to 0
+            if (solved[0] == -1) solved[0] = 0;
+            if (solved[1] == -1) solved[1] = 0;
+            if (solved[2] == -1) solved[2] = 0;
+            if (solved[3] == -1) solved[3] = 0;
             // Output
             ImageView currImg = v.findViewById(R.id.vanilla_keypad_img1);
             currImg.setImageDrawable(getResources().getDrawable(imgs[solved[0]]));

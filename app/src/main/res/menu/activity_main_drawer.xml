@@ -86,13 +86,10 @@
             </group>
         </menu>
     </item>
+    <!--
     <item android:title="@string/menu_mod">
         <menu>
             <group android:checkableBehavior="single">
-                <!-- For some reason, the first item doesn't show up on here. So hopefully this works. -->
-                <item
-                    android:id="@+id/nav_none"
-                    android:title="" />
                 <item
                     android:id="@+id/nav_mod_101_dalmatians"
                     android:icon="@drawable/ic_101_dalmatians"
@@ -136,6 +133,7 @@
             </group>
         </menu>
     </item>
+    -->
     <item android:title="@string/menu_dev">
         <menu>
             <group android:checkableBehavior="single">
