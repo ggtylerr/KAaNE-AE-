@@ -13,7 +13,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 
 import android.view.MenuItem;
 
-import com.ggtylerr.kaane_ae.mod.a101Dalmatians;
+import com.ggtylerr.kaane_ae.mod.*;
 import com.ggtylerr.kaane_ae.vanilla.*;
 import com.google.android.material.navigation.NavigationView;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -148,7 +148,7 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_vanilla_knob: fragment = new Knob(); break;
             // Mod Modules
 //            case R.id.nav_mod_101_dalmatians: fragment = new a101Dalmatians(); break;
-//            case R.id.nav_mod_3d_maze: break;
+//            case R.id.nav_mod_3d_maze: fragment = new a3DMaze(); break;
 //            case R.id.nav_mod_3d_tunnels: break;
 //            case R.id.nav_mod_aa: break;
 //            case R.id.nav_mod_accumulation: break;

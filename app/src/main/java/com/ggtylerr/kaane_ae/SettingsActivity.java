@@ -114,6 +114,9 @@ public class SettingsActivity extends AppCompatActivity {
             icon.setTint(getResources().getColor(R.color.black));
             SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(getContext());
             if (sharedPrefs.getBoolean("theme",false)) {
+                pref = findPreference("storage_location");
+                icon = pref.getIcon();
+                icon.setTint(getResources().getColor(R.color.white));
                 pref = findPreference("log_menu");
                 icon = pref.getIcon();
                 icon.setTint(getResources().getColor(R.color.white));

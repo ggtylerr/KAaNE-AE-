@@ -96,6 +96,9 @@ public class MorseCode extends Fragment {
             } else if (c == 'T') {
                 log.print("Char is T - Determining word as \"TRICK\"");
                 out.setText(getResources().getString(R.string.vanilla_morse_code_trick));
+            } else if (c == 'V') {
+                log.print("Char is V - Determining word as \"VECTOR\"");
+                out.setText(getResources().getString(R.string.vanilla_morse_code_vector));
             } else {
                 log.print("Incorrect Starting Char.");
                 out.setText(getResources().getString(R.string.vanilla_morse_code_error));

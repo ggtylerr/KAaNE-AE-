@@ -28,7 +28,7 @@
     <string name="options_theme_summary">Changing this will restart the app.</string>
     <string name="options_header_about">About</string>
     <string name="options_version_title">Version</string>
-    <string name="options_version">Beta [β] v0.5.2</string>
+    <string name="options_version">Beta [β] v0.5.3</string>
     <string name="options_github">GitHub Repo</string>
     <string name="options_github_url">https://github.com/ggtylerr/KAaNE-AE-</string>
     <string name="options_discord">Discord Server</string>
